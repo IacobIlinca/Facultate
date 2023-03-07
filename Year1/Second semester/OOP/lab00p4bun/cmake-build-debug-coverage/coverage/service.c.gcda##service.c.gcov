@@ -1,0 +1,342 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/service.c
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/service.c.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/service.c.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once 
+        -:    2:
+        -:    3:#include <string.h>
+        -:    4:#include "service.h"
+        -:    5:
+function creeaza_service called 9 returned 100% blocks executed 100%
+        9:    6:service* creeaza_service(repository* repo)
+        -:    7:{
+        9:    8:    service* srv = malloc(sizeof(service));
+        9:    9:    srv->repo = repo;
+        9:   10:    return srv;
+        9:   10-block  0
+        -:   11:}
+        -:   12:
+function destroy_service called 9 returned 100% blocks executed 100%
+        9:   13:void destroy_service(service* srv)
+        -:   14:{
+        9:   15:    distruge_repository(srv->repo);
+        9:   15-block  0
+call    0 returned 9
+        9:   16:    free(srv);
+        9:   17:    srv = NULL;
+        9:   18:}
+        -:   19:
+function add_element called 16 returned 100% blocks executed 100%
+       16:   20:int add_element(service* srv, char* nume, char* producator, int cantitate)
+        -:   21:{
+       16:   22:	element* el = create_element(nume, producator, cantitate);
+       16:   22-block  0
+call    0 returned 16
+       16:   23:	int vali = valid_element(el);
+call    0 returned 16
+       16:   24:	if (vali == 0)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 15
+        -:   25:	{
+        1:   26:		destroy_element(el);
+        1:   26-block  0
+call    0 returned 1
+        1:   27:		return 0;
+        -:   28:	}
+       15:   29:    add_repository(srv->repo, el);
+       15:   29-block  0
+call    0 returned 15
+       15:   30:	return 1;
+        -:   31:}
+        -:   32:
+function sterge_elemet called 2 returned 100% blocks executed 100%
+        2:   33:int sterge_elemet(service* srv, char* nume)
+        -:   34:{
+        2:   35:	int poz = find_element(srv->repo->elemente, nume);
+        2:   35-block  0
+call    0 returned 2
+        2:   36:	if (poz != -1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        -:   37:	{
+        1:   38:		ElemType el = stergere_repository(srv->repo, poz);
+        1:   38-block  0
+call    0 returned 1
+        1:   39:		destroy_element(el);
+call    0 returned 1
+        1:   40:		return 1;
+        -:   41:	}
+        1:   42:	return 0;
+        1:   42-block  0
+        -:   43:}
+        -:   44:
+function modifica_element called 2 returned 100% blocks executed 100%
+        2:   45:int modifica_element(service* srv, char* nume, int cantitate)
+        -:   46:{
+        2:   47:	int poz = find_element(srv->repo->elemente, nume);
+        2:   47-block  0
+call    0 returned 2
+        2:   48:	if (poz != -1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        -:   49:	{
+        1:   50:        modificare_repository(srv->repo, poz, cantitate);
+        1:   50-block  0
+call    0 returned 1
+        1:   51:		return 1;
+        -:   52:	}
+        1:   53:	return 0;
+        1:   53-block  0
+        -:   54:}
+        -:   55:
+function find_element called 5 returned 100% blocks executed 100%
+        5:   56:int find_element(lista* v, char* nume)
+        -:   57:{
+        5:   58:	int i,index = -1;
+        7:   59:	for (i = 0; i < v->length; i++)
+        5:   59-block  0
+        2:   59-block  1
+        7:   59-block  2
+branch  0 taken 5
+branch  1 taken 2 (fallthrough)
+        -:   60:	{
+        5:   61:		element* el = get(v, i);
+        5:   61-block  0
+call    0 returned 5
+        5:   62:		if (strcmp(el->nume, nume) == 0)
+branch  0 taken 3 (fallthrough)
+branch  1 taken 2
+        -:   63:		{
+        3:   64:			index = i;
+        3:   65:			break;
+        3:   65-block  0
+        -:   66:		}
+        -:   67:	}
+        -:   68:	
+        5:   69:	return index;
+        5:   69-block  0
+        -:   70:}
+        -:   71:
+        -:   72:
+function filtru_cant called 1 returned 100% blocks executed 100%
+        1:   73:lista* filtru_cant(service* srv, int canord)
+        -:   74:{
+        1:   75:	lista* m = create_lista();
+        1:   75-block  0
+call    0 returned 1
+        1:   76:    lista* v = srv->repo->elemente;
+        -:   77:	int i;
+        4:   78:	for (i = 0; i < v->length; i++)
+        3:   78-block  0
+        4:   78-block  1
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        -:   79:	{
+        -:   80:		element* el;
+        3:   81:		el = get(v, i);
+        3:   81-block  0
+call    0 returned 3
+        3:   82:		if (el->cantitate < canord)
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   83:			add_elem(m, create_element(el->nume,el->producator,el->cantitate));
+        2:   83-block  0
+call    0 returned 2
+call    1 returned 2
+        -:   84:	}
+        1:   85:	return m;
+        1:   85-block  0
+        -:   86:}
+        -:   87:
+function filtru_nume called 1 returned 100% blocks executed 100%
+        1:   88:lista* filtru_nume(service* srv, char* chr)
+        -:   89:{
+        1:   90:    lista* m = create_lista();
+        1:   90-block  0
+call    0 returned 1
+        1:   91:    lista* v = srv->repo->elemente;
+        -:   92:    int i;
+        4:   93:    for(i=0;i<v->length;i++)
+        3:   93-block  0
+        4:   93-block  1
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        -:   94:    {
+        -:   95:        element* el;
+        3:   96:        el = get(v, i);
+        3:   96-block  0
+call    0 returned 3
+        3:   97:        if(el->nume[0] == chr[0])
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   98:            add_elem(m, create_element(el->nume, el->producator, el->cantitate));
+        2:   98-block  0
+call    0 returned 2
+call    1 returned 2
+        -:   99:    }
+        1:  100:    return m;
+        1:  100-block  0
+        -:  101:}
+        -:  102:
+        -:  103://lista sortare(lista* v)
+        -:  104://{
+        -:  105://	lista m = create_lista();
+        -:  106://	int i ;
+        -:  107://	for (i = 0; i < v->length; i++)
+        -:  108://	{
+        -:  109://		element el;
+        -:  110://		el = get(v, i);
+        -:  111://		add_elem(&m, create_element(el.nume, el.producator, el.cantitate));
+        -:  112://	}
+        -:  113://	int j;
+        -:  114://	
+        -:  115://	for (i = 0; i < m.length-1; i++)
+        -:  116://	{
+        -:  117://		for (j = i+1; j < m.length; j++)
+        -:  118://		{
+        -:  119://			if (m.elems[i].cantitate > m.elems[j].cantitate)
+        -:  120://			{
+        -:  121://				element eli,elj,ela;
+        -:  122://				eli = get(&m, i);
+        -:  123://				elj = get(&m, j);
+        -:  124://				ela=set_element(&m, i, elj);
+        -:  125://				ela=set_element(&m, j, eli);
+        -:  126://				
+        -:  127://				
+        -:  128://			}
+        -:  129://		}
+        -:  130://	}
+        -:  131://	return m;
+        -:  132://}
+        -:  133:
+function cmpfc_cantitate called 6 returned 100% blocks executed 100%
+        6:  134:int cmpfc_cantitate(element* el1, element* el2,int optiune)
+        -:  135:{
+        6:  136:    if(optiune) {
+        6:  136-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 3
+        3:  137:        return el1->cantitate > el2->cantitate;
+        3:  137-block  0
+        -:  138:    } else {
+        3:  139:        return el1->cantitate < el2->cantitate;    }
+        3:  139-block  0
+        -:  140:}
+        -:  141:
+function cmpfc_nume called 6 returned 100% blocks executed 100%
+        6:  142:int cmpfc_nume(element* el1, element* el2, int optiune)
+        -:  143:{
+        6:  144:    if(optiune){
+        6:  144-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 3
+        3:  145:        return strcmp(el1->nume, el2->nume)>0;
+        3:  145-block  0
+        -:  146:    } else {
+        3:  147:        return strcmp(el1->nume, el2->nume)<0;
+        3:  147-block  0
+        -:  148:    }
+        -:  149:}
+        -:  150:
+function sortare called 4 returned 100% blocks executed 100%
+        4:  151:lista* sortare(service* srv,Compararefct cmpfc, int optiune)
+        -:  152:{
+        4:  153:	lista* m = create_lista();
+        4:  153-block  0
+call    0 returned 4
+        4:  154:    lista* v = srv->repo->elemente;
+        -:  155:	
+        -:  156:	int i;
+       16:  157:	for (i = 0; i < v->length; i++)
+       16:  157-block  0
+branch  0 taken 12
+branch  1 taken 4 (fallthrough)
+        -:  158:	{
+        -:  159:		element* el;
+       12:  160:		el = get(v, i);
+       12:  160-block  0
+call    0 returned 12
+       12:  161:		add_elem(m, create_element(el->nume, el->producator, el->cantitate));
+call    0 returned 12
+call    1 returned 12
+        -:  162:	}
+        -:  163:	int j;
+        -:  164:
+       12:  165:	for (i = 0; i < m->length - 1; i++)
+        4:  165-block  0
+        8:  165-block  1
+       12:  165-block  2
+branch  0 taken 8
+branch  1 taken 4 (fallthrough)
+        -:  166:	{
+       20:  167:		for (j = i + 1; j < m->length; j++)
+        8:  167-block  0
+       12:  167-block  1
+       20:  167-block  2
+branch  0 taken 12
+branch  1 taken 8 (fallthrough)
+        -:  168:		{
+       12:  169:			if (cmpfc(m->elems[i],m->elems[j], optiune)==1)
+       12:  169-block  0
+call    0 returned 12
+branch  1 taken 6 (fallthrough)
+branch  2 taken 6
+        -:  170:			{
+        -:  171:				ElemType eli, elj, ela;
+        6:  172:				eli = get(m, i);
+        6:  172-block  0
+call    0 returned 6
+        6:  173:				elj = get(m, j);
+call    0 returned 6
+        6:  174:				ela = set_element(m, i, elj);
+call    0 returned 6
+        6:  175:				ela = set_element(m, j, eli);
+call    0 returned 6
+        -:  176:
+        -:  177:
+        -:  178:			}
+        -:  179:		}
+        -:  180:	}
+        4:  181:	return m;
+        4:  181-block  0
+        -:  182:}
+        -:  183:
+function apelare_undo called 1 returned 100% blocks executed 100%
+        1:  184:int apelare_undo(service* srv){
+        1:  185:    return executare_undo(srv->repo);
+        1:  185-block  0
+call    0 returned 1
+        -:  186:}
+        -:  187:
+function multiplu_trei called 1 returned 100% blocks executed 100%
+        1:  188:lista* multiplu_trei(service* srv, char* chr)
+        -:  189:{
+        1:  190:    lista* m = create_lista();
+        1:  190-block  0
+call    0 returned 1
+        1:  191:    lista* v = srv->repo->elemente;
+        -:  192:    int i;
+        4:  193:    for(i=0;i<v->length;i++)
+        3:  193-block  0
+        4:  193-block  1
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        -:  194:    {
+        -:  195:        element* el;
+        3:  196:        el = get(v, i);
+        3:  196-block  0
+call    0 returned 3
+        3:  197:        if((strcmp(el->nume, chr) == 0) && (el->cantitate%3 ==0))
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:  197-block  0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  198:            add_elem(m, create_element(el->nume, el->producator, el->cantitate));
+        1:  198-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  199:    }
+        1:  200:    return m;
+        1:  200-block  0
+        -:  201:}

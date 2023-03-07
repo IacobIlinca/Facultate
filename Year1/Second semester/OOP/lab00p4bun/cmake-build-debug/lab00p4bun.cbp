@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lab00p4bun"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab00p4bun">
+				<Option output="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/lab00p4bun" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab00p4bun"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab00p4bun/fast">
+				<Option output="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/lab00p4bun" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab00p4bun/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/element.c">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/element.h">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/lista.c">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/lista.h">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/main.c">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/service.c">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/service.h">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/teste.c">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/teste.h">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/repo.c">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/repo.h">
+			<Option target="lab00p4bun"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

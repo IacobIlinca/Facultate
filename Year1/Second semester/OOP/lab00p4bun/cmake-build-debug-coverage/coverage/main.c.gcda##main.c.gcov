@@ -1,0 +1,441 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/main.c
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/main.c.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <string.h>
+        -:    4:#include "service.h"
+        -:    5:#include "teste.h"
+        -:    6:#define _CRTDBG_MAP_ALLOC 
+        -:    7://#include <crtdbg.h>
+        -:    8:
+        -:    9:void run_ui();
+        -:   10:void ui_add(service *srv);
+        -:   11:void ui_sterge(service *srv);
+        -:   12:void ui_modifica(service *srv);
+        -:   13:void ui_filtru(service *srv);
+        -:   14:void ui_sort(service* srv);
+        -:   15:void ui_print(lista *v);
+        -:   16:void ui_sort_cmp(service* srv);
+        -:   17:void ui_undo(service* srv);
+        -:   18:void ui_multiplu_trei(service* srv);
+        -:   19:
+function main called 1 returned 100% blocks executed 100%
+        1:   20:int main()
+        -:   21:{
+        -:   22:
+        1:   23:	run_all_tests();
+        1:   23-block  0
+call    0 returned 1
+        1:   24:	run_ui();
+call    0 returned 1
+        -:   25:	//_CrtDumpMemoryLeaks();
+        1:   26:	return 0;
+        -:   27:}
+        -:   28:
+function print_meniu called 1 returned 100% blocks executed 100%
+        1:   29:void print_meniu()
+        -:   30:{
+        1:   31:    printf("Program minunat realizat cu multa munca si truda...\n");
+        1:   31-block  0
+call    0 returned 1
+        1:   32:    printf("Developement team: Dani \n");
+call    0 returned 1
+        1:   33:    printf("Meniu programel cofetarie :\n");
+call    0 returned 1
+        1:   34:    printf("1. adauga materie \n");
+call    0 returned 1
+        1:   35:    printf("2. sterge materie \n");
+call    0 returned 1
+        1:   36:    printf("3. modifica materie \n");
+call    0 returned 1
+        1:   37:    printf("4. afiseaza materii dupa criteriu \n");
+call    0 returned 1
+        1:   38:    printf("5. ordoneaza dupa nume sau cantitate \n");
+call    0 returned 1
+        1:   39:    printf("6. afiseaza elementele\n");
+call    0 returned 1
+        1:   40:    printf("7. undo\n");
+call    0 returned 1
+        1:   41:    printf("8. Filtrare noua-dupa nume si cantitate multipliu de 3\n");
+call    0 returned 1
+        1:   42:    printf("0. exit \n");
+call    0 returned 1
+        1:   43:}
+        -:   44:
+        -:   45:
+function run_ui called 1 returned 100% blocks executed 71%
+        1:   46:void run_ui()
+        -:   47:{
+        1:   48:	int cmd=69;
+        1:   49:	repository* repo = creeaza_repository();
+        1:   49-block  0
+call    0 returned 1
+        1:   50:    service* srv = creeaza_service(repo);
+call    0 returned 1
+        -:   51:	//lista v = create_lista();
+        -:   52:
+        1:   53:	while (cmd!=0)
+        1:   53-block  0
+branch  0 taken 1
+branch  1 taken 0 (fallthrough)
+        -:   54:	{
+        1:   55:        print_meniu();
+        1:   55-block  0
+call    0 returned 1
+        1:   56:		printf(">> ");
+call    0 returned 1
+        1:   57:		scanf("%d", &cmd);
+call    0 returned 1
+        -:   58:
+        1:   59:		if (cmd == 1)
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   60:			ui_add(srv);
+    %%%%%:   60-block  0
+call    0 never executed
+        -:   61:
+        1:   62:		if (cmd == 2)
+        1:   62-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   63:			ui_sterge(srv);
+    %%%%%:   63-block  0
+call    0 never executed
+        -:   64:
+        1:   65:		if (cmd == 3)
+        1:   65-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   66:			ui_modifica(srv);
+    %%%%%:   66-block  0
+call    0 never executed
+        -:   67:
+        1:   68:		if (cmd == 4)
+        1:   68-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   69:			ui_filtru(srv);
+    %%%%%:   69-block  0
+call    0 never executed
+        -:   70:
+        1:   71:		if (cmd == 5)
+        1:   71-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   72:			ui_sort(srv);
+    %%%%%:   72-block  0
+call    0 never executed
+        -:   73:
+        1:   74:		if (cmd == 6)
+        1:   74-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   75:			ui_print(srv->repo->elemente);
+    %%%%%:   75-block  0
+call    0 never executed
+        -:   76:
+        1:   77:        if (cmd == 7)
+        1:   77-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   78:            ui_undo(srv);
+    %%%%%:   78-block  0
+call    0 never executed
+        -:   79:
+        1:   80:        if (cmd == 8)
+        1:   80-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   81:            ui_multiplu_trei(srv);
+    %%%%%:   81-block  0
+call    0 never executed
+        -:   82:
+        1:   83:		if (cmd == 0)
+        1:   83-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        -:   84:		{	
+        1:   85:			destroy_service(srv);
+        1:   85-block  0
+call    0 returned 1
+        1:   86:			printf("Gata pe azi...\n");
+call    0 returned 1
+        1:   87:			break;
+        -:   88:		}
+        -:   89:
+        -:   90:		
+        -:   91:	}
+        1:   92:}
+        -:   93:
+function ui_add called 0 returned 0% blocks executed 0%
+    #####:   94:void ui_add(service *srv)
+        -:   95:{
+    #####:   96:	printf("Adaugare materie...\n");
+    %%%%%:   96-block  0
+call    0 never executed
+        -:   97:	char nume[30], producator[30];
+        -:   98:	int cantitate;
+    #####:   99:	printf("Introdu numele :\n");
+call    0 never executed
+    #####:  100:	scanf("%s", nume);
+call    0 never executed
+        -:  101:
+    #####:  102:	printf("Introdu producator :\n");
+call    0 never executed
+    #####:  103:	scanf("%s", producator);
+call    0 never executed
+        -:  104:
+    #####:  105:	printf("Cantiate : \n");
+call    0 never executed
+    #####:  106:	scanf("%d", &cantitate);
+call    0 never executed
+        -:  107:
+    #####:  108:	int a = add_element(srv, nume, producator, cantitate);
+call    0 never executed
+    #####:  109:	if (a == 0)
+branch  0 never executed
+branch  1 never executed
+        -:  110:	{
+    #####:  111:		printf("Nu s a adaugat");
+    %%%%%:  111-block  0
+call    0 never executed
+        -:  112:	}
+    #####:  113:	else printf("Materie adaugata cu suuces ");
+    %%%%%:  113-block  0
+call    0 never executed
+        -:  114:
+    #####:  115:}
+        -:  116:
+function ui_print called 0 returned 0% blocks executed 0%
+    #####:  117:void ui_print(lista* v)
+        -:  118:{
+    #####:  119:	printf("%d <--\n", size(v));
+    %%%%%:  119-block  0
+call    0 never executed
+call    1 never executed
+    #####:  120:	for (int i = 0; i < v->length; i++)
+    %%%%%:  120-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  121:	{
+    #####:  122:        element* el = v->elems[i];
+    #####:  123:		printf("%s  :  %s  :  %d \n",el->nume, el->producator, el->cantitate);
+    %%%%%:  123-block  0
+call    0 never executed
+        -:  124:	}
+        -:  125:
+    #####:  126:}
+        -:  127:
+function ui_sterge called 0 returned 0% blocks executed 0%
+    #####:  128:void ui_sterge(service* srv)
+        -:  129:{
+    #####:  130:	printf("Stergere materie...\n");
+    %%%%%:  130-block  0
+call    0 never executed
+        -:  131:	char nume[30];
+    #####:  132:	printf("Introdu nume : \n");
+call    0 never executed
+    #####:  133:	scanf("%s", nume);
+call    0 never executed
+    #####:  134:	int a = sterge_elemet(srv, nume);
+call    0 never executed
+    #####:  135:	if (a == 0) printf("Nu s a sters !\n");
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  135-block  0
+call    2 never executed
+    #####:  136:	else printf("Stergere efectuata cu suuces \n");
+    %%%%%:  136-block  0
+call    0 never executed
+        -:  137:
+    #####:  138:}
+        -:  139:
+function ui_modifica called 0 returned 0% blocks executed 0%
+    #####:  140:void ui_modifica(service* srv)
+        -:  141:{
+    #####:  142:	printf("Modificare element... \n");
+    %%%%%:  142-block  0
+call    0 never executed
+        -:  143:	char nume[30]; int cannou;
+    #####:  144:	printf("Introdu numele :\n");
+call    0 never executed
+    #####:  145:	scanf("%s", nume);
+call    0 never executed
+        -:  146:
+    #####:  147:	printf("Introdu cantitate noua :\n");
+call    0 never executed
+    #####:  148:	scanf("%d", &cannou);
+call    0 never executed
+        -:  149:
+    #####:  150:	int a = modifica_element(srv, nume,cannou);
+call    0 never executed
+    #####:  151:	if (a == 0) printf("Modificare a esuat !\n");
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  151-block  0
+call    2 never executed
+    #####:  152:	else printf("Modificare realizata cu suuces \n");
+    %%%%%:  152-block  0
+call    0 never executed
+        -:  153:
+    #####:  154:}
+        -:  155:
+function ui_filtru called 0 returned 0% blocks executed 0%
+    #####:  156:void ui_filtru(service* srv)
+        -:  157:{
+    #####:  158:    printf("Filtrare in functie de nume-o litera/ cantitate?: \n");
+    %%%%%:  158-block  0
+call    0 never executed
+        -:  159:    char optiune[100];
+    #####:  160:    scanf("%s", optiune);
+call    0 never executed
+    #####:  161:    lista* lista_filt = NULL;
+    #####:  162:    if(strcmp(optiune, "cantitate") == 0)
+branch  0 never executed
+branch  1 never executed
+        -:  163:    {
+        -:  164:        int cant;
+    #####:  165:        printf("Introduceti cantitatea: \n");
+    %%%%%:  165-block  0
+call    0 never executed
+    #####:  166:        scanf("%d", &cant);
+call    0 never executed
+    #####:  167:        lista_filt = filtru_cant(srv, cant);
+call    0 never executed
+    #####:  168:    } else if (strcmp(optiune, "nume") == 0)
+    %%%%%:  168-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  169:    {
+        -:  170:        char chr[10];
+    #####:  171:        printf("Introduceti prima litera a produsului(majuscula): \n");
+    %%%%%:  171-block  0
+call    0 never executed
+    #####:  172:        scanf("%s", chr);
+call    0 never executed
+    #####:  173:        lista_filt = filtru_nume(srv, chr);
+call    0 never executed
+        -:  174:    }
+    #####:  175:    if(lista_filt == NULL) return;
+    %%%%%:  175-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  175-block  1
+    #####:  176:    ui_print(lista_filt);
+    %%%%%:  176-block  0
+call    0 never executed
+    #####:  177:    destroy_lista(lista_filt);
+call    0 never executed
+        -:  178:}
+        -:  179:
+function ui_sort called 0 returned 0% blocks executed 0%
+    #####:  180:void ui_sort(service* srv)
+        -:  181:{
+    #####:  182:    printf("Nume/Cantitate: \n");
+    %%%%%:  182-block  0
+call    0 never executed
+        -:  183:    char optiune[100];
+    #####:  184:    scanf("%s", optiune);
+call    0 never executed
+        -:  185:
+    #####:  186:    printf("1-ascendent, 0- descendent");
+call    0 never executed
+        -:  187:    int directie;
+    #####:  188:    scanf("%d", &directie);
+call    0 never executed
+        -:  189:
+    #####:  190:    lista* lista_sort = NULL;
+    #####:  191:    if(strcmp(optiune, "cantitate") == 0)
+branch  0 never executed
+branch  1 never executed
+        -:  192:    {
+    #####:  193:        lista_sort = sortare(srv, cmpfc_cantitate, directie);
+    %%%%%:  193-block  0
+call    0 never executed
+    #####:  194:    } else if (strcmp(optiune, "nume") == 0)
+    %%%%%:  194-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  195:    {
+    #####:  196:        lista_sort = sortare(srv, cmpfc_nume, directie);
+    %%%%%:  196-block  0
+call    0 never executed
+        -:  197:    }
+    #####:  198:    if(lista_sort == NULL) return;
+    %%%%%:  198-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  198-block  1
+    #####:  199:    ui_print(lista_sort);
+    %%%%%:  199-block  0
+call    0 never executed
+    #####:  200:    destroy_lista(lista_sort);
+call    0 never executed
+        -:  201:}
+        -:  202:
+function ui_undo called 0 returned 0% blocks executed 0%
+    #####:  203:void ui_undo(service* srv)
+        -:  204:{
+    #####:  205:    int rezultat = apelare_undo(srv);
+    %%%%%:  205-block  0
+call    0 never executed
+    #####:  206:    if(rezultat)
+branch  0 never executed
+branch  1 never executed
+    #####:  207:        printf("Undo efectuat cu succes!!!!\n");
+    %%%%%:  207-block  0
+call    0 never executed
+        -:  208:    else
+    #####:  209:        printf("IMPOSIBIL DE REALIZAT UNDO!!!\n");
+    %%%%%:  209-block  0
+call    0 never executed
+    #####:  210:}
+        -:  211:
+function ui_multiplu_trei called 0 returned 0% blocks executed 0%
+    #####:  212:void ui_multiplu_trei(service* srv)
+        -:  213:{
+    #####:  214:    printf("Filtrare in functie de nume si cantitate multipla de 3: \n");
+    %%%%%:  214-block  0
+call    0 never executed
+        -:  215:    char nume[100];
+    #####:  216:    scanf("%s", nume);
+call    0 never executed
+    #####:  217:    lista* lista_mult = NULL;
+    #####:  218:    lista_mult = multiplu_trei(srv, nume);
+call    0 never executed
+        -:  219:
+    #####:  220:    if(lista_mult == NULL) return;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  220-block  0
+    #####:  221:    ui_print(lista_mult);
+    %%%%%:  221-block  0
+call    0 never executed
+    #####:  222:    destroy_lista(lista_mult);
+call    0 never executed
+        -:  223:}
+        -:  224:
+        -:  225:
+        -:  226:
+        -:  227://void ui_filtru(service* srv)
+        -:  228://{
+        -:  229://	printf("Afisare materie cu cantitate mai mica decat cea data :\n");
+        -:  230://	int can;
+        -:  231://	printf("Introodu cantitate :\n");
+        -:  232://	scanf("%d", &can);
+        -:  233://
+        -:  234://	lista lisfiltr = filtru_crit(v, can);
+        -:  235://	ui_print(&lisfiltr);
+        -:  236://	destroy_lista(&lisfiltr);
+        -:  237://}
+        -:  238://void ui_sort(lista* v)
+        -:  239://{
+        -:  240://	printf("sortare cresc dupa cantitate..\n");
+        -:  241://
+        -:  242://	lista lista_sort = sortare(v, cmpfc);
+        -:  243://	ui_print(&lista_sort);
+        -:  244://	destroy_lista(&lista_sort);
+        -:  245://}
+        -:  246:

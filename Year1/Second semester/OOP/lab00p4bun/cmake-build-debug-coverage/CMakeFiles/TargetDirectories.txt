@@ -1,0 +1,3 @@
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir

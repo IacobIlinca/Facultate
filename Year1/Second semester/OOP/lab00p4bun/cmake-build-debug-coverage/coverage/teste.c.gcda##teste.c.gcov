@@ -1,0 +1,891 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/teste.c
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/teste.c.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/teste.c.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "teste.h"
+        -:    3:#include <stdlib.h>
+        -:    4:#include <string.h>
+        -:    5:#include <assert.h>
+        -:    6:#include <stdio.h>
+        -:    7:
+        -:    8:
+        -:    9://teste element
+function test_crez_destroy_element called 1 returned 100% blocks executed 67%
+        1:   10:void test_crez_destroy_element()
+        -:   11:{
+        1:   12:	char *a="abc", *b="abc";
+        1:   13:	int c=69;
+        -:   14:	element* el;
+        1:   15:	el = create_element(a, b, c);
+        1:   15-block  0
+call    0 returned 1
+       1*:   16:	assert(el->cantitate == c);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   16-block  0
+call    2 never executed
+       1*:   17:	assert(strcmp(el->nume, a) == 0);
+        1:   17-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   17-block  1
+call    2 never executed
+       1*:   18:	assert(strcmp(el->producator, b) == 0);
+        1:   18-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   18-block  1
+call    2 never executed
+        1:   19:	destroy_element(el);
+        1:   19-block  0
+call    0 returned 1
+        1:   20:}
+function test_valid_element called 1 returned 100% blocks executed 81%
+        1:   21:void test_valid_element()
+        -:   22:{
+        1:   23:	char a[30] = "abc", b[30] = "abc";
+        1:   24:	int c = 69;
+        -:   25:	element* el,*el2;
+        1:   26:    el = create_element(a, b, c);
+        1:   26-block  0
+call    0 returned 1
+       1*:   27:    assert(valid_element(el) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   27-block  0
+call    3 never executed
+        1:   28:    el2 = create_element("", "", -34);
+        1:   28-block  0
+call    0 returned 1
+       1*:   29:    assert(valid_element(el2) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   29-block  0
+call    3 never executed
+        1:   30:    destroy_element(el2);
+        1:   30-block  0
+call    0 returned 1
+        1:   31:    el2 = create_element("a", "", -34);
+call    0 returned 1
+       1*:   32:    assert(valid_element(el2) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   32-block  0
+call    3 never executed
+        1:   33:    destroy_element(el2);
+        1:   33-block  0
+call    0 returned 1
+        1:   34:    el2 = create_element("a", "a", -34);
+call    0 returned 1
+       1*:   35:    assert(valid_element(el2) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   35-block  0
+call    3 never executed
+        1:   36:    destroy_element(el2);
+        1:   36-block  0
+call    0 returned 1
+        1:   37:    destroy_element(el);
+call    0 returned 1
+        -:   38:
+        1:   39:}
+        -:   40:
+function test_copy_element called 1 returned 100% blocks executed 73%
+        1:   41:void test_copy_element() {
+        1:   42:    char a[30] = "abc", b[30] = "abc";
+        1:   43:    int c = 69;
+        -:   44:    element *el, *el2;
+        1:   45:    el = create_element(a, b, c);
+        1:   45-block  0
+call    0 returned 1
+        1:   46:    el2 = copy_element(el);
+call    0 returned 1
+       1*:   47:    assert(strcmp(el->nume, el2->nume) == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   47-block  0
+call    2 never executed
+       1*:   48:    assert(strcmp(el->producator, el2->producator) == 0);
+        1:   48-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   48-block  1
+call    2 never executed
+       1*:   49:    assert(el->cantitate == el2->cantitate);
+        1:   49-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   49-block  1
+call    2 never executed
+        1:   50:    destroy_element(el2);
+        1:   50-block  0
+call    0 returned 1
+        1:   51:    destroy_element(el);
+call    0 returned 1
+        1:   52:}
+        -:   53://teste lista
+        -:   54:
+function test_crez_dest_lista called 1 returned 100% blocks executed 70%
+        1:   55:void test_crez_dest_lista(){
+        -:   56:	lista* l;
+        1:   57:	l = create_lista();
+        1:   57-block  0
+call    0 returned 1
+       1*:   58:	assert(size(l) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   58-block  0
+call    3 never executed
+       1*:   59:	assert(l->capacity == 2);
+        1:   59-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   59-block  1
+call    2 never executed
+       1*:   60:	assert(l->length == 0);
+        1:   60-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   60-block  1
+call    2 never executed
+        1:   61:	destroy_lista(l);
+        1:   61-block  0
+call    0 returned 1
+        -:   62:	//assert(l->length == 0);
+        1:   63:}
+        -:   64:
+        -:   65:
+function test_agss called 1 returned 100% blocks executed 82%
+        1:   66:void test_agss()
+        -:   67:{
+        -:   68:    lista *l;
+        1:   69:    l = create_lista();
+        1:   69-block  0
+call    0 returned 1
+       1*:   70:    assert(size(l) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   70-block  0
+call    3 never executed
+        -:   71:    element *el1, *el2;
+        1:   72:    el1 = create_element("a", "a", 23);
+        1:   72-block  0
+call    0 returned 1
+        1:   73:    add_elem(l, el1);
+call    0 returned 1
+       1*:   74:    assert(size(l) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   74-block  0
+call    3 never executed
+        1:   75:    el2 = create_element("b", "b", 12);
+        1:   75-block  0
+call    0 returned 1
+        1:   76:    element *el3 = set_element(l, 0, el2);
+call    0 returned 1
+        1:   77:    destroy_element(el1);
+call    0 returned 1
+        1:   78:    element *el = l->elems[0];
+       1*:   79:    assert(el->cantitate == 12);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   79-block  0
+call    2 never executed
+        1:   80:    element *el4 = create_element("aaaa", "bbb", 25);
+        1:   80-block  0
+call    0 returned 1
+        1:   81:    add_elem(l, el4);
+call    0 returned 1
+        1:   82:    element *el5 = create_element("aaaaaa", "bbb", 25);
+call    0 returned 1
+        1:   83:    add_elem(l, el5);
+call    0 returned 1
+       1*:   84:    assert(l->capacity == 4);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   84-block  0
+call    2 never executed
+        1:   85:    destroy_lista(l);
+        1:   85-block  0
+call    0 returned 1
+        -:   86:
+        1:   87:}
+        -:   88:
+function test_stergere_lista called 1 returned 100% blocks executed 80%
+        1:   89:void test_stergere_lista() {
+        -:   90:    lista *l;
+        1:   91:    l = create_lista();
+        1:   91-block  0
+call    0 returned 1
+       1*:   92:    assert(size(l) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   92-block  0
+call    3 never executed
+        -:   93:    element *el1, *el2;
+        1:   94:    el1 = create_element("a", "a", 23);
+        1:   94-block  0
+call    0 returned 1
+        1:   95:    add_elem(l, el1);
+call    0 returned 1
+       1*:   96:    assert(size(l) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   96-block  0
+call    3 never executed
+        1:   97:    el2 = create_element("b", "b", 12);
+        1:   97-block  0
+call    0 returned 1
+        1:   98:    add_elem(l, el2);
+call    0 returned 1
+        1:   99:    stergere(l, 0);
+call    0 returned 1
+       1*:  100:    assert(size(l) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  100-block  0
+call    3 never executed
+        1:  101:    element *remaining = l->elems[0];
+       1*:  102:    assert(remaining->cantitate == 12);
+        1:  102-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  102-block  1
+call    2 never executed
+        1:  103:    destroy_element(el1);
+        1:  103-block  0
+call    0 returned 1
+        1:  104:    destroy_lista(l);
+call    0 returned 1
+        1:  105:}
+        -:  106:
+        -:  107:
+        -:  108://teste repo
+function test_create_destroy_repo called 1 returned 100% blocks executed 78%
+        1:  109:void test_create_destroy_repo() {
+        1:  110:    repository *repo = creeaza_repository();
+        1:  110-block  0
+call    0 returned 1
+       1*:  111:    assert(size(repo->elemente) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  111-block  0
+call    3 never executed
+       1*:  112:    assert(size(repo->lista_undo) == 0);
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  112-block  1
+call    3 never executed
+        1:  113:    distruge_repository(repo);
+        1:  113-block  0
+call    0 returned 1
+        1:  114:}
+        -:  115:
+        -:  116:
+function test_copy_list called 1 returned 100% blocks executed 89%
+        1:  117:void test_copy_list() {
+        1:  118:    repository *repo = creeaza_repository();
+        1:  118-block  0
+call    0 returned 1
+        1:  119:    element *el1 = create_element("a", "a", 23);
+call    0 returned 1
+        1:  120:    add_repository(repo, el1);
+call    0 returned 1
+        1:  121:    lista *list = copy_list(repo);
+call    0 returned 1
+        1:  122:    element *copyEl = list->elems[0];
+       1*:  123:    assert(el1->cantitate == copyEl->cantitate);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  123-block  0
+call    2 never executed
+        1:  124:    destroy_lista(list);
+        1:  124-block  0
+call    0 returned 1
+        1:  125:    distruge_repository(repo);
+call    0 returned 1
+        1:  126:}
+        -:  127:
+function test_stergere_repo called 1 returned 100% blocks executed 85%
+        1:  128:void test_stergere_repo() {
+        1:  129:    repository *repo = creeaza_repository();
+        1:  129-block  0
+call    0 returned 1
+        1:  130:    element *el1 = create_element("a", "a", 23);
+call    0 returned 1
+        1:  131:    add_repository(repo, el1);
+call    0 returned 1
+       1*:  132:    assert(size(repo->elemente) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  132-block  0
+call    3 never executed
+        1:  133:    stergere_repository(repo, 0);
+        1:  133-block  0
+call    0 returned 1
+       1*:  134:    assert(size(repo->elemente) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  134-block  0
+call    3 never executed
+        1:  135:    distruge_repository(repo);
+        1:  135-block  0
+call    0 returned 1
+        1:  136:    destroy_element(el1);
+call    0 returned 1
+        1:  137:}
+        -:  138:
+function test_modifica_repo called 1 returned 100% blocks executed 88%
+        1:  139:void test_modifica_repo() {
+        1:  140:    repository *repo = creeaza_repository();
+        1:  140-block  0
+call    0 returned 1
+        1:  141:    element *el1 = create_element("a", "a", 23);
+call    0 returned 1
+        1:  142:    add_repository(repo, el1);
+call    0 returned 1
+        1:  143:    modificare_repository(repo, 0, 50);
+call    0 returned 1
+        1:  144:    el1 = repo->elemente->elems[0];
+       1*:  145:    assert(el1->cantitate == 50);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  145-block  0
+call    2 never executed
+        1:  146:    distruge_repository(repo);
+        1:  146-block  0
+call    0 returned 1
+        1:  147:}
+        -:  148:
+function test_executare_undo called 1 returned 100% blocks executed 80%
+        1:  149:void test_executare_undo() {
+        1:  150:    repository *repo = creeaza_repository();
+        1:  150-block  0
+call    0 returned 1
+       1*:  151:    assert(executare_undo(repo) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  151-block  0
+call    3 never executed
+        1:  152:    element *el1 = create_element("a", "a", 23);
+        1:  152-block  0
+call    0 returned 1
+        1:  153:    add_repository(repo, el1);
+call    0 returned 1
+       1*:  154:    assert(size(repo->elemente) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  154-block  0
+call    3 never executed
+        1:  155:    element *el2 = create_element("aaa", "a", 23);
+        1:  155-block  0
+call    0 returned 1
+        1:  156:    add_repository(repo, el2);
+call    0 returned 1
+       1*:  157:    assert(size(repo->elemente) == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  157-block  0
+call    3 never executed
+        1:  158:    executare_undo(repo);
+        1:  158-block  0
+call    0 returned 1
+       1*:  159:    assert(size(repo->elemente) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  159-block  0
+call    3 never executed
+        1:  160:    distruge_repository(repo);
+        1:  160-block  0
+call    0 returned 1
+        1:  161:}
+        -:  162:
+        -:  163:
+        -:  164:
+        -:  165://teste service
+function test_add_elem called 1 returned 100% blocks executed 80%
+        1:  166:void test_add_elem()
+        -:  167:{
+        1:  168:    repository *repo = creeaza_repository();
+        1:  168-block  0
+call    0 returned 1
+        1:  169:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  170:    char *nume = "a";
+        1:  171:    char *producator = "a";
+        1:  172:    int a = add_element(service, nume, producator, 69);
+call    0 returned 1
+       1*:  173:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  173-block  0
+call    2 never executed
+        1:  174:    char *nume1 = "";
+        1:  175:    char *producator1 = "";
+        1:  176:    a = add_element(service, nume1, producator1, -90);
+        1:  176-block  0
+call    0 returned 1
+       1*:  177:    assert(a == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  177-block  0
+call    2 never executed
+        1:  178:    destroy_service(service);
+        1:  178-block  0
+call    0 returned 1
+        1:  179:}
+function test_sterge_elem called 1 returned 100% blocks executed 75%
+        1:  180:void test_sterge_elem()
+        -:  181:{
+        1:  182:    repository *repo = creeaza_repository();
+        1:  182-block  0
+call    0 returned 1
+        1:  183:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  184:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+        1:  185:    a = add_element(service, "b", "b", 89);
+call    0 returned 1
+       1*:  186:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  186-block  0
+call    2 never executed
+        1:  187:    a = sterge_elemet(service, "a");
+        1:  187-block  0
+call    0 returned 1
+       1*:  188:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  188-block  0
+call    2 never executed
+       1*:  189:    assert(size(repo->elemente) == 1);
+        1:  189-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  189-block  1
+call    3 never executed
+        1:  190:    element *el = get(repo->elemente, 0);
+        1:  190-block  0
+call    0 returned 1
+       1*:  191:    assert(el->cantitate == 89);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  191-block  0
+call    2 never executed
+        1:  192:    a = sterge_elemet(service, "w");
+        1:  192-block  0
+call    0 returned 1
+       1*:  193:    assert(a == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  193-block  0
+call    2 never executed
+        1:  194:    destroy_service(service);
+        1:  194-block  0
+call    0 returned 1
+        1:  195:}
+function test_modif_elem called 1 returned 100% blocks executed 74%
+        1:  196:void test_modif_elem()
+        -:  197:{
+        1:  198:    repository *repo = creeaza_repository();
+        1:  198-block  0
+call    0 returned 1
+        1:  199:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  200:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+       1*:  201:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  201-block  0
+call    2 never executed
+        1:  202:    a = modifica_element(service, "a", 23);
+        1:  202-block  0
+call    0 returned 1
+        1:  203:    element *el = get(repo->elemente, 0);
+call    0 returned 1
+       1*:  204:    assert(el->cantitate == 23);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  204-block  0
+call    2 never executed
+       1*:  205:    assert(a == 1);
+        1:  205-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  205-block  1
+call    2 never executed
+       1*:  206:    assert(size(repo->elemente) == 1);
+        1:  206-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  206-block  1
+call    3 never executed
+        1:  207:    a = modifica_element(service, "c", 67);
+        1:  207-block  0
+call    0 returned 1
+       1*:  208:    assert(a == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  208-block  0
+call    2 never executed
+        1:  209:    destroy_service(service);
+        1:  209-block  0
+call    0 returned 1
+        1:  210:}
+function test_find_elem called 1 returned 100% blocks executed 80%
+        1:  211:void test_find_elem()
+        -:  212:{
+        1:  213:    repository *repo = creeaza_repository();
+        1:  213-block  0
+call    0 returned 1
+        1:  214:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  215:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+       1*:  216:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  216-block  0
+call    2 never executed
+        1:  217:    a = find_element(repo->elemente, "a");
+        1:  217-block  0
+call    0 returned 1
+       1*:  218:    assert(a == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  218-block  0
+call    2 never executed
+        1:  219:    destroy_service(service);
+        1:  219-block  0
+call    0 returned 1
+        -:  220:
+        1:  221:}
+function test_sort called 1 returned 100% blocks executed 68%
+        1:  222:void test_sort()
+        -:  223:{
+        1:  224:    repository *repo = creeaza_repository();
+        1:  224-block  0
+call    0 returned 1
+        1:  225:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  226:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+       1*:  227:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  227-block  0
+call    2 never executed
+        1:  228:    a = add_element(service, "b", "b", 45);
+        1:  228-block  0
+call    0 returned 1
+        1:  229:    a = add_element(service, "c", "c", 90);
+call    0 returned 1
+        1:  230:    lista *sorted = sortare(service, (Compararefct) cmpfc_cantitate, 1);
+call    0 returned 1
+       1*:  231:    assert(size(sorted) == 3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  231-block  0
+call    3 never executed
+        1:  232:    element *el = sorted->elems[0];
+       1*:  233:    assert(el->cantitate == 45);
+        1:  233-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  233-block  1
+call    2 never executed
+        1:  234:    el = sorted->elems[1];
+       1*:  235:    assert(el->cantitate == 69);
+        1:  235-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  235-block  1
+call    2 never executed
+        1:  236:    el = sorted->elems[2];
+       1*:  237:    assert(el->cantitate == 90);
+        1:  237-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  237-block  1
+call    2 never executed
+        1:  238:    destroy_lista(sorted);
+        1:  238-block  0
+call    0 returned 1
+        1:  239:    sorted = sortare(service, (Compararefct) cmpfc_cantitate, 0);
+call    0 returned 1
+        1:  240:    el = sorted->elems[0];
+       1*:  241:    assert(el->cantitate == 90);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  241-block  0
+call    2 never executed
+        1:  242:    el = sorted->elems[1];
+       1*:  243:    assert(el->cantitate == 69);
+        1:  243-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  243-block  1
+call    2 never executed
+        1:  244:    el = sorted->elems[2];
+       1*:  245:    assert(el->cantitate == 45);
+        1:  245-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  245-block  1
+call    2 never executed
+        1:  246:    destroy_lista(sorted);
+        1:  246-block  0
+call    0 returned 1
+        1:  247:    sorted = sortare(service, (Compararefct) cmpfc_nume, 1);
+call    0 returned 1
+        1:  248:    el = sorted->elems[0];
+       1*:  249:    assert(strcmp(el->nume, "a") == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  249-block  0
+call    2 never executed
+        1:  250:    el = sorted->elems[1];
+       1*:  251:    assert(strcmp(el->nume, "b") == 0);
+        1:  251-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  251-block  1
+call    2 never executed
+        1:  252:    el = sorted->elems[2];
+       1*:  253:    assert(strcmp(el->nume, "c") == 0);
+        1:  253-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  253-block  1
+call    2 never executed
+        1:  254:    destroy_lista(sorted);
+        1:  254-block  0
+call    0 returned 1
+        1:  255:    sorted = sortare(service, (Compararefct) cmpfc_nume, 0);
+call    0 returned 1
+        1:  256:    el = sorted->elems[0];
+       1*:  257:    assert(strcmp(el->nume, "c") == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  257-block  0
+call    2 never executed
+        1:  258:    el = sorted->elems[1];
+       1*:  259:    assert(strcmp(el->nume, "b") == 0);
+        1:  259-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  259-block  1
+call    2 never executed
+        1:  260:    el = sorted->elems[2];
+       1*:  261:    assert(strcmp(el->nume, "a") == 0);
+        1:  261-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  261-block  1
+call    2 never executed
+        1:  262:    destroy_lista(sorted);
+        1:  262-block  0
+call    0 returned 1
+        -:  263:
+        1:  264:    destroy_service(service);
+call    0 returned 1
+        -:  265:
+        1:  266:}
+        -:  267:
+function test_filtru called 1 returned 100% blocks executed 84%
+        1:  268:void test_filtru()
+        -:  269:{
+        1:  270:    repository *repo = creeaza_repository();
+        1:  270-block  0
+call    0 returned 1
+        1:  271:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  272:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+       1*:  273:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  273-block  0
+call    2 never executed
+        1:  274:    a = add_element(service, "b", "b", 45);
+        1:  274-block  0
+call    0 returned 1
+        1:  275:    a = add_element(service, "ac", "c", 90);
+call    0 returned 1
+        1:  276:    lista *fil = filtru_cant(service, 70);
+call    0 returned 1
+       1*:  277:    assert(size(fil) == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  277-block  0
+call    3 never executed
+        -:  278:
+        1:  279:    lista *filtr = filtru_nume(service, "a");
+        1:  279-block  0
+call    0 returned 1
+       1*:  280:    assert(size(filtr) == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  280-block  0
+call    3 never executed
+        -:  281:
+        1:  282:    destroy_service(service);
+        1:  282-block  0
+call    0 returned 1
+        1:  283:    destroy_lista(fil);
+call    0 returned 1
+        1:  284:    destroy_lista(filtr);
+call    0 returned 1
+        -:  285:
+        1:  286:}
+        -:  287:
+        -:  288:
+function test_undo called 1 returned 100% blocks executed 82%
+        1:  289:void test_undo() {
+        1:  290:    repository *repo = creeaza_repository();
+        1:  290-block  0
+call    0 returned 1
+        1:  291:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  292:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+       1*:  293:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  293-block  0
+call    2 never executed
+        1:  294:    apelare_undo(service);
+        1:  294-block  0
+call    0 returned 1
+       1*:  295:    assert(size(repo->elemente) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  295-block  0
+call    3 never executed
+        1:  296:    destroy_service(service);
+        1:  296-block  0
+call    0 returned 1
+        1:  297:}
+        -:  298:
+function test_multiplu_trei called 1 returned 100% blocks executed 86%
+        1:  299:void test_multiplu_trei()
+        -:  300:{
+        1:  301:    repository *repo = creeaza_repository();
+        1:  301-block  0
+call    0 returned 1
+        1:  302:    service *service = creeaza_service(repo);
+call    0 returned 1
+        1:  303:    int a = add_element(service, "a", "a", 69);
+call    0 returned 1
+       1*:  304:    assert(a == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  304-block  0
+call    2 never executed
+        1:  305:    a = add_element(service, "b", "b", 45);
+        1:  305-block  0
+call    0 returned 1
+        1:  306:    a = add_element(service, "ac", "c", 90);
+call    0 returned 1
+        1:  307:    lista *lista_mul = multiplu_trei(service, "ac");
+call    0 returned 1
+       1*:  308:    assert(size(lista_mul) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  308-block  0
+call    3 never executed
+        -:  309:
+        -:  310://    lista *filtr = filtru_nume(service, "a");
+        -:  311://    assert(size(filtr) == 2);
+        -:  312:
+        1:  313:    destroy_service(service);
+        1:  313-block  0
+call    0 returned 1
+        1:  314:    destroy_lista(lista_mul);
+call    0 returned 1
+        -:  315:
+        1:  316:}
+        -:  317:
+function run_all_tests called 1 returned 100% blocks executed 100%
+        1:  318:void run_all_tests()
+        -:  319:{	
+        1:  320:	printf("Start teste...\n");
+        1:  320-block  0
+call    0 returned 1
+        1:  321:	test_crez_destroy_element();
+call    0 returned 1
+        1:  322:	test_valid_element();
+call    0 returned 1
+        -:  323:
+        1:  324:    test_agss();
+call    0 returned 1
+        1:  325:    test_copy_element();
+call    0 returned 1
+        -:  326:
+        1:  327:    test_crez_dest_lista();
+call    0 returned 1
+        1:  328:    test_stergere_lista();
+call    0 returned 1
+        -:  329:
+        -:  330:
+        1:  331:    test_create_destroy_repo();
+call    0 returned 1
+        1:  332:    test_copy_list();
+call    0 returned 1
+        1:  333:    test_stergere_repo();
+call    0 returned 1
+        1:  334:    test_modifica_repo();
+call    0 returned 1
+        1:  335:    test_executare_undo();
+call    0 returned 1
+        -:  336:
+        -:  337:
+        1:  338:    test_add_elem();
+call    0 returned 1
+        1:  339:    test_sterge_elem();
+call    0 returned 1
+        1:  340:    test_modif_elem();
+call    0 returned 1
+        1:  341:    test_find_elem();
+call    0 returned 1
+        1:  342:    test_sort();
+call    0 returned 1
+        1:  343:    test_filtru();
+call    0 returned 1
+        1:  344:    test_undo();
+call    0 returned 1
+        1:  345:    test_multiplu_trei();
+call    0 returned 1
+        -:  346:
+        1:  347:    printf("Teste incheiate cu sucees , miramas...\n");
+call    0 returned 1
+        1:  348:}

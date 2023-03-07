@@ -1,0 +1,111 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/lista.c
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/lista.c.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/lista.c.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once 
+        -:    2:#include <string.h>
+        -:    3:#include <stdlib.h>
+        -:    4:#include "lista.h"
+        -:    5:
+function create_lista called 63 returned 100% blocks executed 100%
+       63:    6:lista* create_lista()
+        -:    7:{
+       63:    8:	lista* v = malloc(sizeof(lista));
+       63:    9:	v->capacity = 2;
+       63:   10:	v->length = 0;
+       63:   11:	v->elems = malloc(v->capacity * sizeof(ElemType));
+       63:   12:	return v;
+       63:   12-block  0
+        -:   13:}
+        -:   14:
+function destroy_lista called 49 returned 100% blocks executed 100%
+       49:   15:void destroy_lista(lista* v)
+        -:   16:{
+      105:   17:	for (int i = 0; i < v->length; i++)
+       49:   17-block  0
+      105:   17-block  1
+branch  0 taken 56
+branch  1 taken 49 (fallthrough)
+        -:   18:	{
+       56:   19:		element* el = get(v, i);
+       56:   19-block  0
+call    0 returned 56
+       56:   20:		destroy_element(el);
+call    0 returned 56
+        -:   21:	}
+       49:   22:	v->length = 0;
+       49:   23:	free(v->elems);
+       49:   24:    v->elems = NULL;
+       49:   25:    free(v);
+       49:   26:    v = NULL;
+       49:   27:}
+        -:   28:
+        -:   29:
+function get called 98 returned 100% blocks executed 100%
+       98:   30:ElemType get(lista* v, int poz)
+        -:   31:{
+       98:   32:	return v->elems[poz];
+       98:   32-block  0
+        -:   33:}
+        -:   34:
+        -:   35:
+        -:   36:
+        -:   37:
+function size called 20 returned 100% blocks executed 100%
+       20:   38:int size(lista* v)
+        -:   39:{
+       20:   40:	return v->length;
+       20:   40-block  0
+        -:   41:}
+        -:   42:
+        -:   43:
+function add_elem called 83 returned 100% blocks executed 100%
+       83:   44:void add_elem(lista* v, ElemType el)
+        -:   45:{
+       83:   46:	if (v->length == v->capacity)
+       83:   46-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 71
+        -:   47:	{
+       12:   48:		int newcapacity = v->capacity * 2;
+       12:   49:		ElemType* aux = malloc(sizeof(ElemType) * newcapacity);
+       36:   50:		for (int i = 0; i < v->length; i++)
+       12:   50-block  0
+       36:   50-block  1
+branch  0 taken 24
+branch  1 taken 12 (fallthrough)
+       24:   51:			aux[i] = v->elems[i];
+       24:   51-block  0
+        -:   52:
+       12:   53:		free(v->elems);
+       12:   54:		v->elems = aux;
+       12:   55:		v->capacity = newcapacity;
+       12:   55-block  0
+        -:   56:	}
+       83:   57:	v->elems[v->length] = el;
+       83:   58:	v->length++;
+       83:   59:}
+        -:   60:
+        -:   61:
+function stergere called 3 returned 100% blocks executed 100%
+        3:   62:ElemType stergere(lista* v, int poz)
+        -:   63:{
+        3:   64:	ElemType el = v->elems[poz];
+        3:   65:    v->length--;
+        3:   66:    v->elems[poz] = v->elems[v->length];
+        3:   67:    if(v->length <= v->capacity/4) v->capacity = v->capacity/4;
+        3:   67-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   67-block  1
+        3:   68:    return el;
+        3:   68-block  0
+        -:   69:}
+        -:   70:
+function set_element called 13 returned 100% blocks executed 100%
+       13:   71:ElemType set_element(lista* v, int poz, ElemType el) {
+       13:   72:	ElemType replacedElement = v->elems[poz];
+       13:   73:	v->elems[poz] = el;
+       13:   74:	return replacedElement;
+       13:   74-block  0
+        -:   75:}

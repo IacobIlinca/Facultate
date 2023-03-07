@@ -1,0 +1,1 @@
+/usr/bin/cc --coverage -g   CMakeFiles/lab00p4bun.dir/lab00p4bun/element.c.o CMakeFiles/lab00p4bun.dir/lab00p4bun/lista.c.o CMakeFiles/lab00p4bun.dir/lab00p4bun/main.c.o CMakeFiles/lab00p4bun.dir/lab00p4bun/service.c.o CMakeFiles/lab00p4bun.dir/lab00p4bun/teste.c.o CMakeFiles/lab00p4bun.dir/repo.c.o  -o lab00p4bun 

@@ -1,0 +1,68 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/lab00p4bun/element.c
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/element.c.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/lab00p4bun/element.c.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once 
+        -:    2:#include "element.h"
+        -:    3:#include <stdlib.h>
+        -:    4:#include <string.h>
+        -:    5:
+function create_element called 68 returned 100% blocks executed 100%
+       68:    6:element* create_element(char* nume, char* producator, int cantitate)
+        -:    7:{
+       68:    8:    element* el = malloc(sizeof (element));
+        -:    9:	
+       68:   10:	int nrc = (int)strlen(nume) + 1;
+       68:   11:	el->nume = malloc(nrc * sizeof(char));
+       68:   12:	strcpy(el->nume, nume);
+        -:   13:	//de retinut toata asta te rog danielll
+        -:   14:	
+       68:   15:	nrc = (int)strlen(producator) + 1;
+       68:   16:	el->producator = malloc(nrc * sizeof(char));
+       68:   17:	strcpy(el->producator, producator);
+        -:   18:
+       68:   19:	el->cantitate = cantitate;
+       68:   20:	return el;
+       68:   20-block  0
+        -:   21:}
+        -:   22:
+function copy_element called 18 returned 100% blocks executed 100%
+       18:   23:element* copy_element(element* el){
+       18:   24:    return create_element(el->nume, el->producator, el->cantitate);
+       18:   24-block  0
+call    0 returned 18
+        -:   25:}
+        -:   26:
+        -:   27:
+function destroy_element called 68 returned 100% blocks executed 100%
+       68:   28:void destroy_element(element* el)
+        -:   29:{
+       68:   30:	free(el->nume);
+       68:   31:    el->nume =  NULL;
+       68:   32:	free(el->producator);
+       68:   33:    el->producator = NULL;
+       68:   34:	free(el);
+       68:   35:    el = NULL;
+       68:   36:}
+        -:   37:
+function valid_element called 20 returned 100% blocks executed 100%
+       20:   38:int valid_element(element* el)
+        -:   39:{
+       20:   40:	if (strlen(el->nume) == 0) return 0;
+       20:   40-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 18
+        2:   40-block  1
+       18:   41:	if (strlen(el->producator) == 0) return 0;
+       18:   41-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 17
+        1:   41-block  1
+       17:   42:	if (el->cantitate < 0) return 0;
+       17:   42-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 16
+        1:   42-block  1
+       16:   43:	return 1;
+       16:   43-block  0
+        -:   44:}

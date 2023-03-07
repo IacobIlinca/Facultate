@@ -1,0 +1,113 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/repo.c
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/repo.c.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab00p4bun/lab00p4bun/cmake-build-debug-coverage/CMakeFiles/lab00p4bun.dir/repo.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 28-Mar-22.
+        -:    3://
+        -:    4:
+        -:    5:#include "repo.h"
+        -:    6:
+function creeaza_repository called 14 returned 100% blocks executed 100%
+       14:    7:repository* creeaza_repository(){
+       14:    8:    repository* repo = malloc(sizeof(repository));
+       14:    9:    repo->elemente = create_lista();
+       14:    9-block  0
+call    0 returned 14
+       14:   10:    repo->lista_undo = create_lista();
+call    0 returned 14
+       14:   11:    return repo;
+        -:   12:}
+        -:   13:
+function distruge_repository called 14 returned 100% blocks executed 100%
+       14:   14:void distruge_repository(repository* repo)
+        -:   15:{
+       14:   16:    destroy_lista(repo->elemente);
+       14:   16-block  0
+call    0 returned 14
+       36:   17:    for(int i=0;i<repo->lista_undo->length;i++)
+       36:   17-block  0
+branch  0 taken 22
+branch  1 taken 14 (fallthrough)
+       22:   18:        destroy_lista(repo->lista_undo->elems[i]);
+       22:   18-block  0
+call    0 returned 22
+       14:   19:    free(repo->lista_undo->elems);
+       14:   20:    repo->lista_undo->elems = NULL;
+       14:   21:    free(repo->lista_undo);
+       14:   22:    repo->lista_undo = NULL;
+       14:   23:    free(repo);
+       14:   24:    repo = NULL;
+        -:   25:
+       14:   26:}
+        -:   27:
+function copy_list called 25 returned 100% blocks executed 100%
+       25:   28:lista* copy_list(repository* repo)
+        -:   29:{
+       25:   30:    lista* list = create_lista();
+       25:   30-block  0
+call    0 returned 25
+       42:   31:    for(int i=0;i<repo->elemente->length;i++)
+       42:   31-block  0
+branch  0 taken 17
+branch  1 taken 25 (fallthrough)
+        -:   32:    {
+       17:   33:        element* el = copy_element(repo->elemente->elems[i]);
+       17:   33-block  0
+call    0 returned 17
+       17:   34:        add_elem(list,el);
+call    0 returned 17
+        -:   35:    }
+       25:   36:    return list;
+       25:   36-block  0
+        -:   37:}
+        -:   38:
+function add_repository called 20 returned 100% blocks executed 100%
+       20:   39:void add_repository(repository* repo, element* el)
+        -:   40:{
+       20:   41:    add_elem(repo->lista_undo, copy_list(repo));
+       20:   41-block  0
+call    0 returned 20
+call    1 returned 20
+       20:   42:    add_elem(repo->elemente, el);
+call    0 returned 20
+       20:   43:}
+        -:   44:
+function stergere_repository called 2 returned 100% blocks executed 100%
+        2:   45:ElemType stergere_repository(repository* repo, int poz)
+        -:   46:{
+        2:   47:    add_elem(repo->lista_undo, copy_list(repo));
+        2:   47-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   48:    return stergere(repo->elemente, poz);
+call    0 returned 2
+        -:   49:}
+        -:   50:
+function modificare_repository called 2 returned 100% blocks executed 100%
+        2:   51:void modificare_repository(repository* repo, int poz, int cantitate)
+        -:   52:{
+        2:   53:    add_elem(repo->lista_undo, copy_list(repo));
+        2:   53-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   54:    element* el = get(repo->elemente, poz);
+call    0 returned 2
+        2:   55:    el->cantitate = cantitate;
+        2:   56:}
+        -:   57:
+function executare_undo called 3 returned 100% blocks executed 100%
+        3:   58:int executare_undo(repository* repo)
+        -:   59:{
+        3:   60:    if(repo->lista_undo->length == 0)
+        3:   60-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   61:        return 0;
+        1:   61-block  0
+        2:   62:    destroy_lista(repo->elemente);
+        2:   62-block  0
+call    0 returned 2
+        2:   63:    repo->elemente = repo->lista_undo->elems[--repo->lista_undo->length];
+        2:   64:    return 1;
+        -:   65:}

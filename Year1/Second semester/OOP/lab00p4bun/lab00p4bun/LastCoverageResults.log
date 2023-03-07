@@ -1,0 +1,21 @@
+[2022-03-18 15:23:41] [info] Start Program:
+Path:"C:\Users\dani7\source\repos\lab00p4bun\x64\Debug\lab00p4bun.exe"
+Arguments:
+Working directory: "C:\Users\dani7\source\repos\lab00p4bun\lab00p4bun\"
+Modules: Selected: C:\Users\dani7\source\repos\lab00p4bun\x64\Debug\lab00p4bun.exe Excluded: 
+Sources: Selected: C:\Users\dani7\source\repos\lab00p4bun\lab00p4bun Excluded: main.c 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\dani7\AppData\Local\Temp\0hjn3qo4.ehi 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-03-18 15:23:41] [info] Module: C:\Users\dani7\source\repos\lab00p4bun\x64\Debug\lab00p4bun.exe is selected because it matches selected pattern: C:\Users\dani7\source\repos\lab00p4bun\x64\Debug\lab00p4bun.exe
+[2022-03-18 15:23:41] [info] ----------------------------------------------------
+[2022-03-18 15:23:41] [info] Coverage binary generated in file: C:\Users\dani7\AppData\Local\Temp\0hjn3qo4.ehi
+[2022-03-18 15:23:41] [info] ----------------------------------------------------
