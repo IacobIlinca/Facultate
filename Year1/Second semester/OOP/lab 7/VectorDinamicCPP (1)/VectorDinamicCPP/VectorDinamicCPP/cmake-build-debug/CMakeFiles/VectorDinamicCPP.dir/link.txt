@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/VectorDinamicCPP.dir/main.cpp.o CMakeFiles/VectorDinamicCPP.dir/Pet.cpp.o CMakeFiles/VectorDinamicCPP.dir/VectDinNewDelete.cpp.o CMakeFiles/VectorDinamicCPP.dir/VectDinSmartPointer.cpp.o  -o VectorDinamicCPP 

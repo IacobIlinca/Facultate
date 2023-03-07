@@ -1,0 +1,35 @@
+﻿  main.cpp
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(8,1): warning C4005: 'INITIAL_CAPACITY': macro redefinition
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.h(5): message : see previous definition of 'INITIAL_CAPACITY'
+  Pet.cpp
+  VectDinNewDelete.cpp
+  VectDinSmartPointer.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  VectorDinamicCPP.vcxproj -> C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\x64\Debug\VectorDinamicCPP.exe
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(87): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(85): warning C26432: If you define or delete any default operation in the type 'class VectorDinamic<class Pet>', define or delete them all (c.21).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(79): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(78): warning C26455: Default constructor should not throw. Declare it 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(126): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(173): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(138): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(138): warning C26400: Do not assign the result of an allocation or a function call with an owner<T> return value to a raw pointer, use owner<T> instead (i.11).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(209): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicIlinca.h(208): warning C26440: Function 'IteratorVector<Pet>::element' can be declared 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(8): warning C26455: Default constructor should not throw. Declare it 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(13): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(13): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(23): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(23): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(32): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(36): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(35): warning C26440: Function 'VectDinSmartPointer::get' can be declared 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(40): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(54): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(54): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(61): warning C26440: Function 'VectDinSmartPointer::begin' can be declared 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(66): warning C26440: Function 'VectDinSmartPointer::end' can be declared 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(79): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(84): warning C26440: Function 'IteratorVectorSP::operator*' can be declared 'noexcept' (f.6).
+C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\VectDinSmartPointer.cpp(87): warning C26440: Function 'IteratorVectorSP::operator++' can be declared 'noexcept' (f.6).

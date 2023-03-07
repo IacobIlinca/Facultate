@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>87</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$VectorDinamic@VPet@@@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>85</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>85</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class VectorDinamic&lt;class Pet&gt;', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$VectorDinamic@VPet@@@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>85</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$VectorDinamic@VPet@@@@QEAA@XZ</DECORATED>
+    <FUNCLINE>78</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>78</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$VectorDinamic@VPet@@@@QEAA@XZ</DECORATED>
+    <FUNCLINE>78</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>126</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::=</FUNCTION>
+    <DECORATED>??4?$VectorDinamic@VPet@@@@QEAAAEAV0@AEBV0@@Z</DECORATED>
+    <FUNCLINE>117</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>173</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26481</DEFECTCODE>
+    <DESCRIPTION>Don't use pointer arithmetic. Use span instead (bounds.1).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::get</FUNCTION>
+    <DECORATED>?get@?$VectorDinamic@VPet@@@@QEAAAEAVPet@@H@Z</DECORATED>
+    <FUNCLINE>172</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>138</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::resize</FUNCTION>
+    <DECORATED>?resize@?$VectorDinamic@VPet@@@@AEAAXXZ</DECORATED>
+    <FUNCLINE>136</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>138</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26400</DEFECTCODE>
+    <DESCRIPTION>Do not assign the result of an allocation or a function call with an owner&lt;T&gt; return value to a raw pointer, use owner&lt;T&gt; instead (i.11).</DESCRIPTION>
+    <FUNCTION>VectorDinamic&lt;Pet&gt;::resize</FUNCTION>
+    <DECORATED>?resize@?$VectorDinamic@VPet@@@@AEAAXXZ</DECORATED>
+    <FUNCLINE>136</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26481</DEFECTCODE>
+    <DESCRIPTION>Don't use pointer arithmetic. Use span instead (bounds.1).</DESCRIPTION>
+    <FUNCTION>IteratorVector&lt;Pet&gt;::element</FUNCTION>
+    <DECORATED>?element@?$IteratorVector@VPet@@@@QEBAAEAVPet@@XZ</DECORATED>
+    <FUNCLINE>208</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Ilinca\Desktop\facultate\semestru 2\oop\lab 7\VectorDinamicCPP (1)\VectorDinamicCPP\VectorDinamicCPP\</FILEPATH>
+      <FILENAME>VectorDinamicIlinca.h</FILENAME>
+      <LINE>208</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'IteratorVector&lt;Pet&gt;::element' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>IteratorVector&lt;Pet&gt;::element</FUNCTION>
+    <DECORATED>?element@?$IteratorVector@VPet@@@@QEBAAEAVPet@@XZ</DECORATED>
+    <FUNCLINE>208</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

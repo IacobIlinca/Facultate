@@ -1,0 +1,56 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/Pet.cpp
+Pet.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/Pet.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/Pet.h
+string
+-
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinNewDelete.cpp
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinNewDelete.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinSmartPointer.cpp
+VectDinSmartPointer.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinSmartPointer.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinSmartPointer.h
+memory
+-
+Pet.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/Pet.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectorDinamicIlinca.h
+vector
+-
+assert.h
+-
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectorDinamicTemplate.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/main.cpp
+stdlib.h
+-
+VectDinNewDelete.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinNewDelete.h
+VectDinSmartPointer.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectDinSmartPointer.h
+VectorDinamicTemplate.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectorDinamicTemplate.h
+Pet.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/Pet.h
+assert.h
+-
+VectorDinamicIlinca.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab 7/VectorDinamicCPP (1)/VectorDinamicCPP/VectorDinamicCPP/VectorDinamicIlinca.h
+vector
+-
+
