@@ -1,0 +1,320 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/CLionProjects/lab1sda/Matrice.cpp
+        -:    0:Graph:/mnt/c/Users/Ilinca/CLionProjects/lab1sda/cmake-build-debug-coverage/CMakeFiles/lab1sda.dir/Matrice.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/CLionProjects/lab1sda/cmake-build-debug-coverage/CMakeFiles/lab1sda.dir/Matrice.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 28-Mar-22.
+        -:    3://
+        -:    4:
+        -:    5:#include "Matrice.h"
+        -:    6:
+        -:    7:#include <exception>
+        -:    8:#include <iostream>
+        -:    9:
+        -:   10:using namespace std;
+        -:   11:
+function _ZN7Matrice15redimensioneazaEv called 18 returned 100% blocks executed 88%
+       18:   12:void Matrice::redimensioneaza() {
+      18*:   13:    auto coloane_nou = new TElem[2*capacit];
+       18:   13-block  0
+branch  0 taken 18 (fallthrough)
+branch  1 taken 0
+       18:   13-block  1
+    %%%%%:   13-block  2
+call    2 never executed
+       18:   13-block  3
+call    3 returned 18
+      18*:   14:    auto val_nou = new TElem[2*capacit];
+branch  0 taken 18 (fallthrough)
+branch  1 taken 0
+       18:   14-block  0
+    %%%%%:   14-block  1
+call    2 never executed
+       18:   14-block  2
+call    3 returned 18
+        -:   15:
+    65548:   16:    for(int i=0;i<dimens;i++)
+    65548:   16-block  0
+branch  0 taken 65530 (fallthrough)
+branch  1 taken 18
+        -:   17:    {
+    65530:   18:        coloane_nou[i] = this->coloane[i];
+    65530:   19:        val_nou[i] = this->val[i];
+    65530:   19-block  0
+        -:   20:    }
+       18:   21:    capacit = capacit*2;
+       18:   22:    delete[] coloane;
+       18:   22-block  0
+branch  0 taken 18 (fallthrough)
+branch  1 taken 0
+       18:   22-block  1
+call    2 returned 18
+       18:   23:    delete[] val;
+       18:   23-block  0
+branch  0 taken 18 (fallthrough)
+branch  1 taken 0
+       18:   23-block  1
+call    2 returned 18
+       18:   24:    this->coloane = coloane_nou;
+       18:   25:    this->val = val_nou;
+        -:   26:
+       18:   27:}
+        -:   28:
+function _ZN7Matrice6adaugaEiiii called 44712 returned 100% blocks executed 100%
+    44712:   29:void Matrice::adauga(int poz, int l, int c, TElem e){
+    44712:   30:    if(dimens == capacit-1)
+    44712:   30-block  0
+branch  0 taken 18 (fallthrough)
+branch  1 taken 44694
+       18:   31:        redimensioneaza();
+       18:   31-block  0
+call    0 returned 18
+    44712:   32:    this->dimens++;
+501471949:   33:    for(int i=dimens;i>=poz+1;i--)
+    44712:   33-block  0
+501471949:   33-block  1
+branch  0 taken 501427237 (fallthrough)
+branch  1 taken 44712
+        -:   34:    {
+501427237:   35:        this->coloane[i] = this->coloane[i-1];
+501427237:   36:        this->val[i] = this->val[i-1];
+501427237:   36-block  0
+        -:   37:    }
+    44712:   38:    this->coloane[poz] = c;
+    44712:   39:    this->val[poz] = e;
+  6757425:   40:    for(int i=l;i<=this->nr_linii;i++)
+    44712:   40-block  0
+  6757425:   40-block  1
+branch  0 taken 6712713 (fallthrough)
+branch  1 taken 44712
+  6712713:   41:        this->linii[i] = this->linii[i]+1;
+  6712713:   41-block  0
+    44712:   42:}
+        -:   43:
+function _ZN7MatriceC2Eii called 5 returned 100% blocks executed 71%
+        5:   44:Matrice::Matrice(int m, int n) {
+        -:   45:    /* de adaugat */
+        5:   46:    if(m<=0 || n<=0)
+        5:   46-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   46-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5
+    #####:   47:        throw exception();
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        5:   48:    this->nr_linii = m;
+        5:   49:    this->nr_col = n;
+        -:   50:
+       5*:   51:    this->linii = new TElem[m+1];   //vector pe linii
+        5:   51-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   51-block  1
+    %%%%%:   51-block  2
+call    2 never executed
+        5:   51-block  3
+call    3 returned 5
+      344:   52:    for(int i=0;i<=m;i++)
+      344:   52-block  0
+branch  0 taken 339 (fallthrough)
+branch  1 taken 5
+      339:   53:        this->linii[i] = NULL_TELEMENT;
+      339:   53-block  0
+        -:   54:
+        5:   55:    this->capacit = 2;
+        5:   56:    this->dimens = 0;
+       5*:   57:    this->val = new TElem[capacit]; //vector de valori
+        5:   57-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   57-block  1
+    %%%%%:   57-block  2
+call    2 never executed
+        5:   57-block  3
+call    3 returned 5
+       5*:   58:    this->coloane = new TElem[capacit]; //vector pe coloane
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   58-block  0
+    %%%%%:   58-block  1
+call    2 never executed
+        5:   58-block  2
+call    3 returned 5
+        -:   59:
+        5:   60:}
+        -:   61:
+function _ZN7Matrice6stergeEii called 0 returned 0% blocks executed 0%
+    #####:   62:void Matrice::sterge(int poz, int l){
+    #####:   63:    for(int i=poz;i<=this->dimens;i++) {
+    %%%%%:   63-block  0
+    %%%%%:   63-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   64:        this->coloane[i] = coloane[i + 1];
+    #####:   65:        this->val[i] = val[i + 1];
+    %%%%%:   65-block  0
+        -:   66:    }
+        -:   67:
+    #####:   68:    this->dimens--;
+    #####:   69:    for(int i = l+1;i<this->nr_linii;i++)
+    %%%%%:   69-block  0
+    %%%%%:   69-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   70:        this->linii[i]--;   //muta tot cu o poz la stanga
+    %%%%%:   70-block  0
+    #####:   71:}
+        -:   72:
+function _ZNK7Matrice7nrLiniiEv called 630 returned 100% blocks executed 100%
+      630:   73:int Matrice::nrLinii() const{
+        -:   74:    /* de adaugat */
+      630:   75:    return this->nr_linii;
+      630:   75-block  0
+        -:   76:}
+        -:   77:
+        -:   78:
+function _ZNK7Matrice9nrColoaneEv called 181134 returned 100% blocks executed 100%
+   181134:   79:int Matrice::nrColoane() const{
+        -:   80:    /* de adaugat */
+   181134:   81:    return this->nr_col;
+   181134:   81-block  0
+        -:   82:}
+        -:   83:
+        -:   84:
+function _ZNK7Matrice7elementEii called 90203 returned 100% blocks executed 100%
+    90203:   85:TElem Matrice::element(int i, int j) const{
+        -:   86:    /* de adaugat */
+    90203:   87:    if(i<0 || j<0)
+    90203:   87-block  0
+branch  0 taken 90202 (fallthrough)
+branch  1 taken 1
+    90202:   87-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 90202
+        1:   88:        throw exception();
+        1:   88-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 0
+        -:   89:    int coloana_curenta;
+  6773197:   90:    for(int poz=this->linii[i];poz<this->linii[i+1];poz++)
+    90202:   90-block  0
+  6773197:   90-block  1
+branch  0 taken 6772555 (fallthrough)
+branch  1 taken 642
+  6682995:   90-block  2
+        -:   91:    {
+  6772555:   92:        coloana_curenta = this->coloane[poz];
+  6772555:   93:        if(coloana_curenta == j)
+  6772555:   93-block  0
+branch  0 taken 44712 (fallthrough)
+branch  1 taken 6727843
+    44712:   94:            return this->val[poz];
+    44712:   94-block  0
+  6727843:   95:        else if (coloana_curenta >j)
+  6727843:   95-block  0
+branch  0 taken 44848 (fallthrough)
+branch  1 taken 6682995
+    44848:   96:            break;
+    44848:   96-block  0
+        -:   97:    }
+    45490:   98:    return NULL_TELEMENT;
+    45490:   98-block  0
+        -:   99:}
+        -:  100:
+        -:  101:
+        -:  102:
+function _ZN7Matrice8modificaEiii called 45213 returned 100% blocks executed 63%
+    45213:  103:TElem Matrice::modifica(int i, int j, TElem e) {
+        -:  104:    /* de adaugat */
+    45213:  105:    if( i>=this->nr_linii || j>=this->nr_col || i<0 ||j<0)
+    45213:  105-block  0
+branch  0 taken 45212 (fallthrough)
+branch  1 taken 1
+    45212:  105-block  1
+branch  2 taken 45212 (fallthrough)
+branch  3 taken 0
+    45212:  105-block  2
+branch  4 taken 45212 (fallthrough)
+branch  5 taken 0
+    45212:  105-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 45212
+        1:  106:        throw exception();
+        1:  106-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 0
+        -:  107:    int p; //= this->linii[i];
+    45212:  108:    int coloana_curenta = -1;
+  1902782:  109:    for(p=this->linii[i];p<this->linii[i+1];p++)
+    45212:  109-block  0
+  1902782:  109-block  1
+branch  0 taken 1902169 (fallthrough)
+branch  1 taken 613
+  1857570:  109-block  2
+        -:  110:        {
+  1902169:  111:            coloana_curenta = this->coloane[p];
+  1902169:  112:            if(coloana_curenta >= j)
+  1902169:  112-block  0
+branch  0 taken 44599 (fallthrough)
+branch  1 taken 1857570
+    44599:  113:                break;
+    44599:  113-block  0
+        -:  114:        }
+    45212:  115:    if(coloana_curenta != j)
+    45212:  115-block  0
+branch  0 taken 45012 (fallthrough)
+branch  1 taken 200
+        -:  116:    {
+        -:  117:        //daca ajung aici inseamna ca elem de pe poz data ii 0
+    45012:  118:        if(e!=0)
+    45012:  118-block  0
+branch  0 taken 44712 (fallthrough)
+branch  1 taken 300
+    44712:  119:            adauga(p,i+1,j,e);
+    44712:  119-block  0
+call    0 returned 44712
+    45012:  120:        return 0;
+    45012:  120-block  0
+        -:  121:    }
+      200:  122:    else if (e==0)
+      200:  122-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 200
+        -:  123:        //daca elementul pe care vrem sa il adaugam in matrice este 0, pur si simplu il stergem fiind matrice rara
+    #####:  124:        sterge(p,i);
+    %%%%%:  124-block  0
+call    0 never executed
+        -:  125:    else {
+      200:  126:        auto z = this->val[p];
+      200:  127:        this->val[p] = e;  //altfel modific valoarea
+      200:  128:        return z;       //ii ok aici?
+      200:  128-block  0
+        -:  129:
+        -:  130:    }
+        -:  131:
+    #####:  132:    cout<<"Valorile din vectorul de linii sunt:";
+call    0 never executed
+    #####:  133:    for(int l=0;l<=nr_linii;l++)
+    %%%%%:  133-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  134:        cout<<"linii["<<l<<"] = "<<linii[l]<<'\n';
+    %%%%%:  134-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:  135:
+    #####:  136:    return 0;
+    %%%%%:  136-block  0
+        -:  137:
+        -:  138:}
+        -:  139:
+        -:  140:

@@ -1,0 +1,32 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  
+     7                                  segment data use32 class=data
+     8 00000000 010002000300040005-         s dw 1,2,3,4,5,6,7,8,9
+     8 00000009 000600070008000900 
+     9                                      len equ ($-s)/2
+    10 00000012 00<rept>                    d times len db 0
+    11                                      
+    12                                  ; Se da un sir de caractere s
+    13                                  ; Se cere sirul de caractere d obtinut prin copierea sirului s, folosind instructiuni pe siruri.
+    14                                  segment code use32 class=code
+    15                                      start:
+    16 00000000 B909000000                      mov ECX, len ; nr de elemente din sir
+    17 00000005 BE[00000000]                    mov ESI, s ; incarcare offset s in ESI
+    18 0000000A BF[12000000]                    mov EDI, d ; incarcare offset d in EDI
+    19 0000000F E307                            jecxz sfarsit
+    20 00000011 FC                              CLD
+    21                                          Again:
+    22 00000012 AC                                  lodsb
+    23 00000013 AA                                  stosb
+    24 00000014 AC                                  lodsb
+    25 00000015 AA                                  stosb
+    26 00000016 E2FA                            LOOP Again
+    27                                          
+    28                                          sfarsit:
+    29                                          ; exit(0)
+    30 00000018 6A00                            push dword 0        ; push the parameter for exit onto the stack
+    31 0000001A FF15[00000000]                  call [exit]         ; call exit to terminate the program

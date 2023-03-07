@@ -1,0 +1,72 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit, printf, scanf       
+     5                                  import exit msvcrt.dll
+     6                                  import printf msvcrt.dll
+     7                                  import scanf msvcrt.dll
+     8                                  ;25: Sa se citeasca de la tastatura doua numere a si b (in baza 10) şi să se determine relaţia de ordine dintre ele (a < b, a = b sau a > b). Afisati rezultatul în următorul format: "<a> < <b>, <a> = <b> sau <a
+     9                                  segment data use32 class=data
+    10 00000000 00000000                    x dd 0
+    11 00000004 00000000                    y dd 0
+    12 00000008 496E74726F64756365-         mesaj_initial db "Introduceti cele doua numere: " , 0
+    12 00000011 74692063656C652064-
+    12 0000001A 6F7561206E756D6572-
+    12 00000023 653A2000           
+    13 00000027 256420256400                format db "%d %d",0
+    14 0000002D 2564203C20256400            mesaj_mai_mic db "%d < %d", 0
+    15 00000035 2564203E20256400            mesaj_mai_mare db "%d > %d", 0
+    16 0000003D 2564203D20256400            mesaj_egale db "%d = %d", 0
+    17                                      
+    18                                      
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ;mesaj initial: "Introduceti cele doua numere: "
+    22 00000000 68[08000000]                    push dword mesaj_initial
+    23 00000005 FF15[00000000]                  call [printf]
+    24 0000000B 83C404                          add esp, 4*1
+    25                                          
+    26                                          ;citirea celor doua numere de la tastatura
+    27 0000000E 68[04000000]                    push dword y
+    28 00000013 68[00000000]                    push dword x
+    29 00000018 68[27000000]                    push dword format
+    30 0000001D FF15[00000000]                  call [scanf]
+    31 00000023 83C40C                          add esp, 4*3
+    32                                          
+    33 00000026 A1[00000000]                    mov eax, [x]
+    34 0000002B 8B1D[04000000]                  mov ebx, [y]
+    35 00000031 39D8                            cmp eax, ebx
+    36 00000033 7F1E                            jg mai_mare
+    37 00000035 7C38                            jl mai_mic
+    38                                          
+    39                                          ;daca x=y => se va afisa "<x> = <y>"
+    40 00000037 FF35[04000000]                  push dword [y]
+    41 0000003D FF35[00000000]                  push dword [x]
+    42 00000043 68[3D000000]                    push dword mesaj_egale
+    43 00000048 FF15[00000000]                  call [printf]
+    44 0000004E 83C40C                          add esp, 4*3
+    45 00000051 EB38                            jmp sfarsit
+    46                                          
+    47                                          ;daca x>y => se va afisa "<x> > <y>"
+    48                                          mai_mare:
+    49 00000053 FF35[04000000]                      push dword [y]
+    50 00000059 FF35[00000000]                      push dword [x]
+    51 0000005F 68[35000000]                        push dword mesaj_mai_mare 
+    52 00000064 FF15[00000000]                      call [printf]
+    53 0000006A 83C40C                              add esp, 4*3
+    54 0000006D EB1C                                jmp sfarsit
+    55                                              
+    56                                          ;daca x<y => se va afisa "<x> < <y>"
+    57                                          mai_mic:
+    58 0000006F FF35[04000000]                      push dword [y]
+    59 00000075 FF35[00000000]                      push dword [x]
+    60 0000007B 68[2D000000]                        push dword mesaj_mai_mic 
+    61 00000080 FF15[00000000]                      call [printf]
+    62 00000086 83C40C                              add esp, 4*3
+    63 00000089 EB00                                jmp sfarsit
+    64                                              
+    65                                          sfarsit:
+    66 0000008B 6A00                            push    dword 0    
+    67 0000008D FF15[00000000]                  call    [exit]     
+    68                                  
+    69                                          

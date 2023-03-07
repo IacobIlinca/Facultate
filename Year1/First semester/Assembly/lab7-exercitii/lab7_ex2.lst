@@ -1,0 +1,18 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  
+     7                                  segment data use32 class=data
+     8 00000000 616263646566                s db 'abcdef'
+     9                                      
+    10                                  ; Se da un sir de caractere s.
+    11                                  ; Se cere sirul de caractere d obtinut prin inversarea sirului s, folosind instructiuni pe siruri.
+    12                                  segment code use32 class=code
+    13                                      start:
+    14                                          
+    15                                          
+    16                                          ; exit(0)
+    17 00000000 6A00                            push dword 0        ; push the parameter for exit onto the stack
+    18 00000002 FF15[00000000]                  call [exit]         ; call exit to terminate the program

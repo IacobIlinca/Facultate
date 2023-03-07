@@ -1,0 +1,3 @@
+C:/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug/CMakeFiles/lab4sda.dir
+C:/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug/CMakeFiles/rebuild_cache.dir

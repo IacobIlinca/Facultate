@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab1sda/Matrice.cpp
+Matrice.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab1sda/Matrice.h
+exception
+-
+iostream
+-
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab1sda/Matrice.h
+

@@ -1,0 +1,20 @@
+%5. a) Sa se determine pozitiile elementului maxim dintr-o lista liniara. De ex:
+%poz([10,14,12,13,14], L) va produce L = [2,5].5
+
+maxim([],-3200).
+maxim([H|T],H):-maxim(T,M),M<H,!.
+maxim([_|T],M):-maxim(T,M).
+
+pozitie([],[],_,_):-!.
+pozitie([H|T],[P|B],M,P):-
+	H=M,
+	!,
+	P1 is P+1,
+	pozitie(T,B,M,P1).
+pozitie([_|T],B,M,P):-P1 is P+1,pozitie(T,B,M,P1).
+
+pozitii([],[]):-!.
+pozitii(L,R):-
+	maxim(L,M),
+	pozitie(L,R,M,1).
+

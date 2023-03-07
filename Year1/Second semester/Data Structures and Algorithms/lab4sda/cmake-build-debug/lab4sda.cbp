@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lab4sda"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab4sda">
+				<Option output="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug/lab4sda" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4sda"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab4sda/fast">
+				<Option output="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug/lab4sda" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4sda/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Ilinca/Desktop/facultate/semestru\ 2/sda/lab/lab4sda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/IteratorMultime.cpp">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/IteratorMultime.h">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/Multime.cpp">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/Multime.h">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/TestExtins.cpp">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/TestExtins.h">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/TestScurt.cpp">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/TestScurt.h">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/main.cpp">
+			<Option target="lab4sda"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab4sda/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

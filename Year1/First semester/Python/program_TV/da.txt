@@ -1,0 +1,11 @@
+Jurnal,Stiri,10,Informatii
+
+Canal,practic,67,pfef
+
+Reportaj,informare,9,opp
+
+Canal,practic,6,pff
+
+nsbhws,poo,1,oop
+
+a,b,33,ee

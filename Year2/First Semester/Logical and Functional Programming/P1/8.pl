@@ -1,0 +1,28 @@
+%8.a. Sa se scrie un predicat care testeaza daca o lista este multime.
+% b. Sa se scrie un predicat care elimina primele 3 aparitii ale unui
+% element intr-o lista. Daca elementul apare mai putin de 3 ori, se va
+% elimina de cate ori apare.
+
+%a.
+%apare(E:Integer, L:List).
+apare(E,[E|_]).
+apare(E,[_|T]):-apare(E,T).
+
+multime([]).
+multime([H|T]):-
+	not(apare(H,T)),
+	multime(T).
+
+%b.aparitie(E:Integer, L:List, N:Integer).
+aparitie(_,[],0):-!.
+aparitie(E,[E|T],N):-aparitie(E,T,N1), !, N is N1+1.
+aparitie(E,[_|T],N):-aparitie(E,T,N).
+
+%elim(E:Integer, L:List, LR:List, P:Integer).
+elim(_,[],[],_).
+elim(_,L,L,P):-P=0,!.
+elim(E,[E|T],LR,C):- C1 is C-1, elim(E,T,LR,C1).
+elim(E,[H|T],LR,C):- H\=E,!,elim(E,T,LR,C).
+
+elimina(E,L,LR):-elim(E,L,LR,3).
+

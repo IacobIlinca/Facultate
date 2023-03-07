@@ -1,0 +1,10 @@
+%3.Sa se sorteze o lista cu eliminarea dublurilor. De ex: [4 2 6 2 3 4]
+% => [2 3 4 6].
+
+insert(E,[],[E]).
+insert(E,[H|T],[E|[H|T]]):- E<H,!.
+insert(E,[H|T],[H|L]):- E>H,!, insert(E,T,L).
+insert(E,[E|T],L):-insert(E,T,L).
+
+sortare([],[]).
+sortare([H|T],R):-sortare(T,L), insert(H,L,R).

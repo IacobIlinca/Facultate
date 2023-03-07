@@ -1,0 +1,29 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  
+     7                                  segment data use32 class=data
+     8 00000000 3412AB67CD89                s1 dw 1234h, 67abh, 89cdh
+     9                                      len1 equ $-s1
+    10 00000006 452378566745                s2 dw 2345h, 5678h, 4567h
+    11                                      len2 equ $-s2
+    12 0000000C 00<rept>                    d times len1 db 0
+    13                                      
+    14                                  ; Se dau doua siruri de cuvinte s1 si s2.
+    15                                  ; Se cere sirul de cuvinte d obtinut in interpretarea cu semn, astfel:
+    16                                  ; - d[i] = s1[i], daca s1[i] > s2[i]
+    17                                  ; - d[i] = s2[i], altfel.
+    18                                  segment code use32 class=code
+    19                                      start:
+    20 00000000 B906000000                      mov ecx, len1 ; nr de elemente din sir
+    21 00000005 BE[00000000]                    mov esi, s1 ; incarcare offset s in esi
+    22 0000000A BB[06000000]                    mov ebx, s2 ; incarcare offset s in ebx
+    23 0000000F BF[0C000000]                    mov edi, d ; incarcare offset d in edi
+    24                                          
+    25                                          
+    26                                      
+    27                                          ; exit(0)
+    28 00000014 6A00                            push dword 0        ; push the parameter for exit onto the stack
+    29 00000016 FF15[00000000]                  call [exit]         ; call exit to terminate the program

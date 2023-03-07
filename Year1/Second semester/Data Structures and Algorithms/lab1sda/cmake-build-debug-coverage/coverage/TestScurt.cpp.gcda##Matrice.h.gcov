@@ -1,0 +1,66 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/CLionProjects/lab1sda/Matrice.h
+        -:    0:Graph:/mnt/c/Users/Ilinca/CLionProjects/lab1sda/cmake-build-debug-coverage/CMakeFiles/lab1sda.dir/TestScurt.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/CLionProjects/lab1sda/cmake-build-debug-coverage/CMakeFiles/lab1sda.dir/TestScurt.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 28-Mar-22.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB1SDA_MATRICE_H
+        -:    6:#define LAB1SDA_MATRICE_H
+        -:    7:
+        -:    8:#pragma once
+        -:    9:
+        -:   10:typedef int TElem;
+        -:   11:
+        -:   12:
+        -:   13:#define NULL_TELEMENT 0
+        -:   14:
+        -:   15:class Matrice {
+        -:   16:
+        -:   17:private:
+        -:   18:    /* aici e reprezentarea */
+        -:   19:    int nr_linii,nr_col; //nr de linii si nr de coloane
+        -:   20:    int capacit; //capacitatea vectorilor c si v
+        -:   21:    int dimens; //deimensiunea vectorilor c si v
+        -:   22:    TElem* linii;  //vector pe linii
+        -:   23:    TElem* coloane; //vector pe coloane
+        -:   24:    TElem* val; //vector de valori
+        -:   25:
+        -:   26:    void redimensioneaza(); //redimensioneaza vectorii de valoare si cei de coloane
+        -:   27:    void adauga(int poz, int l, int c, TElem e);  //adauga elementul e pe linia l si coloana c
+        -:   28:    void sterge(int poz, int l);    //sterge elem de pe poz
+        -:   29:
+        -:   30:
+        -:   31:public:
+        -:   32:
+        -:   33:    //constructor
+        -:   34:    //se arunca exceptie daca nrLinii<=0 sau nrColoane<=0
+        -:   35:    Matrice(int nrLinii, int nrColoane);
+        -:   36:
+        -:   37:
+        -:   38:    //destructor
+function _ZN7MatriceD2Ev called 0 returned 0% blocks executed 0%
+    #####:   39:    ~Matrice(){};
+        -:   40:
+        -:   41:    //returnare element de pe o linie si o coloana
+        -:   42:    //se arunca exceptie daca (i,j) nu e pozitie valida in Matrice
+        -:   43:    //indicii se considera incepand de la 0
+        -:   44:    TElem element(int i, int j) const;
+        -:   45:
+        -:   46:
+        -:   47:    // returnare numar linii
+        -:   48:    int nrLinii() const;
+        -:   49:
+        -:   50:    // returnare numar coloane
+        -:   51:    int nrColoane() const;
+        -:   52:
+        -:   53:
+        -:   54:    // modificare element de pe o linie si o coloana si returnarea vechii valori
+        -:   55:    // se arunca exceptie daca (i,j) nu e o pozitie valida in Matrice
+        -:   56:    TElem modifica(int i, int j, TElem);
+        -:   57:
+        -:   58:};
+        -:   59:
+        -:   60:
+        -:   61:#endif //LAB1SDA_MATRICE_H

@@ -1,0 +1,7 @@
+12,Flamingo,agricultura vacanta medical,2014
+2,Apache,militar medical,1995
+45,Stark Rebound,militar livrare,2019
+33,Ana, militar vacanta,1890
+56, Pachet, vacanta,1956
+55, Dorin, agricultura vacanta,2002
+88,Agricolu, agricultura,1999

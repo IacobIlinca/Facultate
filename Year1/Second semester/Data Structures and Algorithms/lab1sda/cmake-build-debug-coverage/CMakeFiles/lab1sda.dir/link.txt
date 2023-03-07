@@ -1,0 +1,1 @@
+/usr/bin/c++  --coverage -g   CMakeFiles/lab1sda.dir/main.cpp.o CMakeFiles/lab1sda.dir/Matrice.cpp.o CMakeFiles/lab1sda.dir/TestExtins.cpp.o CMakeFiles/lab1sda.dir/TestScurt.cpp.o  -o lab1sda 

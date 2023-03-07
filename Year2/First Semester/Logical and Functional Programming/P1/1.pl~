@@ -1,0 +1,17 @@
+%1.aSa se scrie un predicat care intoarce diferenta a doua multimi.
+%b.Sa se scrie un predicat care adauga intr-o lista dupa fiecare element par
+%valoarea 1.
+
+%member(E:Integer,L:List).
+member(E,[E|_]):-!.
+member(E,[_|T]):-member(E,T).
+
+%diferenta(L1:List,L2:List, LR:List).
+diferenta(L,[],L):-!.
+diferenta([],_,[]).
+diferenta([H|T],L,[H|T1]):-
+	not(member(H,L)),
+	!,
+	diferenta(T,L,T1).
+diferenta([_|T],L,L1):-diferenta(T,L,L1).
+

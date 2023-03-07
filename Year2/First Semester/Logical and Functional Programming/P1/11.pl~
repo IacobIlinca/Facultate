@@ -1,0 +1,37 @@
+%11.a. Sa se scrie un predicat care sa testeze daca o lista formata din numere
+%intregi are aspect de "vale"(o multime se spune ca are aspect de "vale"
+% daca elementele descresc pana la un moment dat, apoi cresc. De ex.10 8
+% 6 9 11 13).
+%b. Sa se calculeze suma alternanta a elementelor unei liste
+% (l1 - l2 + l3 ...).
+
+%a.vale_aux(L:List,E:Integer).
+vale_aux([_|T],1):-T=[],!.
+vale_aux([H|[H1|T]],N):- H>H1, N=0,vale_aux([H1|T],N).
+vale_aux([H|[H1|T]],N):-H<H1, N=0,vale_aux([H1|T],1).
+vale_aux([H|[H1|T]],N):-H<H1, N=1,vale_aux([H1|T],N).
+
+vale([]):-!.
+vale(L):-vale_aux(L,0).
+
+%b.
+poz_aux(E,[E|_],N,N):-!.
+poz_aux(E,[_|T],N,K):-K1 is K+1, poz_aux(E,T,N,K1).
+
+poz(_,[],0):-!.
+poz(E,L,N):-poz_aux(E,L,N,1).
+
+suma_aux([],S,_,S).
+suma_aux([H|T],S,L,S1):- %L=copia listei initiale.
+	poz(H,L,P),
+	P mod 2 =:= 1,
+	S2 is S1+H,
+	suma_aux(T,S,L,S2).
+suma_aux([H|T],S,L,S1):-
+	poz(H,L,P),
+	P mod 2 =:= 0,
+	S2 is S1-H,
+	suma_aux(T,S,L,S2).
+suma([],0).
+suma(L,S):- suma_aux(L,S,L,0).
+

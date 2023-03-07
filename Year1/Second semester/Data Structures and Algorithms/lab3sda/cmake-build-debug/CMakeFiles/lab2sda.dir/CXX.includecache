@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/Colectie.cpp
+Colectie.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/Colectie.h
+IteratorColectie.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/IteratorColectie.h
+exception
+-
+iostream
+-
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/Colectie.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/IteratorColectie.h
+Colectie.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/Colectie.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/TestExtins.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/TestScurt.h
+
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/main.cpp
+iostream
+-
+TestExtins.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/TestExtins.h
+TestScurt.h
+/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/sda/lab/lab3sda/TestScurt.h
+

@@ -1,0 +1,5 @@
+2,fp,12
+4,analiza,5
+7,apaa,13
+8,uthgu,8
+5,aaaaa,5
