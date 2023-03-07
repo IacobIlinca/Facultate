@@ -1,0 +1,66 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/UI.h
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 30-Mar-22.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB4_6OOP_UI_H
+        -:    6:#define LAB4_6OOP_UI_H
+        -:    7:
+        -:    8:#pragma once
+        -:    9:#include "Service.h"
+        -:   10:
+        -:   11:class Console{
+        -:   12:private:
+        -:   13:    Medicamente_Service& srv;
+        -:   14:public:
+function _ZN7ConsoleC2ER19Medicamente_Service called 1 returned 100% blocks executed 100%
+        1:   15:    Console(Medicamente_Service& srv) :srv{ srv } {};
+        -:   16:    Console(const Console& ot) = delete;
+        -:   17:    /*
+        -:   18:     * Printeaza meniul aplicatiei
+        -:   19:     */
+        -:   20:    void print_meniu();
+        -:   21:    /*
+        -:   22:     * Functia de ui pentru adaugarea unui medicament
+        -:   23:     */
+        -:   24:    void ui_add();
+        -:   25:    /*
+        -:   26:     * Functia de ui pentru printarea medicamentelor
+        -:   27:     */
+        -:   28:    void print_all_medicamente();
+        -:   29:    /*
+        -:   30:     * Functia de ui pentru modificarea unui medicament
+        -:   31:     */
+        -:   32:    void ui_modificare();
+        -:   33:    /*
+        -:   34:     * Functia de ui pentru stergerea unui medicament
+        -:   35:     */
+        -:   36:    void ui_stergere();
+        -:   37:    void ui_find();
+        -:   38:    /*
+        -:   39:     * Functia de ui pentru filtrarea unui medicament
+        -:   40:     */
+        -:   41:    void ui_filtrare();
+        -:   42:
+        -:   43:    void ui_sort();
+        -:   44:    void ui_all_of();
+        -:   45:
+        -:   46:
+        -:   47:    //UI PENTRU LISTA
+        -:   48:    void print_meniu_list();
+        -:   49:    void ui_add_list();
+        -:   50:    void ui_add_random_list();
+        -:   51:    void ui_empty_list();
+        -:   52:    void ui_reteta();
+        -:   53:    void print_all_from_list();
+        -:   54:
+        -:   55:    void ui_undo();
+        -:   56:
+        -:   57:    void run();
+        -:   58:
+        -:   59:};
+        -:   60:
+        -:   61:#endif //LAB4_6OOP_UI_H

@@ -1,0 +1,168 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Service.h
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 30-Mar-22.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB4_6OOP_SERVICE_H
+        -:    6:#define LAB4_6OOP_SERVICE_H
+        -:    7:
+        -:    8:#pragma once
+        -:    9:#include "Repository.h"
+        -:   10:#include "Validators.h"
+        -:   11:#include "Reteta.h"
+        -:   12:#include <functional>
+        -:   13:#include "unique_ptr.h"
+        -:   14:#include "Undo.h"
+        -:   15:using std::function;
+        -:   16:using std::unique_ptr;
+        -:   17:
+        -:   18:class Medicamente_Service{
+        -:   19:private:
+        -:   20:    Medicament_Repository& repo;
+        -:   21:    Medicament_Validator& val;
+        -:   22:
+        -:   23:    List currentlist;
+        -:   24:
+        -:   25:    vector<unique_ptr<ActiuneUndo>>UndoActions;
+        -:   26:
+        -:   27:    vector<Medicament> general_sort(bool(*mai_mic_f)(const Medicament&, const Medicament&));
+        -:   28:
+        -:   29:public:
+        -:   30:    Medicamente_Service(Medicament_Repository& med_repo, Medicament_Validator& val) :repo{ med_repo }, val{ val } {};
+        -:   31:
+        -:   32:    //constructor de copiere
+        -:   33:    //punem delete fiindca nu vrem sa se faca nicio copie la Service
+        -:   34:    //(in aplicatie avem 1 singur Service)
+        -:   35:    Medicamente_Service(const Medicamente_Service& ot) = delete;
+        -:   36:
+        -:   37:    /*
+        -:   38:	Adauga un medicament cu denumirea denumire, producatorul producator, substanta activa substanta activa si pretul pret
+        -:   39:	*@param denumire: denumirea medicamentului care se adauga (string)
+        -:   40:	*@param producator: producatorul medicamentului care se adauga (string)
+        -:   41:	*@param substanta_activa: substanta activa medicamentului care se adauga (string)
+        -:   42:	*@param pret: pretul medicamentului care se adauga (double)
+        -:   43:	*
+        -:   44:	* @throws:
+        -:   45:	*	RepoException daca mai exista medicament cu denumirea si producatorul dat
+        -:   46:	*	ValidationException daca medicamentul nu este valid
+        -:   47:	*/
+        -:   48:
+        -:   49:    void add_medicament(string denumire, string producator, string substanta_activa, double pret);
+        -:   50:
+        -:   51:    /*
+        -:   52:	Returneaza un vector cu toate medicamentele disponibile
+        -:   53:
+        -:   54:	@return: lista cu toate medicamentele disponibile (vector cu obiecte de tip Medicament)
+        -:   55:	*/
+        -:   56:
+function _ZN19Medicamente_Service19get_all_medicamenteEv called 12 returned 100% blocks executed 100%
+       12:   57:    const vector<Medicament>& get_all_medicamente() {
+       12:   58:        return this->repo.get_all_medicamente();
+       12:   58-block  0
+call    0 returned 12
+        -:   59:    }
+        -:   60:
+        -:   61:
+        -:   62:    /*
+        -:   63:	Modifica pretul unui medicament cu denumirea denumire, producatorul producator, substanta activa substanta activa si noul pret pret_nou
+        -:   64:	*@param denumire: denumirea medicamentului ce se modifica (string)
+        -:   65:	*@param producator: producatorul medicamentului ce se modifica (string)
+        -:   66:	*@param substanta_activa: substanta activa medicamentului ce se modifica (string)
+        -:   67:	*@param pret_nou: pretul nou al medicamentului (double)
+        -:   68:	*
+        -:   69:	* @throws:
+        -:   70:	*	RepoException daca nu exista medicament cu denumirea si producatorul dat
+        -:   71:	*	ValidationException daca medicamentul nu este valid
+        -:   72:	*/
+        -:   73:    void modifica_pret_service(string denumire, string producator, string substanta_activa, double pret_nou);
+        -:   74:    /*
+        -:   75:	Sterge un medicament cu denumirea denumire, producatorul producator, substanta activa substanta activa si pretul pret
+        -:   76:	*@param denumire: denumirea medicamentului ce se sterge (string)
+        -:   77:	*@param producator: producatorul medicamentului ce se sterge (string)
+        -:   78:	*@param substanta_activa: substanta activa medicamentului ce se sterge (string)
+        -:   79:	*@param pret: pretul medicamentului ce se sterge (double)
+        -:   80:	*
+        -:   81:	* @throws:
+        -:   82:	*	RepoException daca nu exista medicament cu denumirea si producatorul dat
+        -:   83:	*	ValidationException daca medicamentul nu este valid
+        -:   84:	*/
+        -:   85:    void stergere_service(string denumire, string producator, string substanta_activa, double pret);
+        -:   86:
+        -:   87:    Medicament find_service(string denumire, string producator);
+        -:   88:
+        -:   89:    /*
+        -:   90:     * Filtreaza medicamentele din lista care au substanta activa substanta_activa
+        -:   91:     *@param substanta_activa: substanta activa dupa care se face filtrarea (string)
+        -:   92:	 *@return: lista noua cu medicamentele filtrate
+        -:   93:     */
+        -:   94:    vector<Medicament> filtrare_substanta_activa(string substanta_activa);
+        -:   95:    /*
+        -:   96:     * Filtreaza medicamentele din lista care au pretul pret
+        -:   97:     *@param substanta_activa: pretul dupa care se face filtrarea (double)
+        -:   98:	 *@return: lista noua cu medicamentele filtrate
+        -:   99:     */
+        -:  100:    vector<Medicament> filtrare_pret(double pret);
+        -:  101:
+        -:  102:    /*
+        -:  103:    functie de sortare a produselor dupa denumire
+        -:  104:    param reverse: 0-ordine crescatoare,1-descrescatoare
+        -:  105:     */
+        -:  106:    vector<Medicament> sort_by_denumire();
+        -:  107:    /*
+        -:  108:    functie de sortare a produselor dupa producator
+        -:  109:    param reverse: 0-ordine crescatoare,1-descrescatoare*/
+        -:  110:    vector<Medicament> sort_by_producator();
+        -:  111:
+        -:  112:    /*
+        -:  113:     Functie de sortare generala
+        -:  114:     functie - functie de comparare, verifica daca are loc relatia intre cele 2 produse
+        -:  115:     returneaza o lista sortata dupa criteriu dat ca paramatru
+        -:  116:    */
+        -:  117:    vector<Medicament> sortservice(int reverse, bool (*functie)( Medicament&, Medicament&));
+        -:  118:
+        -:  119:    vector<Medicament> sortdenumire(int reverse);
+        -:  120:    vector<Medicament> sortproducator(int reverse);
+        -:  121:    vector<Medicament> sortdsubstpret(int reverse);
+        -:  122:    int all_of_denumire_incepe_cu_a(string denumire);
+        -:  123:
+        -:  124:
+        -:  125:
+        -:  126:    //FUNCTIONALITATI RETETA
+        -:  127:    /*
+        -:  128:     * adauga un medicament cu denumirea data pe reteta
+        -:  129:     * @param denumire:denumirea produsului ce se doreste a fi adaugat pe reteta
+        -:  130:     * post: medicamentul dat este adaugat in lista
+        -:  131:     * @throws: RepoException daca nu exista medicament cu denumirea data
+        -:  132:     */
+        -:  133:    void add_list_service(string denumire);
+        -:  134:
+        -:  135:    /*
+        -:  136:     * Adauga un nr dat de medicamente random in reteta
+        -:  137:     * @param:howMany: cate medicamente se adauga (int)
+        -:  138:     * @return: nr de produse adaugate pe reteta
+        -:  139:     * post: list' = list + {med random}
+        -:  140:     */
+        -:  141:    int add_random_service(int howMany);
+        -:  142:
+        -:  143:    /*
+        -:  144:     * elimina toate produsele din lista
+        -:  145:     * post:lista nu contine niciun produs
+        -:  146:     */
+        -:  147:    void empty_list_service();
+        -:  148:
+        -:  149:    /*
+        -:  150:     * returneaza un vector cu toate medicamentele de pe reteta
+        -:  151:     */
+        -:  152:    const vector<Medicament>& get_all_from_list_service();
+        -:  153:
+        -:  154:
+        -:  155:    void undo();
+        -:  156:    size_t get_dim_undo() noexcept;
+        -:  157:};
+        -:  158:
+        -:  159:void teste_service();
+        -:  160:
+        -:  161:#endif //LAB4_6OOP_SERVICE_H

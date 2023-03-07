@@ -1,0 +1,21 @@
+# ninja log v5
+114	1971	6738279620104006	CMakeFiles/lab4_6oop.dir/Undo.cpp.obj	b2eb651b5a3fcaf8
+26	1975	6738279620094031	CMakeFiles/lab4_6oop.dir/Medicament.cpp.obj	2ef8d7d19156169b
+105	1976	6738279620199035	CMakeFiles/lab4_6oop.dir/Teste_fisiere.cpp.obj	53c3d119aa2a70e4
+14	1983	6738279620278952	CMakeFiles/lab4_6oop.dir/Repository.cpp.obj	6828806f4dcee08a
+1	2043	6738279621069244	CMakeFiles/lab4_6oop.dir/main.cpp.obj	5a5376277dff0ea
+52	2044	6738279621089579	CMakeFiles/lab4_6oop.dir/Teste_reteta.cpp.obj	b8990d453647dbd7
+34	2086	6738279621606623	CMakeFiles/lab4_6oop.dir/Reteta.cpp.obj	d54d58ef28b6efc
+30	2229	6738279623045829	CMakeFiles/lab4_6oop.dir/UI.cpp.obj	ab2e5c824bd25eee
+17	2343	6738279624193303	CMakeFiles/lab4_6oop.dir/Teste.cpp.obj	34d1b563126d36c9
+20	2682	6738279627466031	CMakeFiles/lab4_6oop.dir/Service.cpp.obj	6db610b602aa75cc
+2683	3128	6738279631997677	lab4_6oop.exe	d0f53467a254eab1
+30	988	6738291843324836	CMakeFiles/lab4_6oop.dir/Undo.cpp.obj	b2eb651b5a3fcaf8
+32	993	6738291843455883	CMakeFiles/lab4_6oop.dir/Teste_fisiere.cpp.obj	53c3d119aa2a70e4
+11	1010	6738291843632237	CMakeFiles/lab4_6oop.dir/Repository.cpp.obj	6828806f4dcee08a
+2	1077	6738291844355666	CMakeFiles/lab4_6oop.dir/main.cpp.obj	5a5376277dff0ea
+20	1095	6738291844539347	CMakeFiles/lab4_6oop.dir/Teste_reteta.cpp.obj	b8990d453647dbd7
+25	1202	6738291845601294	CMakeFiles/lab4_6oop.dir/UI.cpp.obj	ab2e5c824bd25eee
+18	1301	6738291846592630	CMakeFiles/lab4_6oop.dir/Teste.cpp.obj	34d1b563126d36c9
+13	1565	6738291849229177	CMakeFiles/lab4_6oop.dir/Service.cpp.obj	6db610b602aa75cc
+1566	1916	6738291852678063	lab4_6oop.exe	d0f53467a254eab1

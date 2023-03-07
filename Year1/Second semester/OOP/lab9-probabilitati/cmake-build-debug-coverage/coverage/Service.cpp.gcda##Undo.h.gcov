@@ -1,0 +1,104 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Undo.h
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 27-Apr-22.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB4_6OOP_UNDO_H
+        -:    6:#define LAB4_6OOP_UNDO_H
+        -:    7:
+        -:    8:#pragma once
+        -:    9:#include "Repository.h"
+        -:   10:#include <string>
+        -:   11:using std::string;
+        -:   12:
+        -:   13:class ActiuneUndo{
+        -:   14:private:
+        -:   15:public:
+        -:   16:    virtual void doUndo() = 0;
+      35*:   17:    virtual ~ActiuneUndo() = default;
+------------------
+_ZN11ActiuneUndoD0Ev:
+function _ZN11ActiuneUndoD0Ev called 0 returned 0% blocks executed 0%
+    #####:   17:    virtual ~ActiuneUndo() = default;
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN11ActiuneUndoD2Ev:
+function _ZN11ActiuneUndoD2Ev called 35 returned 100% blocks executed 100%
+       35:   17:    virtual ~ActiuneUndo() = default;
+------------------
+        -:   18:};
+        -:   19:
+        -:   20:class UndoAdauga: public ActiuneUndo {
+        -:   21:private:
+        -:   22:    Medicament_Repository& repo;
+        -:   23:    Medicament med;
+        -:   24:public:
+function _ZN10UndoAdaugaC2ER21Medicament_RepositoryRK10Medicament called 31 returned 100% blocks executed 80%
+       31:   25:    UndoAdauga(Medicament_Repository& _repo, const Medicament& _med) : repo{_repo }, med{ _med }{};
+       31:   25-block  0
+call    0 returned 31
+call    1 returned 31
+branch  2 taken 31 (fallthrough)
+branch  3 taken 0 (throw)
+       31:   25-block  1
+    $$$$$:   25-block  2
+call    4 never executed
+        -:   26:    void doUndo() override;
+        -:   27:};
+        -:   28:
+        -:   29:
+        -:   30:class UndoSterge: public ActiuneUndo {
+        -:   31:private:
+        -:   32:    Medicament_Repository& repo;
+        -:   33:    Medicament med;
+        -:   34:public:
+function _ZN10UndoStergeC2ER21Medicament_RepositoryRK10Medicament called 2 returned 100% blocks executed 80%
+        2:   35:    UndoSterge(Medicament_Repository& _repo, const Medicament& _med) : repo{_repo }, med{_med }{};
+        2:   35-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   35-block  1
+    $$$$$:   35-block  2
+call    4 never executed
+        -:   36:    void doUndo() override;
+        -:   37:};
+        -:   38:
+        -:   39:
+        -:   40:class UndoModifica: public ActiuneUndo {
+        -:   41:private:
+        -:   42:    Medicament_Repository& repo;
+        -:   43:    Medicament med;
+        -:   44:public:
+function _ZN12UndoModificaC2ER21Medicament_RepositoryRK10Medicament called 2 returned 100% blocks executed 80%
+        2:   45:    UndoModifica(Medicament_Repository& _repo, const Medicament& _med) :repo{ _repo }, med{ _med }{};
+        2:   45-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   45-block  1
+    $$$$$:   45-block  2
+call    4 never executed
+        -:   46:    void doUndo() override;
+        -:   47:};
+        -:   48:
+        -:   49:
+        -:   50:class UndoException {
+        -:   51:private:
+        -:   52:    string msg;
+        -:   53:public:
+function _ZN13UndoExceptionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   54:    UndoException(const string& msg) :msg{ msg }{};
+        1:   54-block  0
+call    0 returned 1
+        -:   55:    const string& get_msg() const noexcept;
+        -:   56:};
+        -:   57:
+        -:   58:#endif //LAB4_6OOP_UNDO_H

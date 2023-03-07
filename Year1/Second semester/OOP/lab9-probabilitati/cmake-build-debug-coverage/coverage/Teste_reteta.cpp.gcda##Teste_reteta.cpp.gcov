@@ -1,0 +1,448 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Teste_reteta.cpp
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Teste_reteta.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Teste_reteta.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 25-Apr-22.
+        -:    3://
+        -:    4:
+        -:    5:#include "Teste_reteta.h"
+        -:    6:#include <assert.h>
+        -:    7:#include "Service.h"
+        -:    8:#include "Reteta.h"
+        -:    9:
+        -:   10:
+function _Z11test_retetav called 1 returned 100% blocks executed 48%
+        1:   11:void test_reteta(){
+        2:   12:    List teste;
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   12-block  1
+call    2 never executed
+        3:   13:    Medicament med1{"coldrex","alfa","calciu", 90};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   13-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   13-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   13-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   13-block  3
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+    $$$$$:   13-block  9
+call   21 never executed
+        3:   14:    Medicament med2{"fervex","beta","sodiu", 16};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   14-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   14-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+        1:   14-block  3
+call   20 returned 1
+    $$$$$:   14-block  4
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+call   21 never executed
+        1:   15:    teste.addList(med1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16:    teste.addList(med2);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   17:    assert(teste.getallfromList().size() == 2);
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   17-block  2
+call    6 never executed
+        1:   18:    teste.emptyList();
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   19:    assert(teste.getallfromList().size() == 0);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   19-block  2
+call    6 never executed
+        1:   20:}
+        -:   21:
+function _Z20teste_reteta_servicev called 1 returned 100% blocks executed 50%
+        1:   22:void teste_reteta_service(){
+        2:   23:    Medicament_Repository test_repo;
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   23-block  1
+call    2 never executed
+        -:   24:    Medicament_Validator test_val;
+        2:   25:    Medicamente_Service test_service{ test_repo,test_val };
+call    0 returned 1
+        1:   25-block  0
+call    1 returned 1
+    $$$$$:   25-block  1
+call    2 never executed
+        -:   26:
+        1:   27:    test_service.add_medicament("fervex","beta","ibuprofen",89.7);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   27-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   27-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   27-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   27-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   27-block  4
+call   21 never executed
+    $$$$$:   27-block  5
+    $$$$$:   27-block  6
+call   22 never executed
+    $$$$$:   27-block  7
+    $$$$$:   27-block  8
+call   23 never executed
+    $$$$$:   27-block  9
+    $$$$$:   27-block 10
+call   24 never executed
+    $$$$$:   27-block 11
+    $$$$$:   27-block 12
+call   25 never executed
+    $$$$$:   27-block 13
+    $$$$$:   27-block 14
+call   26 never executed
+    $$$$$:   27-block 15
+        1:   28:    test_service.add_medicament("coldrex","alfa","paracetamol",9.5);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   28-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   28-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   28-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   28-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   28-block  4
+call   21 never executed
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+call   22 never executed
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+call   23 never executed
+    $$$$$:   28-block  9
+    $$$$$:   28-block 10
+call   24 never executed
+    $$$$$:   28-block 11
+    $$$$$:   28-block 12
+call   25 never executed
+    $$$$$:   28-block 13
+    $$$$$:   28-block 14
+call   26 never executed
+    $$$$$:   28-block 15
+        1:   29:    test_service.add_medicament("theraflu","omega","calciu",3.8);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   29-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   29-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   29-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   29-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   29-block  4
+call   21 never executed
+    $$$$$:   29-block  5
+    $$$$$:   29-block  6
+call   22 never executed
+    $$$$$:   29-block  7
+    $$$$$:   29-block  8
+call   23 never executed
+    $$$$$:   29-block  9
+    $$$$$:   29-block 10
+call   24 never executed
+    $$$$$:   29-block 11
+    $$$$$:   29-block 12
+call   25 never executed
+    $$$$$:   29-block 13
+    $$$$$:   29-block 14
+call   26 never executed
+    $$$$$:   29-block 15
+        1:   30:    test_service.add_medicament("borenar","oli","mg",7);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   30-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   30-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   30-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   30-block  4
+call   21 never executed
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+call   22 never executed
+    $$$$$:   30-block  7
+    $$$$$:   30-block  8
+call   23 never executed
+    $$$$$:   30-block  9
+    $$$$$:   30-block 10
+call   24 never executed
+    $$$$$:   30-block 11
+    $$$$$:   30-block 12
+call   25 never executed
+    $$$$$:   30-block 13
+    $$$$$:   30-block 14
+call   26 never executed
+    $$$$$:   30-block 15
+        -:   31:
+        1:   32:    test_service.add_random_service(4);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   33:    assert(test_service.get_all_from_list_service().size() == 4);
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   33-block  2
+call    6 never executed
+        1:   34:    test_service.empty_list_service();
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   35:    assert(test_service.get_all_from_list_service().size() == 0);
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   35-block  2
+call    6 never executed
+        -:   36:
+        1:   37:    test_service.add_random_service(20);
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   38:    //putem adauga doar 4 produse (fara sa se repete)
+       1*:   39:    assert(test_service.get_all_from_list_service().size() == 4);
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   39-block  2
+call    6 never executed
+        -:   40:
+        1:   41:    test_service.empty_list_service();
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42:    test_service.add_list_service("fervex");
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   42-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   42-block  3
+call    9 never executed
+    $$$$$:   42-block  4
+    $$$$$:   42-block  5
+call   10 never executed
+    $$$$$:   42-block  6
+       1*:   43:    assert(test_service.get_all_from_list_service().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   43-block  1
+call    6 never executed
+        -:   44:
+        -:   45:    try{
+       3*:   46:        test_service.add_list_service("algc");
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   46-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    %%%%%:   46-block  2
+call    7 never executed
+call    8 never executed
+        1:   46-block  3
+call    9 returned 1
+        1:   46-block  4
+        1:   46-block  5
+call   10 returned 1
+        1:   46-block  6
+    #####:   47:        assert(false);
+call    0 never executed
+        -:   48:    }
+        1:   49:    catch (Repo_Exception&) {
+        1:   49-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   50:        assert(true);
+        -:   51:    }
+        -:   52:
+        -:   53:
+        1:   54:}
+        -:   55:
+function _Z15test_all_retetav called 1 returned 100% blocks executed 100%
+        1:   56:void test_all_reteta(){
+        1:   57:    test_reteta();
+        1:   57-block  0
+call    0 returned 1
+        1:   58:    teste_reteta_service();
+call    0 returned 1
+        1:   59:}

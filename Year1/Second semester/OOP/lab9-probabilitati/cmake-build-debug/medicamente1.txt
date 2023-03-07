@@ -1,0 +1,4 @@
+coldrex,alfa,calciu,5
+betadina,beta,zinc,8
+borenar,omega,sodiu,9
+xyzal,theta,fier,1

@@ -1,0 +1,74 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Undo.h
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Undo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Undo.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 27-Apr-22.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB4_6OOP_UNDO_H
+        -:    6:#define LAB4_6OOP_UNDO_H
+        -:    7:
+        -:    8:#pragma once
+        -:    9:#include "Repository.h"
+        -:   10:#include <string>
+        -:   11:using std::string;
+        -:   12:
+        -:   13:class ActiuneUndo{
+        -:   14:private:
+        -:   15:public:
+        -:   16:    virtual void doUndo() = 0;
+    #####:   17:    virtual ~ActiuneUndo() = default;
+------------------
+_ZN11ActiuneUndoD0Ev:
+function _ZN11ActiuneUndoD0Ev called 0 returned 0% blocks executed 0%
+    #####:   17:    virtual ~ActiuneUndo() = default;
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN11ActiuneUndoD2Ev:
+function _ZN11ActiuneUndoD2Ev called 0 returned 0% blocks executed 0%
+    #####:   17:    virtual ~ActiuneUndo() = default;
+------------------
+        -:   18:};
+        -:   19:
+        -:   20:class UndoAdauga: public ActiuneUndo {
+        -:   21:private:
+        -:   22:    Medicament_Repository& repo;
+        -:   23:    Medicament med;
+        -:   24:public:
+        -:   25:    UndoAdauga(Medicament_Repository& _repo, const Medicament& _med) : repo{_repo }, med{ _med }{};
+        -:   26:    void doUndo() override;
+        -:   27:};
+        -:   28:
+        -:   29:
+        -:   30:class UndoSterge: public ActiuneUndo {
+        -:   31:private:
+        -:   32:    Medicament_Repository& repo;
+        -:   33:    Medicament med;
+        -:   34:public:
+        -:   35:    UndoSterge(Medicament_Repository& _repo, const Medicament& _med) : repo{_repo }, med{_med }{};
+        -:   36:    void doUndo() override;
+        -:   37:};
+        -:   38:
+        -:   39:
+        -:   40:class UndoModifica: public ActiuneUndo {
+        -:   41:private:
+        -:   42:    Medicament_Repository& repo;
+        -:   43:    Medicament med;
+        -:   44:public:
+        -:   45:    UndoModifica(Medicament_Repository& _repo, const Medicament& _med) :repo{ _repo }, med{ _med }{};
+        -:   46:    void doUndo() override;
+        -:   47:};
+        -:   48:
+        -:   49:
+        -:   50:class UndoException {
+        -:   51:private:
+        -:   52:    string msg;
+        -:   53:public:
+        -:   54:    UndoException(const string& msg) :msg{ msg }{};
+        -:   55:    const string& get_msg() const noexcept;
+        -:   56:};
+        -:   57:
+        -:   58:#endif //LAB4_6OOP_UNDO_H

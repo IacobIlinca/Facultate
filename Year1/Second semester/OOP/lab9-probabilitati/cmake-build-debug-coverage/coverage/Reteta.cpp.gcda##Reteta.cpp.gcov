@@ -1,0 +1,80 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Reteta.cpp
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Reteta.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Reteta.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 25-Apr-22.
+        -:    3://
+        -:    4:
+        -:    5:#include "Reteta.h"
+        -:    6:using std::shuffle;
+        -:    7:
+function _ZN4List7addListERK10Medicament called 3 returned 100% blocks executed 100%
+        3:    8:void List::addList(const Medicament &m) {
+        3:    9:    this->listproducts.push_back(m);
+        3:    9-block  0
+call    0 returned 3
+        3:   10:}
+        -:   11:
+function _ZN4List9emptyListEv called 3 returned 100% blocks executed 100%
+        3:   12:void List::emptyList() {
+        3:   13:    this->listproducts.clear();
+        3:   13-block  0
+call    0 returned 3
+        3:   14:}
+        -:   15:
+function _ZN4List13addrandomlistESt6vectorI10MedicamentSaIS1_EEm called 2 returned 100% blocks executed 88%
+        2:   16:void List::addrandomlist(vector<Medicament> originalprod, size_t howMany) {
+        -:   17:    //amestecam elementele vectorului v
+        2:   18:    shuffle(originalprod.begin(), originalprod.end(), std::default_random_engine(std::random_device{}()));
+        2:   18-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   18-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   18-block  2
+call    7 returned 2
+call    8 returned 2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   18-block  3
+call   12 returned 2
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+call   13 never executed
+       10:   19:    while (listproducts.size() < howMany && originalprod.size()>0) {
+       10:   19-block  0
+call    0 returned 10
+branch  1 taken 9 (fallthrough)
+branch  2 taken 1
+        9:   19-block  1
+call    3 returned 9
+branch  4 taken 8 (fallthrough)
+branch  5 taken 1
+        8:   19-block  2
+        2:   19-block  3
+       10:   19-block  4
+branch  6 taken 8 (fallthrough)
+branch  7 taken 2
+        8:   20:        listproducts.push_back(originalprod.back());
+        8:   20-block  0
+call    0 returned 8
+call    1 returned 8
+        8:   21:        originalprod.pop_back();
+call    0 returned 8
+        -:   22:    }
+        2:   23:}
+        2:   23-block  0
+        -:   24:
+function _ZN4List14getallfromListEv called 8 returned 100% blocks executed 100%
+        8:   25:const vector<Medicament>& List::getallfromList() {
+        8:   26:    return this->listproducts;
+        8:   26-block  0
+        -:   27:}
+        -:   28:
+        -:   29:

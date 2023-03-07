@@ -1,0 +1,55 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Reteta.h
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 25-Apr-22.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB4_6OOP_RETETA_H
+        -:    6:#define LAB4_6OOP_RETETA_H
+        -:    7:
+        -:    8:#include "Medicament.h"
+        -:    9:#include <vector>
+        -:   10:#include <algorithm>
+        -:   11:#include <random> //std::default_random_engine
+        -:   12:#include <chrono> //std::chrono::system_clock
+        -:   13:
+        -:   14:using std::vector;
+        -:   15:class List {
+        -:   16:    vector<Medicament> listproducts;
+        -:   17:public:
+function _ZN4ListC2Ev called 11 returned 100% blocks executed 100%
+       11:   18:    List()=default;
+       11:   18-block  0
+call    0 returned 11
+        -:   19:
+        -:   20:    /*
+        -:   21:     * Adaugam un medicament pe reteta
+        -:   22:     * pre-m:medicamentul ce se adauga
+        -:   23:     * post-medicamentul m va fi in lista
+        -:   24:     */
+        -:   25:
+        -:   26:    void addList(const Medicament& m);
+        -:   27:
+        -:   28:    /*
+        -:   29:     *Goleste reteta
+        -:   30:     * post-lista este goala
+        -:   31:     */
+        -:   32:    void emptyList();
+        -:   33:
+        -:   34:    /*
+        -:   35:     * Adauga un numar random de medicamente in reteta.
+        -:   36:     * originalmeds:medicamentele din care se alege
+        -:   37:     * howMany: cate medicamente sa se adauge (int)
+        -:   38:     * post-medicamentele sunt adaugate in reteta curenta.
+        -:   39:     */
+        -:   40:    void addrandomlist(vector<Medicament> originalprod, size_t howMany);
+        -:   41:
+        -:   42:    /*
+        -:   43:     * Returneaza un vector care contine toate medicamentele de pe reteta.
+        -:   44:     */
+        -:   45:    const vector<Medicament>& getallfromList();
+        -:   46:};
+        -:   47:
+        -:   48:#endif //LAB4_6OOP_RETETA_H

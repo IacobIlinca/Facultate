@@ -1,0 +1,610 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Service.cpp
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 30-Mar-22.
+        -:    3://
+        -:    4:
+        -:    5:#pragma once
+        -:    6:#include "Service.h"
+        -:    7:#include <assert.h>
+        -:    8:#include <functional>
+        -:    9:#include <algorithm>
+        -:   10:#include "Undo.h"
+        -:   11:using std::make_unique;
+        -:   12:
+function _ZN19Medicamente_Service14add_medicamentENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_d called 36 returned 86% blocks executed 56%
+       36:   13:void Medicamente_Service::add_medicament(string denumire, string producator, string substanta_activa, double pret) {
+       77:   14:    Medicament med1{denumire, producator, substanta_activa, pret};
+       36:   14-block  0
+call    0 returned 36
+branch  1 taken 36 (fallthrough)
+branch  2 taken 0 (throw)
+       36:   14-block  1
+call    3 returned 36
+branch  4 taken 36 (fallthrough)
+branch  5 taken 0 (throw)
+       36:   14-block  2
+call    6 returned 36
+branch  7 taken 36 (fallthrough)
+branch  8 taken 0 (throw)
+       36:   14-block  3
+call    9 returned 36
+branch 10 taken 36 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 36
+call   13 returned 36
+    $$$$$:   14-block  4
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+        5:   14-block  7
+call   14 returned 5
+       36:   15:    val.valideaza(med1);
+call    0 returned 36
+branch  1 taken 32 (fallthrough)
+branch  2 taken 4 (throw)
+       32:   16:    repo.store(med1);
+       32:   16-block  0
+call    0 returned 32
+branch  1 taken 31 (fallthrough)
+branch  2 taken 1 (throw)
+       31:   17:    UndoActions.push_back( make_unique<UndoAdauga>(repo, med1));
+       31:   17-block  0
+call    0 returned 31
+branch  1 taken 31 (fallthrough)
+branch  2 taken 0 (throw)
+       31:   17-block  1
+call    3 returned 31
+call    4 returned 31
+branch  5 taken 31 (fallthrough)
+branch  6 taken 0 (throw)
+       31:   17-block  2
+call    7 returned 31
+call    8 returned 31
+call    9 returned 31
+    $$$$$:   17-block  3
+call   10 never executed
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+call   11 never executed
+    $$$$$:   17-block  6
+       31:   18:}
+        -:   19:
+function _ZN19Medicamente_Service21modifica_pret_serviceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_d called 2 returned 100% blocks executed 49%
+        2:   20:void Medicamente_Service::modifica_pret_service(string denumire, string producator, string substanta_activa,
+        -:   21:                                                double pret_nou) {
+        6:   22:    Medicament med1{denumire, producator, substanta_activa, pret_nou};
+        2:   22-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   22-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   22-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   22-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 2
+call   13 returned 2
+call   14 returned 2
+    $$$$$:   22-block  4
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+    $$$$$:   22-block  7
+call   15 never executed
+        2:   23:    val.valideaza(med1);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   24:    Medicament med2=repo.find(med1.get_denumire(), med1.get_producator());
+        2:   24-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   24-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   24-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   24-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 2
+    $$$$$:   24-block  4
+    $$$$$:   24-block  5
+    $$$$$:   24-block  6
+call   13 never executed
+        2:   25:    repo.modificare_pret_repo(med1);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   26:    UndoActions.push_back(make_unique<UndoModifica>(repo, med2));
+        2:   26-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   26-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   26-block  2
+call    7 returned 2
+call    8 returned 2
+call    9 returned 2
+    $$$$$:   26-block  3
+call   10 never executed
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+call   11 never executed
+    $$$$$:   26-block  6
+        2:   27:}
+        -:   28:
+function _ZN19Medicamente_Service16stergere_serviceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_d called 2 returned 100% blocks executed 50%
+        2:   29:void Medicamente_Service::stergere_service(string denumire, string producator, string substanta_activa, double pret) {
+        4:   30:    Medicament med1{denumire, producator, substanta_activa, pret};
+        2:   30-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   30-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   30-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   30-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 2
+call   13 returned 2
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+call   14 never executed
+        2:   31:    val.valideaza(med1);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   32:    repo.stergere_repo(med1);
+        2:   32-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   33:    UndoActions.push_back(make_unique<UndoSterge>(repo, med1));
+        2:   33-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   33-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   33-block  2
+call    7 returned 2
+call    8 returned 2
+call    9 returned 2
+    $$$$$:   33-block  3
+call   10 never executed
+    $$$$$:   33-block  4
+    $$$$$:   33-block  5
+call   11 never executed
+    $$$$$:   33-block  6
+        2:   34:}
+        -:   35:
+function _ZN19Medicamente_Service12find_serviceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_ called 1 returned 100% blocks executed 64%
+        1:   36:Medicament Medicamente_Service::find_service(string denumire, string producator) {
+        1:   37:    return repo.find(denumire, producator);
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   37-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   37-block  3
+call   10 returned 1
+call   11 returned 1
+        1:   37-block  4
+    $$$$$:   37-block  5
+call   12 never executed
+    $$$$$:   37-block  6
+    $$$$$:   37-block  7
+call   13 never executed
+        -:   38:}
+        -:   39:
+function _ZN19Medicamente_Service25filtrare_substanta_activaENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 73%
+        1:   40:vector<Medicament> Medicamente_Service::filtrare_substanta_activa(string substanta_activa) {
+        -:   41://    vector<Medicament> rezultat;
+        -:   42://    for(const auto& med : repo.get_all_medicamente()) {
+        -:   43://        if(med.get_substanta_activa() == substanta_activa){
+        -:   44://            rezultat.push_back(med);
+        -:   45://        }
+        -:   46://    }
+        -:   47://    return rezultat;
+        -:   48:
+        1:   49:    const vector<Medicament>& allmeds = get_all_medicamente();
+        1:   49-block  0
+call    0 returned 1
+        1:   50:    vector<Medicament> rezultat;
+call    0 returned 1
+function _ZZN19Medicamente_Service25filtrare_substanta_activaENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10MedicamentE_clES8_ called 3 returned 100% blocks executed 100%
+        3:   51:    std::copy_if(allmeds.begin(), allmeds.end(), back_inserter(rezultat),[substanta_activa](const Medicament& m)
+        4:   52:    {return m.get_substanta_activa()==substanta_activa;});
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   52-block  1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   52-block  2
+call   11 returned 1
+    $$$$$:   52-block  3
+call   12 never executed
+    $$$$$:   52-block  4
+        3:   52-block  5
+call   13 returned 3
+call   14 returned 3
+call   15 returned 3
+        1:   53:    return rezultat;
+        1:   53-block  0
+        -:   54:}
+        -:   55:
+function _ZN19Medicamente_Service13filtrare_pretEd called 1 returned 100% blocks executed 90%
+        1:   56:vector<Medicament> Medicamente_Service::filtrare_pret(double pret) {
+        -:   57://    vector<Medicament> rezultat;
+        -:   58://    for(const auto& med : repo.get_all_medicamente()) {
+        -:   59://        if(med.get_pret() == pret){
+        -:   60://            rezultat.push_back(med);
+        -:   61://        }
+        -:   62://    }
+        -:   63://    return rezultat;
+        1:   64:    const vector<Medicament>& allmeds = get_all_medicamente();
+        1:   64-block  0
+call    0 returned 1
+        1:   65:    vector<Medicament> rezultat;
+call    0 returned 1
+function _ZZN19Medicamente_Service13filtrare_pretEdENKUlRK10MedicamentE_clES2_ called 3 returned 100% blocks executed 100%
+        6:   66:    std::copy_if(allmeds.begin(), allmeds.end(), back_inserter(rezultat),[pret](const Medicament& m)
+        4:   67:    {return m.get_pret()==pret;});
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67-block  0
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   67-block  1
+call    8 returned 3
+        1:   68:    return rezultat;
+        1:   68-block  0
+        1:   68-block  1
+        -:   69:}
+        -:   70:
+        -:   71:/*
+        -:   72:vector<Medicament> Medicamente_Service::general_sort(bool (*mai_mic_f)(const Medicament &, const Medicament &)) {
+        -:   73:    vector<Medicament> v{repo.get_all_medicamente()};
+        -:   74:    for (size_t i=0;i<v.size();i++) {
+        -:   75:        for (size_t j = i + 1; j < v.size(); j++) {
+        -:   76:            if (!mai_mic_f(v[i], v[j])) {
+        -:   77:                Medicament aux = v[i];
+        -:   78:                v[i] = v[j];
+        -:   79:                v[j] = aux;
+        -:   80:            }
+        -:   81:        }
+        -:   82:    }
+        -:   83:    return v;
+        -:   84:}
+        -:   85:
+        -:   86:vector<Medicament> Medicamente_Service::sort_by_denumire() {
+        -:   87:    auto sorted_copy = repo.get_all_medicamente();
+        -:   88:    sort(sorted_copy.begin(), sorted_copy.end(), cmp_denumire);
+        -:   89:    return sorted_copy;
+        -:   90:}
+        -:   91:
+        -:   92:vector<Medicament> Medicamente_Service::sort_by_producator() {
+        -:   93:    auto sorted_copy = repo.get_all_medicamente();
+        -:   94:    sort(sorted_copy.begin(), sorted_copy.end(), cmp_producator);
+        -:   95:    return sorted_copy;
+        -:   96:}
+        -:   97:
+        -:   98: */
+        -:   99://vector<Medicament> Medicamente_Service::sortservice(int reverse, bool (*functie)(Medicament &, Medicament &)) {
+        -:  100://    vector<Medicament> v{repo.get_all_medicamente() };  //copie
+        -:  101://
+        -:  102://    for (int i=0;i<v.size();i++)
+        -:  103://    {
+        -:  104://        for (int j=i+1;j<v.size();j++)
+        -:  105://        {
+        -:  106://            if (reverse == 0)
+        -:  107://            {
+        -:  108://                //crescator
+        -:  109://                if (!functie(v[i],v[j]))
+        -:  110://                {
+        -:  111://                    Medicament aux = v[i];
+        -:  112://                    v[i] = v[j];
+        -:  113://                    v[j] = aux;
+        -:  114://                }
+        -:  115://            }
+        -:  116://            else
+        -:  117://            {
+        -:  118://                //descrescator
+        -:  119://                if (functie(v[i], v[j]))
+        -:  120://                {
+        -:  121://                    Medicament aux = v[i];
+        -:  122://                    v[i] = v[j];
+        -:  123://                    v[j] = aux;
+        -:  124://                }
+        -:  125://            }
+        -:  126://        }
+        -:  127://    }
+        -:  128://    return v;
+        -:  129://}
+        -:  130:
+function _ZN19Medicamente_Service12sortdenumireEi called 2 returned 100% blocks executed 92%
+        2:  131:vector<Medicament> Medicamente_Service::sortdenumire(int reverse) {
+        2:  132:    vector<Medicament> sorted{ repo.get_all_medicamente() };
+        2:  132-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  133:    sort(sorted.begin(),sorted.end(), cmp_denumire);
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:  134:    if (reverse == 1) {
+        2:  134-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  135:        std::reverse(sorted.begin(), sorted.end());
+        1:  135-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        -:  136:    }
+        2:  137:    return sorted;
+        2:  137-block  0
+        2:  137-block  1
+        -:  138:    //return sortservice(reverse, cmp_denumire);
+        -:  139:}
+        -:  140:
+function _ZN19Medicamente_Service14sortproducatorEi called 2 returned 100% blocks executed 92%
+        2:  141:vector<Medicament> Medicamente_Service::sortproducator(int reverse) {
+        2:  142:    vector<Medicament> sorted{ repo.get_all_medicamente() };
+        2:  142-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  143:    sort(sorted.begin(),sorted.end(), cmp_producator);
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:  144:    if (reverse == 1) {
+        2:  144-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  145:        std::reverse(sorted.begin(), sorted.end());
+        1:  145-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        -:  146:    }
+        2:  147:    return sorted;
+        2:  147-block  0
+        2:  147-block  1
+        -:  148:    //return sortservice(reverse, cmp_producator);
+        -:  149:}
+        -:  150:
+function _ZN19Medicamente_Service14sortdsubstpretEi called 2 returned 100% blocks executed 92%
+        2:  151:vector<Medicament> Medicamente_Service::sortdsubstpret(int reverse) {
+        2:  152:    vector<Medicament> sorted{ repo.get_all_medicamente() };
+        2:  152-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  153:    sort(sorted.begin(),sorted.end(), cmp_substspret);
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:  154:    if (reverse == 1) {
+        2:  154-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  155:        std::reverse(sorted.begin(), sorted.end());
+        1:  155-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        -:  156:    }
+        2:  157:    return sorted;
+        2:  157-block  0
+        2:  157-block  1
+        -:  158:    //return sortservice(reverse, cmp_substspret);
+        -:  159:}
+        -:  160:
+        -:  161:
+function _ZN19Medicamente_Service27all_of_denumire_incepe_cu_aENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 74%
+        2:  162:int Medicamente_Service::all_of_denumire_incepe_cu_a(string denumire) {
+        4:  163:    vector<Medicament> copie { repo.get_all_medicamente() };
+        2:  163-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  163-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  163-block  2
+call    6 returned 2
+    $$$$$:  163-block  3
+call    7 never executed
+function _ZZN19Medicamente_Service27all_of_denumire_incepe_cu_aENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlR10MedicamentE_clES7_ called 7 returned 100% blocks executed 100%
+        9:  164:    if (std::all_of(copie.begin(), copie.end(), [denumire](Medicament& m){ return m.get_denumire() == denumire;}))
+        2:  164-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  164-block  1
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        2:  164-block  2
+call    8 returned 2
+branch  9 taken 1 (fallthrough)
+branch 10 taken 1
+    $$$$$:  164-block  3
+call   11 never executed
+    $$$$$:  164-block  4
+        7:  164-block  5
+call   12 returned 7
+call   13 returned 7
+call   14 returned 7
+        -:  165:    {
+        1:  166:        return 1;
+        1:  166-block  0
+        -:  167:    }
+        1:  168:    return 0;
+        1:  168-block  0
+        -:  169:}
+        -:  170:
+        -:  171:
+        -:  172://FUNCTIONALITATI RETETA
+        -:  173:
+function _ZN19Medicamente_Service16add_list_serviceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
+        2:  174:void Medicamente_Service::add_list_service(string denumire) {
+        2:  175:    const auto& med = repo.find_denumire(denumire);
+        2:  175-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1 (throw)
+        1:  175-block  1
+call    4 returned 1
+        1:  175-block  2
+call    5 returned 1
+        1:  176:    currentlist.addList(med);
+call    0 returned 1
+        1:  177:}
+        -:  178:
+function _ZN19Medicamente_Service18add_random_serviceEi called 2 returned 100% blocks executed 82%
+        2:  179:int Medicamente_Service::add_random_service(int howMany) {
+        2:  180:    currentlist.addrandomlist(this->get_all_medicamente(), howMany);
+        2:  180-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:  180-block  1
+call    5 returned 2
+    $$$$$:  180-block  2
+call    6 never executed
+        2:  181:    return currentlist.getallfromList().size();
+call    0 returned 2
+call    1 returned 2
+        2:  181-block  0
+        -:  182:}
+        -:  183:
+function _ZN19Medicamente_Service18empty_list_serviceEv called 2 returned 100% blocks executed 100%
+        2:  184:void Medicamente_Service::empty_list_service() {
+        2:  185:    currentlist.emptyList();
+        2:  185-block  0
+call    0 returned 2
+        2:  186:}
+        -:  187:
+function _ZN19Medicamente_Service25get_all_from_list_serviceEv called 4 returned 100% blocks executed 100%
+        4:  188:const vector<Medicament>& Medicamente_Service::get_all_from_list_service() {
+        4:  189:    return currentlist.getallfromList();
+        4:  189-block  0
+call    0 returned 4
+        -:  190:}
+        -:  191:
+function _ZN19Medicamente_Service4undoEv called 4 returned 75% blocks executed 68%
+        4:  192:void Medicamente_Service::undo() {
+        4:  193:    if (UndoActions.size() < 1) {
+        4:  193-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:  194:        throw UndoException("Nu se poate da undo!\n");
+        1:  194-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  194-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  194-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 0
+    $$$$$:  194-block  3
+call   11 never executed
+    $$$$$:  194-block  4
+    $$$$$:  194-block  5
+call   12 never executed
+    $$$$$:  194-block  6
+    $$$$$:  194-block  7
+call   13 never executed
+        -:  195:    }
+        3:  196:    UndoActions.back()->doUndo();
+        3:  196-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:  197:    UndoActions.pop_back();
+call    0 returned 3
+        3:  198:}
+        -:  199:
+        -:  200:
+function _ZN19Medicamente_Service12get_dim_undoEv called 1 returned 100% blocks executed 100%
+        1:  201:size_t Medicamente_Service::get_dim_undo() noexcept {
+        1:  202:    return UndoActions.size();
+        1:  202-block  0
+call    0 returned 1
+        -:  203:}

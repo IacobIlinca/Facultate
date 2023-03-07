@@ -1,0 +1,93 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/main.cpp
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "UI.h"
+        -:    3:#include "Teste.h"
+        -:    4://#include "Pet.h"
+        -:    5://#include "teste_vector.h"
+        -:    6:#include "Teste_reteta.h"
+        -:    7:#include "Teste_fisiere.h"
+        -:    8:using std::cout;
+        -:    9:using std::endl;
+        -:   10:
+        -:   11://void test_all(){
+        -:   12://    teste_domain();
+        -:   13://    cout << "Finished domain tests." << endl;
+        -:   14://    teste_repo();
+        -:   15://    cout << "Finished repo tests." << endl;
+        -:   16://    teste_service();
+        -:   17://    cout << "Finished service tests." << endl;
+        -:   18://}
+        -:   19:
+function _Z9start_appv called 1 returned 100% blocks executed 55%
+        1:   20:void start_app(){
+        -:   21://    cout << "Alegeti modul de afisare: 1-consola    2-fisier.\n";
+        -:   22://    cout << "Optiunea dumneavoastra este: ";
+        -:   23://    int cmd;
+        -:   24://    std::cin >> cmd;
+        -:   25://    if (cmd == 1)
+        -:   26://    {
+        -:   27://        Medicament_Repository repo;
+        -:   28://        Medicament_Validator val;
+        -:   29://        Medicamente_Service srv{repo, val};
+        -:   30://        Console ui{srv};
+        -:   31://        ui.run();
+        -:   32://    }
+        -:   33://
+        -:   34://    else {
+        -:   35://        RepoFile repo{ "med2.txt"};
+        -:   36://        Medicament_Validator val;
+        -:   37://        Medicamente_Service srv{repo, val};
+        -:   38://        Console ui{srv};
+        -:   39://        ui.run();
+        -:   40://    }
+        -:   41:    //Medicament_Repository repo;
+        3:   42:    RepoFile repo{ "med2.txt"};
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   42-block  2
+    $$$$$:   42-block  3
+    $$$$$:   42-block  4
+call    9 never executed
+        -:   43:    Medicament_Validator val;
+        2:   44:    Medicamente_Service srv{repo, val};
+call    0 returned 1
+        1:   44-block  0
+call    1 returned 1
+    $$$$$:   44-block  1
+call    2 never executed
+        1:   45:    Console ui{srv};
+call    0 returned 1
+        1:   46:    ui.run();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47:}
+        -:   48:
+function main called 1 returned 100% blocks executed 100%
+        1:   49:int main() {
+        1:   50:    test_all();
+        1:   50-block  0
+call    0 returned 1
+        -:   51:    //testAll<VectorDinamic<Pet>>();
+        1:   52:    test_all_reteta();
+call    0 returned 1
+        1:   53:    test_all_fisiere();
+call    0 returned 1
+        1:   54:    start_app();
+call    0 returned 1
+        -:   55:
+        -:   56:
+        1:   57:    return 0;
+        -:   58:}

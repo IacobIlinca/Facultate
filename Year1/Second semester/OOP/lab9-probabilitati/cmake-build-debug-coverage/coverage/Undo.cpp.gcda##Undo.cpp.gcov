@@ -1,0 +1,36 @@
+        -:    0:Source:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/Undo.cpp
+        -:    0:Graph:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Undo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Ilinca/Desktop/facultate/semestru 2/oop/lab9/cu undo si fisiere/lab9-bun/cmake-build-debug-coverage/CMakeFiles/lab4_6oop.dir/Undo.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Ilinca on 27-Apr-22.
+        -:    3://
+        -:    4:
+        -:    5:#include "Undo.h"
+        -:    6:
+function _ZNK13UndoException7get_msgB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:    7:const string& UndoException::get_msg() const noexcept {
+        1:    8:    return msg;
+        1:    8-block  0
+        -:    9:}
+        -:   10:
+function _ZN10UndoAdauga6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   11:void UndoAdauga::doUndo() {
+        1:   12:    repo.stergere_repo(med);
+        1:   12-block  0
+call    0 returned 1
+        1:   13:}
+        -:   14:
+function _ZN10UndoSterge6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   15:void UndoSterge::doUndo() {
+        1:   16:    repo.store(med);
+        1:   16-block  0
+call    0 returned 1
+        1:   17:}
+        -:   18:
+function _ZN12UndoModifica6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   19:void UndoModifica::doUndo() {
+        1:   20:    repo.modificare_pret_repo(med);
+        1:   20-block  0
+call    0 returned 1
+        1:   21:}
