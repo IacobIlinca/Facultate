@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Ilinca\\Desktop\\facultate\\AN II\\semestrul 2\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ilinca\\Desktop\\facultate\\AN II\\semestrul 2\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ilinca\\Desktop\\facultate\\AN II\\semestrul 2\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd.csproj",
+        "projectName": "Lab4-deadlock-sgbd",
+        "projectPath": "C:\\Users\\Ilinca\\Desktop\\facultate\\AN II\\semestrul 2\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd.csproj",
+        "packagesPath": "C:\\Users\\Ilinca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ilinca\\Desktop\\facultate\\AN II\\semestrul 2\\Lab4-deadlock-sgbd\\Lab4-deadlock-sgbd\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ilinca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

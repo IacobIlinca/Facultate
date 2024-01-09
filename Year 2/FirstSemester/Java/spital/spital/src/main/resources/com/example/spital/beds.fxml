@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spital.Beds">
+   <children>
+      <Label layoutX="20.0" layoutY="23.0" text="Paturi ocupate:" />
+      <TextField fx:id="paturiOcupateTxtFld" disable="true" layoutX="115.0" layoutY="18.0" prefHeight="26.0" prefWidth="36.0" />
+      <Label layoutX="20.0" layoutY="65.0" text="Situatie paturi libere:" />
+      <Label layoutX="20.0" layoutY="90.0" text="TIC:" />
+      <Label layoutX="19.0" layoutY="123.0" text="TIM:" />
+      <Label layoutX="20.0" layoutY="158.0" text="TIIP:" />
+      <TextField fx:id="TIIPtxt" disable="true" layoutX="75.0" layoutY="158.0" prefHeight="26.0" prefWidth="36.0" />
+      <TextField fx:id="TICtxt" disable="true" layoutX="75.0" layoutY="85.0" prefHeight="26.0" prefWidth="36.0" />
+      <TextField fx:id="TIMtxt" disable="true" layoutX="75.0" layoutY="119.0" prefHeight="26.0" prefWidth="36.0" />
+   </children>
+</AnchorPane>

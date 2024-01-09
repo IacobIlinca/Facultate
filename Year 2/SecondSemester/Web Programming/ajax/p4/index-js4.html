@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>X-0 Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            border: 1px solid darkmagenta;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        td:hover {
+            background-color: lightpink;
+        }
+
+        #status {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="0"></td>
+            <td id="1"></td>
+            <td id="2"></td>
+        </tr>
+        <tr>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+        </tr>
+        <tr>
+            <td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+        </tr>
+    </table>
+    <div id="status">Așteaptă...</div>
+    <script>
+        const player = 'X';
+        const computer = '0';
+        let currentPlayer;
+        let gameover = false;
+
+        $(document).ready(() => {
+            initGame();
+
+            $('td').click(function () {
+                if ($(this).text() !== '' || gameover) {
+                    return;
+                }
+
+                $(this).text(currentPlayer);
+                checkGameStatus();
+                makeComputerMove();
+            });
+        });
+
+        function initGame() {
+            currentPlayer = Math.floor(Math.random() * 2) === 0 ? player : computer;
+            if (currentPlayer === computer) {
+                makeComputerMove();
+            }
+        }
+
+        function getBoard() {
+            const board = [];
+            $('td').each(function () {
+                board.push($(this).text());
+            });
+            return board;
+        }
+
+        function makeComputerMove() {
+            if (currentPlayer !== computer) {
+                return;
+            }
+
+            $.ajax({
+                url: 'http://localhost/problema4.php',
+                method: 'POST',
+                dataType: "json",
+                data: {
+                    board: getBoard(),
+                    player: player,
+                    computer: computer
+                },
+                success: function (response) {
+                    const move = response.move;
+                    $('#' + move).text(computer);
+                    checkGameStatus();
+                }
+            });
+        }
+
+
+        function checkGameStatus() {
+            var board = getBoard();
+            var winningCombinations = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
+                [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
+            ];
+            for (var i = 0; i < winningCombinations.length; i++) {
+                var combo = winningCombinations[i];
+                if (board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
+                    gameover = true;
+                    $('#status').text(board[combo[0]] + ' a câștigat!');
+                    return;
+                }
+            }
+
+            if (board.indexOf('') === -1) {
+                gameover = true;
+                $('#status').text('Jocul s-a terminat. Egalitate!');
+                return;
+            }
+
+            currentPlayer = currentPlayer === player ? computer : player;
+        }
+    </script>
+</body>
+
+</html>

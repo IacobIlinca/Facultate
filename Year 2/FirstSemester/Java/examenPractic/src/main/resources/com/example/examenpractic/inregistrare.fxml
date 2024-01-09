@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examenpractic.InregistrareController">
+   <children>
+      <Label layoutX="31.0" layoutY="25.0" text="Nume" />
+      <Label layoutX="31.0" layoutY="62.0" text="Prenume" />
+      <Label layoutX="31.0" layoutY="103.0" text="Username" />
+      <Label layoutX="31.0" layoutY="138.0" text="Parola" />
+      <ComboBox fx:id="orasCmbBox" layoutX="25.0" layoutY="175.0" prefWidth="150.0" promptText="Oras" />
+      <Label layoutX="31.0" layoutY="221.0" text="Strada" />
+      <Label layoutX="30.0" layoutY="260.0" text="Numar Strada" />
+      <Label layoutX="31.0" layoutY="305.0" text="Telefon" />
+      <TextField fx:id="numeTxtFld" layoutX="151.0" layoutY="21.0" />
+      <TextField fx:id="stradaTxtFld" layoutX="161.0" layoutY="217.0" />
+      <TextField fx:id="nrStradaTxtFld" layoutX="161.0" layoutY="256.0" />
+      <TextField fx:id="telefonTxtFld" layoutX="161.0" layoutY="301.0" />
+      <TextField fx:id="prenumeTxtFld" layoutX="151.0" layoutY="58.0" />
+      <TextField fx:id="ussernameTxtFld" layoutX="151.0" layoutY="99.0" />
+      <TextField fx:id="parolaTxtFld" layoutX="151.0" layoutY="142.0" />
+      <Button fx:id="registerBtn" layoutX="123.0" layoutY="341.0" mnemonicParsing="false" onAction="#onRegisterBtnClicked" text="Register now!" />
+      <ListView fx:id="useriLstVw" layoutX="363.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="logInBtn" layoutX="452.0" layoutY="301.0" mnemonicParsing="false" onAction="#onLogInBtnClicked" text="LogIn" />
+   </children>
+</AnchorPane>

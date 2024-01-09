@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problema 1 JavaScript</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('select#unu').on('dblclick', function(){
+                    var item = $(this).find('option:selected').text();
+                    var index = $(this).find('option:selected').index();
+                    var selectat = 1;
+                    muta(item, selectat, index);
+                });
+                $('select#trei').on('dblclick', function(){
+                    var item = $(this).find('option:selected').text();
+                    var index = $(this).find('option:selected').index();
+                    var selectat = 3;
+                    muta(item, selectat, index);
+                });
+                function muta(item, selectat, index){
+                    if(selectat == 1){
+                        var trei = $('select#trei');
+                        var unu = $('select#unu');
+                        var option = $('<option></option>').text(item);
+                        trei.append(option);
+                        unu.find('option').eq(index).remove();
+                    }
+                    else if (selectat == 2){
+                        var doi = $('select#doi');
+                        var patru = $('select#patru');
+                        var option = $('<option></option>').text(item);
+                        patru.append(option);
+                        doi.find('option').eq(index).remove();
+                    }
+                    else if (selectat == 3){
+                        var trei = $('select#trei');
+                        var unu = $('select#unu');
+                        var option = $('<option></option>').text(item);
+                        unu.append(option);
+                        trei.find('option').eq(index).remove();
+                    }
+                    else if (selectat == 4){
+                        var doi = $('select#doi');
+                        var patru = $('select#patru');
+                        var option = $('<option></option>').text(item);
+                        doi.append(option);
+                        patru.find('option').eq(index).remove();
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Lista 1</h2>
+        <ul>
+            <select id="unu" multiple="multiple">
+                <option value="" disabled selected style="display:none;"></option>
+                <option value="Optiune1">Meere</option>
+                <option value="Optiune2">Pere</option>
+                <option value="Optiune3">Rodii</option>
+                <option value="Optiune4">Prune</option>
+            </select>
+        </ul>
+        <h2>Lista 2</h2>
+        <ul>
+            <select id="trei" multiple="multiple">
+                <option value="" disabled selected style="display:none;"></option>
+                <option value="Optiune5">Portocale</option>
+                <option value="Optiune7">Clementine</option>
+                <option value="Optiune7">Mandarine</option>
+                <option value="Optiune8">Lamai</option>
+            </select>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinica.SectieController">
+   <children>
+      <TableView fx:id="tblViewSectie" layoutX="55.0" layoutY="80.0" onMousePressed="#pressedLineSectie" prefHeight="200.0" prefWidth="503.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="45.999969482421875" text="Id" />
+          <TableColumn fx:id="numeColumn" prefWidth="75.33334350585938" text="Nume" />
+            <TableColumn fx:id="sefDeSectieColumn" prefWidth="90.66668701171875" text="Sef de sectie" />
+            <TableColumn fx:id="pretConsultatieColumn" prefWidth="126.66668701171875" text="Pret Per Consultatie" />
+            <TableColumn fx:id="durataColumn" prefWidth="164.6666259765625" text="Durata Maxima Consultatie" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

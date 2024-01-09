@@ -1,0 +1,20 @@
+1;2;NU;Tahicardie;10
+2;3;NU;Astm bronsic;4
+3;1;DA;Insuficienta renala;14
+4;4;DA;Febra;3
+5;7;NU;Dislocare Umar;13
+6;5;NU;Gripa;7
+7;6;NU;Muscatura caine;14
+8;2;NU;Bronsita;12
+9;3;DA;Artmie;11
+10;1;DA;Dermatita atopica;2
+11;2;NU;Tahicardie;10
+12;3;NU;Astm bronsic;4
+13;1;DA;Insuficienta renala;14
+14;4;DA;Febra;3
+15;7;NU;Dislocare Umar;13
+16;5;NU;Gripa;7
+17;6;NU;Muscatura caine;14
+18;2;NU;Bronsita;12
+19;3;DA;Artmie;11
+20;1;DA;Dermatita atopica;2

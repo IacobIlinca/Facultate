@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinica.ConsultatieController">
+   <children>
+      <DatePicker fx:id="dataDatePicker" layoutX="27.0" layoutY="187.0" promptText="Data consultatie" />
+      <TableView fx:id="tblViewMediciDinConsultatii" layoutX="217.0" layoutY="44.0" prefHeight="200.0" prefWidth="383.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="idSectieColumn" prefWidth="75.0" text="Id sectie" />
+          <TableColumn fx:id="numeColumn" prefWidth="75.0" text="Nume" />
+          <TableColumn fx:id="vechimeColumn" prefWidth="75.0" text="Vechime" />
+            <TableColumn fx:id="rezidentColumn" prefWidth="75.0" text="Rezident" />
+        </columns>
+      </TableView>
+      <Label layoutX="25.0" layoutY="35.0" text="CNP Pacient:" />
+      <TextField fx:id="cnpPacientTxtFld" layoutX="40.0" layoutY="59.0" />
+      <TextField fx:id="numePacientTxtFld" layoutX="40.0" layoutY="131.0" />
+      <Label layoutX="14.0" layoutY="101.0" text="Nume Pacient:" />
+      <Spinner fx:id="oraSpinner" editable="true" layoutX="27.0" layoutY="300.0" />
+      <Button fx:id="faConsultatieBtn" layoutX="441.0" layoutY="300.0" mnemonicParsing="false" onAction="#onRezervaConsultClicked" text="Rezerva consultatia!" />
+   </children>
+</AnchorPane>

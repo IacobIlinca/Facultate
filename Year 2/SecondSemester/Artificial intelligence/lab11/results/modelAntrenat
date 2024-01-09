@@ -1,0 +1,25 @@
+C:\Users\Ilinca\AppData\Local\Programs\Python\Python310\python.exe "C:\Users\Ilinca\Desktop\facultate\AN II\semestrul 2\ai\lab11\modelAntrenat.py" 
+Epoch 1/10
+898/898 [==============================] - 77s 84ms/step - loss: 1.7799 - accuracy: 0.2738 - val_loss: 1.6655 - val_accuracy: 0.3260
+Epoch 2/10
+898/898 [==============================] - 100s 111ms/step - loss: 1.6270 - accuracy: 0.3567 - val_loss: 1.5811 - val_accuracy: 0.3826
+Epoch 3/10
+898/898 [==============================] - 107s 119ms/step - loss: 1.5591 - accuracy: 0.3891 - val_loss: 1.5266 - val_accuracy: 0.4090
+Epoch 4/10
+898/898 [==============================] - 104s 116ms/step - loss: 1.5132 - accuracy: 0.4110 - val_loss: 1.4841 - val_accuracy: 0.4249
+Epoch 5/10
+898/898 [==============================] - 135s 151ms/step - loss: 1.4841 - accuracy: 0.4237 - val_loss: 1.4668 - val_accuracy: 0.4308
+Epoch 6/10
+898/898 [==============================] - 111s 123ms/step - loss: 1.4580 - accuracy: 0.4352 - val_loss: 1.4567 - val_accuracy: 0.4301
+Epoch 7/10
+898/898 [==============================] - 154s 172ms/step - loss: 1.4350 - accuracy: 0.4467 - val_loss: 1.4392 - val_accuracy: 0.4368
+Epoch 8/10
+898/898 [==============================] - 160s 178ms/step - loss: 1.4165 - accuracy: 0.4529 - val_loss: 1.4264 - val_accuracy: 0.4476
+Epoch 9/10
+898/898 [==============================] - 132s 147ms/step - loss: 1.3951 - accuracy: 0.4621 - val_loss: 1.4137 - val_accuracy: 0.4515
+Epoch 10/10
+898/898 [==============================] - 128s 142ms/step - loss: 1.3756 - accuracy: 0.4700 - val_loss: 1.4258 - val_accuracy: 0.4430
+225/225 [==============================] - 9s 41ms/step - loss: 1.4258 - accuracy: 0.4430
+Test accuracy: 0.4430203437805176
+
+Process finished with exit code 0

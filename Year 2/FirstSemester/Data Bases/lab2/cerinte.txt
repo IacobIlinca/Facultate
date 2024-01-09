@@ -1,0 +1,11 @@
+1. Cate carti 'Dune' inchiriaza persoane la care le incepe numele cu litera 'A'.
+2. Numarul de carti inchiriate de fiecare persoana care sta in Alba Iulia.
+relatie m-n.
+3.Numarul de bibliotecari care lucreaza la fiecare etaj din Cluj Napoca.
+4. Bibliotecarii care lucreaza in cladirea Nicolae Iorga din Turda.
+5. Numele persoanelor cu nume distincte care au inchiriat cartea Dune din Alba Iulia.
+6. Strazile pe care stau bibliotecarii din Turda ce lucreaza la etajul 0.
+7. Cartile care au autori nascuti in secolul 20 si au nr exemplarelor mai mare de 2.
+8. Cartile de genul Crima care au mai mult de 2 exemplare.
+9. Cartile care sunt din genul Crima sau Fantasy si au mai mult de 4 exemplare.
+10. Persoanele care au imprumutat Moarte pe Nil in anul 2022.

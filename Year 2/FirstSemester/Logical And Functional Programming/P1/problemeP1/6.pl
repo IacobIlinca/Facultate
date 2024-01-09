@@ -1,0 +1,34 @@
+%6.a. Sa se scrie un predicat care elimina dintr-o lista toate elementele care
+%se repeta (ex: l=[1,2,1,4,1,3,4] => l=[2,3])
+% b. Sa se elimine toate aparitiile elementului maxim dintr-o lista de
+% numere intregi.
+
+%a.
+%member(E:Integer, L:List).
+member(E,[E|_]):-!.
+member(E,[_|T]):-member(E,T).
+
+%elimin(E:Integer, L:List, LR:List).
+elimin(_,[],[]):-!.
+elimin(E,[E|T],L):- !, elimin(E,T,L).
+elimin(E,[H|T],[H|L]):-elimin(E,T,L).
+
+%elimina(L:List, LR:List).
+elimina([],[]):-!.
+elimina([H|T],L):-
+	member(H,T),!,
+	elimin(H,T,L1),
+	elimina(L1,L).
+elimina([H|T],[H|L]):-
+	not(member(H,T)),
+	!,
+	elimina(T,L).
+
+%b.
+%maxim(L:List, E:Integer).
+maxim([], -3200):-!.
+maxim([H|T],H):-maxim(T,M),H>M,!.
+maxim([_|T],M):-maxim(T,M).
+
+%eliminaMax(L:List, LR:List).
+eliminaMax(L,LR):-maxim(L,M), elimin(M,L,LR).

@@ -1,0 +1,120 @@
+C:\Users\Ilinca\AppData\Local\Programs\Python\Python310\python.exe "C:\Users\Ilinca\Desktop\facultate\AN II\semestrul 2\ai\lab9\ann.py"
+Epoch 1/50
+4/4 [==============================] - 1s 60ms/step - loss: 1071.2874 - accuracy: 0.4815 - val_loss: 372.1441 - val_accuracy: 0.3214
+Epoch 2/50
+4/4 [==============================] - 0s 25ms/step - loss: 407.7515 - accuracy: 0.5833 - val_loss: 1290.8083 - val_accuracy: 0.3214
+Epoch 3/50
+4/4 [==============================] - 0s 23ms/step - loss: 535.7645 - accuracy: 0.5833 - val_loss: 344.1275 - val_accuracy: 0.5000
+Epoch 4/50
+4/4 [==============================] - 0s 23ms/step - loss: 101.2429 - accuracy: 0.7778 - val_loss: 509.7617 - val_accuracy: 0.6786
+Epoch 5/50
+4/4 [==============================] - 0s 23ms/step - loss: 287.6725 - accuracy: 0.6852 - val_loss: 998.7706 - val_accuracy: 0.4286
+Epoch 6/50
+4/4 [==============================] - 0s 23ms/step - loss: 299.4310 - accuracy: 0.7407 - val_loss: 149.5720 - val_accuracy: 0.7500
+Epoch 7/50
+4/4 [==============================] - 0s 25ms/step - loss: 220.7059 - accuracy: 0.7037 - val_loss: 187.8408 - val_accuracy: 0.8214
+Epoch 8/50
+4/4 [==============================] - 0s 23ms/step - loss: 315.0850 - accuracy: 0.7037 - val_loss: 207.8824 - val_accuracy: 0.8214
+Epoch 9/50
+4/4 [==============================] - 0s 23ms/step - loss: 167.7766 - accuracy: 0.8333 - val_loss: 296.1559 - val_accuracy: 0.7857
+Epoch 10/50
+4/4 [==============================] - 0s 26ms/step - loss: 220.9176 - accuracy: 0.7870 - val_loss: 198.9711 - val_accuracy: 0.8214
+Epoch 11/50
+4/4 [==============================] - 0s 23ms/step - loss: 194.5579 - accuracy: 0.8148 - val_loss: 296.3457 - val_accuracy: 0.8214
+Epoch 12/50
+4/4 [==============================] - 0s 24ms/step - loss: 151.4894 - accuracy: 0.7870 - val_loss: 197.8912 - val_accuracy: 0.7857
+Epoch 13/50
+4/4 [==============================] - 0s 24ms/step - loss: 128.3106 - accuracy: 0.8333 - val_loss: 391.1320 - val_accuracy: 0.6786
+Epoch 14/50
+4/4 [==============================] - 0s 24ms/step - loss: 82.7535 - accuracy: 0.8426 - val_loss: 240.3537 - val_accuracy: 0.7500
+Epoch 15/50
+4/4 [==============================] - 0s 25ms/step - loss: 46.8794 - accuracy: 0.9167 - val_loss: 274.4181 - val_accuracy: 0.8214
+Epoch 16/50
+4/4 [==============================] - 0s 23ms/step - loss: 47.7805 - accuracy: 0.8519 - val_loss: 216.2573 - val_accuracy: 0.7857
+Epoch 17/50
+4/4 [==============================] - 0s 25ms/step - loss: 16.4995 - accuracy: 0.9444 - val_loss: 216.7809 - val_accuracy: 0.7857
+Epoch 18/50
+4/4 [==============================] - 0s 23ms/step - loss: 19.8743 - accuracy: 0.9074 - val_loss: 263.4139 - val_accuracy: 0.8214
+Epoch 19/50
+4/4 [==============================] - 0s 24ms/step - loss: 25.7667 - accuracy: 0.9167 - val_loss: 204.3101 - val_accuracy: 0.8214
+Epoch 20/50
+4/4 [==============================] - 0s 25ms/step - loss: 18.7977 - accuracy: 0.9537 - val_loss: 222.7933 - val_accuracy: 0.8571
+Epoch 21/50
+4/4 [==============================] - 0s 23ms/step - loss: 42.6778 - accuracy: 0.8981 - val_loss: 237.9625 - val_accuracy: 0.8571
+Epoch 22/50
+4/4 [==============================] - 0s 26ms/step - loss: 47.0964 - accuracy: 0.8704 - val_loss: 285.9458 - val_accuracy: 0.8214
+Epoch 23/50
+4/4 [==============================] - 0s 23ms/step - loss: 93.9307 - accuracy: 0.8426 - val_loss: 205.0672 - val_accuracy: 0.7857
+Epoch 24/50
+4/4 [==============================] - 0s 23ms/step - loss: 49.7039 - accuracy: 0.8981 - val_loss: 248.6197 - val_accuracy: 0.8214
+Epoch 25/50
+4/4 [==============================] - 0s 26ms/step - loss: 34.4641 - accuracy: 0.9167 - val_loss: 283.1073 - val_accuracy: 0.8214
+Epoch 26/50
+4/4 [==============================] - 0s 23ms/step - loss: 29.0659 - accuracy: 0.9537 - val_loss: 197.5600 - val_accuracy: 0.7857
+Epoch 27/50
+4/4 [==============================] - 0s 25ms/step - loss: 44.2789 - accuracy: 0.8981 - val_loss: 267.2108 - val_accuracy: 0.8214
+Epoch 28/50
+4/4 [==============================] - 0s 24ms/step - loss: 5.0913 - accuracy: 0.9630 - val_loss: 202.0244 - val_accuracy: 0.7857
+Epoch 29/50
+4/4 [==============================] - 0s 23ms/step - loss: 9.1731 - accuracy: 0.9537 - val_loss: 218.6418 - val_accuracy: 0.8571
+Epoch 30/50
+4/4 [==============================] - 0s 25ms/step - loss: 1.6184e-23 - accuracy: 1.0000 - val_loss: 191.9888 - val_accuracy: 0.8214
+Epoch 31/50
+4/4 [==============================] - 0s 24ms/step - loss: 7.1361 - accuracy: 0.9630 - val_loss: 224.8343 - val_accuracy: 0.8571
+Epoch 32/50
+4/4 [==============================] - 0s 25ms/step - loss: 4.3484 - accuracy: 0.9630 - val_loss: 274.8196 - val_accuracy: 0.7857
+Epoch 33/50
+4/4 [==============================] - 0s 23ms/step - loss: 2.9130 - accuracy: 0.9815 - val_loss: 187.5260 - val_accuracy: 0.8571
+Epoch 34/50
+4/4 [==============================] - 0s 24ms/step - loss: 16.4488 - accuracy: 0.9630 - val_loss: 197.7078 - val_accuracy: 0.8214
+Epoch 35/50
+4/4 [==============================] - 0s 26ms/step - loss: 5.5765 - accuracy: 0.9907 - val_loss: 303.4850 - val_accuracy: 0.7500
+Epoch 36/50
+4/4 [==============================] - 0s 24ms/step - loss: 16.7277 - accuracy: 0.9537 - val_loss: 211.9007 - val_accuracy: 0.7857
+Epoch 37/50
+4/4 [==============================] - 0s 25ms/step - loss: 15.6135 - accuracy: 0.9352 - val_loss: 378.1938 - val_accuracy: 0.6786
+Epoch 38/50
+4/4 [==============================] - 0s 24ms/step - loss: 14.7259 - accuracy: 0.9444 - val_loss: 192.3745 - val_accuracy: 0.8214
+Epoch 39/50
+4/4 [==============================] - 0s 24ms/step - loss: 20.5345 - accuracy: 0.9352 - val_loss: 277.0846 - val_accuracy: 0.8214
+Epoch 40/50
+4/4 [==============================] - 0s 25ms/step - loss: 16.3439 - accuracy: 0.9074 - val_loss: 295.2156 - val_accuracy: 0.7857
+Epoch 41/50
+4/4 [==============================] - 0s 23ms/step - loss: 7.8336 - accuracy: 0.9722 - val_loss: 225.5784 - val_accuracy: 0.7857
+Epoch 42/50
+4/4 [==============================] - 0s 26ms/step - loss: 21.7902 - accuracy: 0.9259 - val_loss: 464.7813 - val_accuracy: 0.6071
+Epoch 43/50
+4/4 [==============================] - 0s 25ms/step - loss: 27.7593 - accuracy: 0.8796 - val_loss: 198.5493 - val_accuracy: 0.8214
+Epoch 44/50
+4/4 [==============================] - 0s 23ms/step - loss: 4.2013 - accuracy: 0.9630 - val_loss: 244.4388 - val_accuracy: 0.8571
+Epoch 45/50
+4/4 [==============================] - 0s 24ms/step - loss: 5.7771 - accuracy: 0.9815 - val_loss: 289.6475 - val_accuracy: 0.8214
+Epoch 46/50
+4/4 [==============================] - 0s 23ms/step - loss: 7.2197 - accuracy: 0.9815 - val_loss: 194.2473 - val_accuracy: 0.8214
+Epoch 47/50
+4/4 [==============================] - 0s 26ms/step - loss: 2.2097 - accuracy: 0.9815 - val_loss: 194.8409 - val_accuracy: 0.8214
+Epoch 48/50
+4/4 [==============================] - 0s 23ms/step - loss: 3.8723e-22 - accuracy: 1.0000 - val_loss: 339.2758 - val_accuracy: 0.7500
+Epoch 49/50
+4/4 [==============================] - 0s 24ms/step - loss: 12.5459 - accuracy: 0.9630 - val_loss: 201.5827 - val_accuracy: 0.8929
+Epoch 50/50
+4/4 [==============================] - 0s 26ms/step - loss: 1.1548 - accuracy: 0.9907 - val_loss: 191.5460 - val_accuracy: 0.8571
+1/1 [==============================] - 0s 20ms/step - loss: 191.5460 - accuracy: 0.8571
+Test accuracy: 0.8571428656578064
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ dense (Dense)               (None, 64)                3145792
+
+ dense_1 (Dense)             (None, 32)                2080
+
+ dense_2 (Dense)             (None, 1)                 33
+
+=================================================================
+Total params: 3,147,905
+Trainable params: 3,147,905
+Non-trainable params: 0
+_________________________________________________________________
+
+Process finished with exit code 0

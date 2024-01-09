@@ -1,0 +1,28 @@
+div{
+	display: flex;
+	width: 700px;
+	border: 1px solid;
+}
+
+p{
+	position: absolute;
+	margin: 0 50px;
+}
+
+img{
+	border: 25px solid aquamarine;
+	height: 200px;
+	width: 200px;
+}
+
+li{
+	display: flex;
+	float: left;
+	margin: 20px;
+	align-items: flex-end;
+}
+
+#img1, #img2{
+	display: flex;
+	width: 200px;
+}

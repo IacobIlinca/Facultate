@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problema 2 JavaScript</title>
+    </head>
+    <body>
+        <form name="myForm" action="" onsubmit="return validate()" method="post">
+            Nume: <input type="text" id="nume"><br>
+            Data nasterii: <input type="date" id="data"><br>
+            Varsta: <input type="text" id="varsta"><br>
+            Email: <input type="text" id="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+
+    <script>
+        function validateNumar(nr){
+            return /^\d+$/.test(nr);
+        }
+
+        function validateData(data){
+            let parte = data.split('-');
+            return parte[0]>1923 && parte[0]<2008;
+        }
+
+        function validateVarsta(varsta){
+            return varsta<=100 && varsta>=15;
+        }
+
+        function validateLitere(cuvant){
+            return /^[a-zA-Z]+$/.test(cuvant);
+        }
+
+        function validateEmail(email){
+            return /\S+@\S+\.\S+/.test(email);
+        }
+
+        function validateGol(orice){
+            return orice === "";
+        }
+
+        function validate(){
+            
+            let nume = document.getElementById("nume").value
+            let data = document.getElementById("data").value
+            let varsta = document.getElementById("varsta").value
+            let email = document.getElementById("email").value
+            let error = "";
+
+            if(validateGol(nume)){
+                error += "Campul nume este gol!\n";
+                document.forms["myForm"]["nume"].style.border = "thick solid red";
+            } else if(!validateLitere(nume)){
+                error += "Campul nume nu contine doar litere!\n";
+                document.forms["myForm"]["nume"].style.border = "thick solid red";
+            } else {document.forms["myForm"]["nume"].style.border = "none";}
+            
+            if(validateGol(data)){
+                error += "Campul data este gol!\n";
+                document.forms["myForm"]["data"].style.border = "thick solid red";
+            } else if(!validateData(data)){
+                error += "Campul data nu contine un an cuprins intre 1950 si 2008!\n";
+                document.forms["myForm"]["data"].style.border = "thick solid red";
+            } else {document.forms["myForm"]["data"].style.border = "none";}
+            
+            if(validateGol(varsta)){
+                error += "Campul varsta este gol!\n";
+                document.forms["myForm"]["varsta"].style.border = "thick solid red";
+            } else if(!validateNumar(varsta) && !validateVarsta(varsta)){
+                error += "Campul varsta nu este o valoare numerica cuprinsa intre 15 si 100!\n";
+                document.forms["myForm"]["varsta"].style.border = "thick solid red";
+            } else {document.forms["myForm"]["varsta"].style.border = "none";}
+
+            if(validateGol(email)){
+                error += "Campul email este gol!\n";
+                document.forms["myForm"]["email"].style.border = "thick solid red";
+            } else if(!validateEmail(email)){
+                error += "Campul email nu contine un email valid!\n";
+                document.forms["myForm"]["email"].style.border = "thick solid red";
+            } else {document.forms["myForm"]["email"].style.border = "none";}
+            
+
+            if(error.length > 0){
+                alert(error);
+                return false;
+                
+            }else{
+                alert("Datele sunt completate corect!\n");
+                return false;
+            }
+                
+            
+        }
+    </script>
+
+</html>

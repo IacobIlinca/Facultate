@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				getPlecari();
+			});
+			function getPlecari() {
+				$.ajax({
+					url: 'http://localhost/showPlecari.php',
+					method: 'GET',
+					success: function(response) {
+						$('#plecari').html(response);
+					},
+					error: function() {
+						alert("Your browser does not support AJAX!");
+					}
+				});
+			}
+            function getSosiri(elem) {
+			console.log("Intra " + elem.value);
+			$.ajax({
+				url: 'http://localhost/showSosiri.php',
+				method: 'GET',
+				data: {
+					name: elem.value
+				},
+				success: function(response) {
+					$('#sosiri').html(response);
+				},
+				error: function() {
+					alert("Your browser does not support AJAX!");
+				}
+			});
+		}
+		
+	</script>
+</head>
+<body>
+
+	<h1>Mersul trenurilor</h1>
+	<span>
+		<label>
+			Statii plecare:
+			<select id="plecari" multiple size=6>
+			</select>
+		</label>
+	</span>
+	<span>
+		<label>
+			Statii sosire:
+			<select id="sosiri" multiple size=6>
+				<option>(none)</option>
+			</select>
+		</label>
+	</span>
+	
+</body>
+</html>

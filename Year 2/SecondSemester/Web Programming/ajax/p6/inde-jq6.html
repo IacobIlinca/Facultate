@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magazin IT</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Magazin IT</h1>
+    <h2>Filtrare produse</h2>
+    <form id="filter-form">
+        <label for="producator">Producator:</label>
+        <select id="producator" name="producator">
+            <option value="">--Selecteaza--</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Dell">Dell</option>
+            <option value="HP">HP</option>
+        </select>
+
+        <label for="procesor">Procesor:</label>
+        <select id="procesor" name="procesor">
+            <option value="">--Selecteaza--</option>
+            <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+            <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+        </select>
+
+        <label for="memorie">Memorie:</label>
+        <select id="memorie" name="memorie">
+            <option value="">--Selecteaza--</option>
+            <option value="8 GB">8 GB</option>
+            <option value="16 GB">16 GB</option>
+            <option value="32 GB">32 GB</option>
+        </select>
+
+        <label for="hdd">Capacitate HDD:</label>
+        <select id="hdd" name="hdd">
+            <option value="">--Selecteaza--</option>
+            <option value="512 GB">512 GB</option>
+            <option value="1 TB">1 TB</option>
+            <option value="2 TB">2 TB</option>
+        </select>
+
+        <label for="gpu">Placa video:</label>
+        <select id="gpu" name="gpu">
+            <option value="">--Selecteaza--</option>
+            <option value="Nvidia GeForce MX350">Nvidia GeForce MX350</option>
+            <option value="AMD Radeon RX 5500M">AMD Radeon RX 5500M</option>
+        </select>
+
+        <input type="submit" value="Filtreaza">
+    </form>
+
+    <div id="rezultate-filtrare"></div>
+    <script>
+        $(document).ready(function () {
+            var filterForm = $("#filter-form");
+            var productList = $("#rezultate-filtrare");
+
+            filterForm.submit(function (event) {
+                event.preventDefault();
+
+                var formData = filterForm.serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost/magazin.php",
+                    data: formData,
+                    success: function (response) {
+                        productList.html(response);
+                    },
+                    error: function () {
+                        alert("Error retrieving filtered products.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

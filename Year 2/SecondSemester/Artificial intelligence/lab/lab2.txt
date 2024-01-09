@@ -1,0 +1,20 @@
+m-nr linii
+u-o comunitate
+mu-nr muchii din  interiorul comunitatii
+ku-suma gradelor nodurilor din comunitatea u
+
+Q = suma(mu/m - (ku/2m)^2)
+     u
+Q apartine [0.5,1)
+Q = 0 Q~>=0.3
+
+
+1-2
+|X|
+4-3
+  |
+  5-6
+
+1-1 -> primu ii id, al doilea ii clasa de care apartine
+
+

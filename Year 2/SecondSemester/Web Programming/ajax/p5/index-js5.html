@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problema5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="tree-view">
+        <ul>
+            <li class="directory">
+                <span class="toggle"></span>
+                <a href="#" class="node">C:\Users\Ilinca\Desktop\Unu</a>
+                <ul class="nested">
+                    <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Unu\Fisier1.txt</a></li>
+                    <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Unu\Fisier2.txt</a></li>
+                    <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Unu\Fisier3.txt</a></li>
+
+                    <li class="directory">
+                        <span class="toggle"></span>
+                        <a href="#" class="node">C:\Users\Ilinca\Desktop\Unu\Doi</a>
+                        <ul class="nested">
+                            <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Unu\Doi\Fisier4.txt</a>
+                            </li>
+                            <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Unu\Doi\Fisier5.txt</a>
+                            </li>
+                            <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Unu\Doi\Fisier6.txt</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="directory">
+                <span class="toggle"></span>
+                <a href="#" class="node">C:\Users\Ilinca\Desktop\Trei</a>
+                <ul class="nested">
+                    <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Trei\Fisier7.txt</a></li>
+                    <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Trei\Fisier8.txt</a></li>
+                    <li class="fileLi"><a class="file" href="#">C:\Users\Ilinca\Desktop\Trei\Fisier9.txt</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // Ascunde initial toate elementele de tipul 'nested'
+            $('.nested').hide();
+
+            // Adauga event listener pentru click pe elementele de tipul 'node'
+            $('.node').click(function () {
+                var $this = $(this);
+                var $parent = $this.parent();
+                var $nested = $parent.children('.nested');
+
+                // Verifica daca elementul selectat este un nod director
+                if ($parent.hasClass('directory')) {
+                    // Schimba starea elementului 'toggle'
+                    $parent.children('.toggle').toggleClass('opened');
+
+                    // Afiseaza sau ascunde elementele 'nested' corespunzatoare
+                    $nested.toggle();
+                }
+            });
+            $('.file').click(function () {
+                var $this = $(this)[0];
+                // Incarca continutul fisierului prin AJAX
+                $.ajax({
+                    url: 'http://localhost/getTree.php',
+                    type: 'POST',
+                    data: { file: $this.innerText },
+                    success: function (data) {
+                        // Afiseaza continutul fisierului
+                        $this.innerText = data;
+                    },
+                    error: function () {
+                        alert('Eroare la incarcarea fisierului!');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div#board{
+                background: lightcoral;
+                border: #AA336A 1px solid;
+                width: 676px;
+                height: 450px;
+                padding:25px;
+                margin:auto;
+            }
+
+            div#board > div{
+            border:darkslateblue 1px solid;
+            width:90px;
+            height:90px;
+            float:left;
+            margin:10px;
+            padding:0px;
+            cursor:pointer;
+            text-align:center;
+            } 
+
+            div#board > img {
+            width: 90px;
+            height: 90px;
+            }
+
+            h1{
+                color: #AA336A;
+            }
+
+        </style>
+        <script>
+            var valori = [];
+            var patr_ids = [];
+            var nr_intors = 0;
+            var variabile = ['Czibula-Gabriela.jpg','Czibula-Gabriela.jpg',
+                            'Andor-Camelia-Florina.jpg','Andor-Camelia-Florina.jpg',
+                            'Coroiu-Adriana.jpg','Coroiu-Adriana.jpg',
+                            'Suciu-Dan.jpg','Suciu-Dan.jpg',
+                            'Diana-Halita.jpg','Diana-Halita.jpg',
+                            'Diana-Miholca.jpg','Diana-Miholca.jpg',
+                            'Diosan-Laura.jpg','Diosan-Laura.jpg',
+                            'Florentin-Bota.jpg','Florentin-Bota.jpg',
+                            'Grigoreta-Cojocar.jpg','Grigoreta-Cojocar.jpg',
+                            'Mircea-Gabriel.jpg','Mircea-Gabriel.jpg',
+                            'Petrascu-Vladiela.jpg','Petrascu-Vladiela.jpg',
+                            'Pop-Emilia.jpg','Pop-Emilia.jpg'];
+            Array.prototype.tile_shuffle = function(){
+            var i = this.length, j, temp;
+            while(--i > 0){
+                j = Math.floor(Math.random() * (i+1));
+                temp = this[j];
+                this[j] = this[i];
+                this[i] = temp;
+                }
+            }
+
+            function FlipPatrat(patrat, val){
+                if(patrat.innerHTML == "" && valori.length < 2){
+                    patrat.style.background = '#FFF';
+                    patrat.innerHTML = '<img src="' + val + '">';
+
+                    if(valori.length == 0){
+                        valori.push(val);
+                        patr_ids.push(patrat.id);
+                    } else if(valori.length == 1){
+                        valori.push(val);
+                        patr_ids.push(patrat.id);
+                        if(valori[0] == valori[1]){
+                            nr_intors = nr_intors + 2;
+                            valori = [];
+                            patr_ids = [];
+                            if(nr_intors == variabile.length){
+                                alert("Game over!");
+                                document.getElementById('board').innerHTML  = "";
+                                newBoard();
+                            }
+                        } else{
+                            function reIntoarcere(){
+                                var p1 = document.getElementById(patr_ids[0]);
+                                var p2 = document.getElementById(patr_ids[1]);
+                                p1.style.background = 'none';
+                                p1.innerHTML = "";
+                                p2.style.background = 'none';
+                                p2.innerHTML = "";
+                                valori = [];
+                                patr_ids = [];
+                            }
+                            setTimeout(reIntoarcere, 700);
+                        }
+                    }
+
+                }
+            }
+
+        function newPatrat(){
+            flipped = 0;
+            var output = '';
+            variabile.tile_shuffle();
+            for(var i = 0; i < variabile.length; i++)
+            {
+                output += '<div id="p'+i+'" onclick="FlipPatrat(this,\''+variabile[i]+'\')"></div>';
+            }
+            document.getElementById('board').innerHTML = output;
+	}
+        </script>
+        <title>Problema 3 JavaScript</title>
+    </head>
+    <body>
+        <h1 id="header" align="center"> Memory Game </h1>
+        <div id="board"></div>
+        <script>newPatrat();</script>
+    </body>
+
+</html>

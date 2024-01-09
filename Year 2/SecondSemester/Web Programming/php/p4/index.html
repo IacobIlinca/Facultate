@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autentificare si inregistrare utilizatori</title>
+</head>
+<body>
+    <h2>Autentificare</h2>
+    <form action="http://localhost/login.php" method="POST">
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+        <input type="submit" value="Autentificare">
+    </form>
+
+    <h2>Inregistrare</h2>
+    <form action="http://localhost/register.php" method="POST">
+        <label>Nume:</label>
+        <input type="text" name="name" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+        <input type="submit" value="Inregistrare">
+    </form>
+</body>
+</html>

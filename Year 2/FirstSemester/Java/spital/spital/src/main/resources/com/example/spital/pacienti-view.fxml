@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="321.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spital.PacientiView">
+   <children>
+      <ListView fx:id="listaPacienti" layoutX="14.0" layoutY="14.0" prefHeight="288.0" prefWidth="404.0" />
+      <Button fx:id="interneazaButton" layoutX="454.0" layoutY="187.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="26.0" prefWidth="95.0" text="Interneaza" />
+      <RadioButton fx:id="checkTIC" layoutX="430.0" layoutY="66.0" mnemonicParsing="false" text="TIC" />
+      <RadioButton fx:id="checkTIM" layoutX="431.0" layoutY="96.0" mnemonicParsing="false" text="TIM" />
+      <RadioButton fx:id="checkTIIP" layoutX="431.0" layoutY="129.0" mnemonicParsing="false" text="TIIP" />
+   </children>
+</AnchorPane>

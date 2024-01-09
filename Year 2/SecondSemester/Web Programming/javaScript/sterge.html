@@ -1,0 +1,2 @@
+<table id="someTable" border="1"> <tr><td>a</td><td>b</td><td>c</td></tr> <tr><td>d</td><td>e</td><td>f</td></tr> <tr><td>g</td><td>h</td><td>i</td></tr> </table> <script> var myTable = document.getElementById("someTable"); var rows = myTable.rows; for (i = 0; i < rows.length; i++) { var cells = rows[i].cells; for (j = 0; j < cells.length; j++) { cells[j].onclick = function() { alert('S-a dat click pe linia ' + i + ' si coloana ' + j);;
+} } } </script>

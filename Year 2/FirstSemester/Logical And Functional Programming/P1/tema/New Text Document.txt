@@ -1,0 +1,27 @@
+%Sa se scrie un predicat care transforma o listaintr-o multime, in ordinea primei aparitii. Exemplu: [1,2,3,1,2] e transformat in [1,2,3].
+
+%adauga_sfarsit(E:Intreg, L:Lista, LRez:Lista);
+%Model de fux: (i,i,o);
+%E:elementul ce se doreste a fi adaugat la finalul listei;
+%L:lista initiala
+%LRez: lista initlala cu elementul nou la final;
+
+adauga_sfarsit(E,[],[E]):-!.
+adauga_sfarsit(E,[H|T],[H|L]):-adauga_sfarsit(E,T,L).
+
+
+%invers(L:Lista. LRez:Lista);
+%Model de flux: (i,o);
+%L:lista intiala;
+%LRez:lista inversata;
+
+invers([],[]):-!.
+invers([H|T],L):-invers(T,S),adauga_sfarsit(H,S,L).
+
+%multime(L:Lista, LRez: Lista);
+%L:lista initiala
+%LRez:lista transformata in multime in functie de I aparitie;
+
+multime([],[]):-!.
+multime([H],[H]):-!.
+multime([H|T],L):- invers(T,S), multime(S,L), invers(L,R).

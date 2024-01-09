@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .table{
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .row{
+            text-align: left;
+        }
+    </style>
+    <body>
+        <table class="table" id="table":>
+            <tr>
+                <th onclick="sortTableStrCol(0)" class="row">Fructe</th>
+                <th onclick="sortTableIntCol(1)" class="row">Pret</th>
+                <th onclick="sortTableIntCol(2)" class="row">Cantitate</th>
+            </tr>
+            <tr>
+                <td>Mere</td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Prune</td>
+                <td>2</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Capsuni</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Cirese</td>
+                <td>25</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Visine</td>
+                <td>12</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Nuci</td>
+                <td>45</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+        <table class="table" id="table1":>
+            <tr>
+                <th onclick="sortTableStr(0, this)" class="row">Fructe</th>
+                <td>Mere</td>
+                <td>Prune</td>
+                <td>Capsuni</td>
+                <td>Cirese</td>
+                <td>Visine</td>
+                <td>Nuci</td>
+            </tr>
+            <tr>
+                <th onclick="sortTableIntRow(1,this)" class="row">Pret</th>
+                <td>4</td>
+                <td>2</td>
+                <td>10</td>
+                <td>25</td>
+                <td>12</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <th onclick="sortTableIntRow(2,this)" class="row">Cantitate</th>
+                <td>10</td>
+                <td>5</td>
+                <td>5</td>
+                <td>7</td>
+                <td>23</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </body>
+    
+    <script src="p4.js"></script>
+</html>

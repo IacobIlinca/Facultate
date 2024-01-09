@@ -1,0 +1,4 @@
+1;1;1;5;Participant
+2;2;1;10;Participant
+3;3;1;2;Participant
+4;4;1;7;Participant

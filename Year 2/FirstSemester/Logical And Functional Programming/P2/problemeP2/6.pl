@@ -1,0 +1,21 @@
+%6.Intr-o lista L sa se inlocuiasca toate aparitiile unui element E cu
+%elementele unei alte liste, L1. De ex: inloc([1,2,1,3,1,4],1,[10,11],X)
+%va produce X=[10,11,2,10,11,3,10,11,4].
+%
+
+
+adauga_sf(E,[],[E]).
+adauga_sf(E,[H|T],[H|L]):-adauga_sf(E,T,L).
+
+conca([],[],[]).
+conca([],L,L).
+conca(L,[],L).
+conca(L,[H|T],R):-adauga_sf(H,L,S), conca(S,T,R).
+
+inloc([],_,_,[]).
+inloc(L,_,[],L).
+inloc(L,E,[E],L).
+inloc([H|T],E,L,[H|R]):-
+	E\=H,
+	inloc(T,E,L,R).
+inloc([E|T],E,L,R):-inloc(T,E,L,S), conca(L,S,R).

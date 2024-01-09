@@ -1,0 +1,43 @@
+body{
+	margin: 0;
+}
+#parinte{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+#header{
+	height: 100px;
+	background-color: red;
+	text-align: center;
+	
+	}
+#menu{
+	height: 25px;
+	background-color: yellow;
+	margin: 0;
+	text-align: center;
+	}
+#content{
+	min-height: 67vh;
+	background-color: green;
+
+}
+#footer{
+	min-height: 70px;
+	background-color: pink;
+	text-align: center;	
+	bottom: 0
+}
+
+ul{
+	margin: 0;
+}
+
+ul#meniu li{
+	display: inline;
+	text-align: top;
+}
+p{
+	text-indent: 25px;
+}

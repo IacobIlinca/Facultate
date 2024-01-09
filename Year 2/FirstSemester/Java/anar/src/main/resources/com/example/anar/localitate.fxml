@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="549.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.anar.LocalitateController">
+   <children>
+      <TableView fx:id="tblVwLocalitateMajor" layoutX="52.0" layoutY="417.0" prefHeight="118.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="numeColumnMajor" prefWidth="95.33331298828125" text="Nume" />
+          <TableColumn fx:id="rauColumnMajor" prefWidth="106.66665649414062" text="Rau principal" />
+            <TableColumn fx:id="cotaMinimaColumnMajor" prefWidth="138.0" text="Cota Minima De Risc" />
+            <TableColumn fx:id="cotaMaximaColumnMajor" prefWidth="155.3333740234375" text="Cota Maxima Admisa" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblVwLocalitateRedus" layoutX="52.0" layoutY="70.0" prefHeight="118.0" prefWidth="496.0">
+         <columns>
+            <TableColumn fx:id="numeColumnRedus" prefWidth="95.33331298828125" text="Nume" />
+            <TableColumn fx:id="rauColumnRedus" prefWidth="106.66665649414062" text="Rau principal" />
+            <TableColumn fx:id="cotaMinimaColumnRedus" prefWidth="138.0" text="Cota Minima De Risc" />
+            <TableColumn fx:id="cotaMaximaColumnRedus" prefWidth="155.3333740234375" text="Cota Maxima Admisa" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblVwLocalitateMediu" layoutX="66.0" layoutY="245.0" prefHeight="118.0" prefWidth="496.0">
+         <columns>
+            <TableColumn fx:id="numeColumnMediu" prefWidth="95.33331298828125" text="Nume" />
+            <TableColumn fx:id="rauColumnMediu" prefWidth="106.66665649414062" text="Rau principal" />
+            <TableColumn fx:id="cotaMinimaColumnMediu" prefWidth="138.0" text="Cota Minima De Risc" />
+            <TableColumn fx:id="cotaMaximaColumnMediu" prefWidth="155.3333740234375" text="Cota Maxima Admisa" />
+         </columns>
+      </TableView>
+      <Label layoutX="245.0" layoutY="382.0" text="Risc major de inundatii" />
+      <Label layoutX="231.0" layoutY="214.0" text="Risc mediu de inundatii" />
+      <Label layoutX="246.0" layoutY="28.0" text="Risc redus de inundatii" />
+   </children>
+</AnchorPane>

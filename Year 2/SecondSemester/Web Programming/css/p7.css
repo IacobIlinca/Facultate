@@ -1,0 +1,46 @@
+/* ul{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+} */
+
+li{
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    min-height: 150px;
+    min-width: 200px;
+}
+
+.alice::before{
+    background-image: url("https://www.cs.ubbcluj.ro/~bufny/wp-content/uploads/css-pr7.png");
+    background-position: -10px -40px;
+    width: 135px;
+    height: 80px;
+    content:'';
+}
+
+.bob::before{
+    background-image: url("https://www.cs.ubbcluj.ro/~bufny/wp-content/uploads/css-pr7.png");
+    background-position: -10px -150px;
+    width: 135px;
+    height: 80px;
+    content:'';
+}
+
+
+div{
+    min-width: 50px;
+    max-width: 500px;
+    min-height: 10px;
+    max-height: 500px;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid;
+    text-align: center;
+}
+
+
+
+
+    

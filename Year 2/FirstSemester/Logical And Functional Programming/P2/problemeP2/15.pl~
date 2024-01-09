@@ -1,0 +1,8 @@
+%15.Sa se determine cea mai lunga secventa de numere pare consecutive
+%% dintr-o lista (daca sunt mai multe secvente de lungime maxima, una
+%% dintre ele).
+
+
+lungime([],0):-!.
+lungime([_|T],N):-lungime(T,N1),N is N1+1.
+

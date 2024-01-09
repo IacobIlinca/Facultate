@@ -1,0 +1,27 @@
+%10. a. Sa se intercaleze un element pe pozitia a n-a a unei liste.
+%b. Definiti un predicat care intoarce cel mai mare divizor comun al
+%numerelor dintr-o lista.
+
+%a.
+%verif(L:List, P:Integer, N:Integer, LR:List).
+insert([],0,E,[E]):-!.
+insert(L,P,E,LR):-
+	P=0,!,
+	LR = [E|L].
+insert([H|T],P,E,LR):-
+	N is P-1,
+	insert(T,N,E,LN),
+	LR = [H|LN].
+
+%b.
+%cmmdc(A:Integer, B:Integer).
+cmmdc(A,B,A):-A=B,!.
+cmmdc(A,B,D):-A<B,!,B1 is B-A, cmmdc(A,B1,D).
+cmmdc(A,B,D):-A>B,!, A1 is A-B,cmmdc(A1,B,D).
+
+%cmmdcL(L:List, R:Integer).
+cmmdcL([H],H):-!.
+cmmdcL([H1|[H2|T]],R):-
+	cmmdc(H1,H2,R1),
+	cmmdcL([R1|T],R).
+

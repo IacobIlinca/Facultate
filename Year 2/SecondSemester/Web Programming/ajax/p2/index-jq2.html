@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problema 2</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+	<body onload="getContent(0)">
+		<h1>My contact list</h1>
+		<table id="myTable">
+		</table>
+		<br>
+		<button id="prev">Previous</button>
+		<button id="next">Next</button>
+        <script>
+            var pageNr = 0;
+            var pas = 3;
+            var isNext = false;
+            var xmlhttp;
+            
+            function getContent(nrPage) {
+                xmlhttp = $.ajax({
+                    url: "http://localhost/showPersoane.php?page=" + nrPage,
+                    method: "GET",
+                    success: function(response) {
+                        $("#myTable").html(response);
+                        if (pageNr === 0) {
+                            $('#prev').attr('disabled', true);
+                        }
+                        else {
+                            $('#prev').removeAttr("disabled");
+                        }
+                        checkNext(pageNr+pas);
+                    },
+                    error: function() {
+                        alert("Error loading content.");
+                    }
+                });
+            }
+            
+            function nextPage() {
+                pageNr += pas;
+                getContent(pageNr);
+            }
+            
+            function previousPage() {
+                pageNr -= pas;
+                getContent(pageNr);
+            }
+            
+            function checkNext(pageNumber) {
+                xmlhttp = $.ajax({
+                    url: "http://localhost/nrPersoane.php?page=" + pageNumber,
+                    method: "GET",
+                    success: function(response) {
+                        if (response == 0) {
+                            $('#next').attr('disabled', true);
+                        }
+                        else {
+                            $('#next').removeAttr("disabled");
+                        }
+                    },
+                    error: function() {
+                        alert("Error checking for next page.");
+                    }
+                });
+            }
+            
+            $("#prev").click(function() {
+                previousPage();
+            });
+            
+            $("#next").click(function() {
+                nextPage();
+            });
+        </script>
+        
+    </body>
+</html>    

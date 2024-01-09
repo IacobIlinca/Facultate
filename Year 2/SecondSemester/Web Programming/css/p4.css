@@ -1,0 +1,70 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    transform: rotate(90deg)
+}
+
+.cell {
+    background-image: url("https://www.cs.ubbcluj.ro/~bufny/wp-content/uploads/css-pr4.png");
+    transform: rotate(270deg);
+    width: 84px;
+    height: 84px;
+    background-position-y: 84px;
+}
+
+.cell.fb {
+    background-position-x: 84px;
+}
+
+.cell.dots {
+    background-position-x: 168px;
+}
+
+.cell.dribble {
+    background-position-x: 252px;
+}
+
+.cell.gplus {
+    background-position-x: 336px;
+}
+
+.cell.linkedin {
+    background-position-x: 420px;
+}
+
+.cell.pinterest {
+    background-position-x: 504px;
+}
+
+.cell.semnal {
+    background-position-x: 588px;
+}
+
+.cell.skype {
+    background-position-x: 672px;
+}
+
+.cell.twitter {
+    background-position-x: 756px;
+}
+
+.cell.vimeo {
+    background-position-x: 840px;
+}
+
+.cell.yt {
+    background-position-x: 924px;
+}
+
+.cell:hover {
+    background-position-y: 0px;
+}
+

@@ -1,0 +1,19 @@
+În cazul clasificării binare, pragul de decizie specifică valoarea de probabilitate de la care se face decizia
+dacă un exemplu de intrare aparține unei clase sau nu.
+În general, valoarea implicită pentru pragul de decizie este 0.5, adică dacă probabilitatea estimată pentru clasa
+pozitivă este mai mare sau egală cu 0.5, atunci exemplul de intrare este clasificat ca aparținând acestei clase,
+altfel este clasificat ca aparținând clasei negative.
+
+Dacă se modifică pragul de decizie din 0.5 în alte valori, de exemplu 0.3 sau 0.7, acest lucru va afecta modul în
+care sunt clasificate exemplele de intrare. Dacă pragul este scăzut la 0.3, atunci clasificatorul va fi mai
+predispus să clasifice un exemplu ca aparținând clasei pozitive, chiar dacă probabilitatea estimată este relativ mică.
+
+Pe de altă parte, dacă pragul este crescut la 0.7, clasificatorul va fi mai puțin dispus să clasifice un exemplu
+ca aparținând clasei pozitive, deci va fi mai conservator în deciziile sale.
+
+Pentru a evalua calitatea clasificatorului pentru diferite valori ale pragului de decizie,
+se pot utiliza diverse măsuri de performanță, cum ar fi acuratețea, precizia, recall-ul sau F1-score.
+Aceste măsuri pot fi calculate pentru fiecare prag de decizie și pot fi reprezentate grafic sub forma unei curbe
+ROC (Receiver Operating Characteristic), care arată trade-off-ul între rata de fals pozitive și rata de
+adevărate pozitive pentru diferite valori ale pragului.
+Pragul optim poate fi ales pe baza acestei curbe, în funcție de necesitățile specifice ale problemei de clasificare.

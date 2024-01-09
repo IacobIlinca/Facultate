@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onKeyPressed="#onKeyPressedSearch" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zboruri.ZboruriController">
+   <children>
+      <TableView fx:id="tblViewwZboruri" layoutX="37.0" layoutY="14.0" prefHeight="200.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="fromColumn" prefWidth="75.0" text="From" />
+            <TableColumn fx:id="toColumn" prefWidth="75.0" text="To" />
+            <TableColumn fx:id="departureDateColumn" prefWidth="138.66668701171875" text="Departure Date" />
+            <TableColumn fx:id="landingDateColumn" prefWidth="100.0" text="Landing date" />
+            <TableColumn fx:id="seatsColumn" prefWidth="72.6666259765625" text="Seats" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="fromCmbBox" layoutX="37.0" layoutY="228.0" prefWidth="150.0" promptText="From" />
+      <ComboBox fx:id="toCmbBox" layoutX="382.0" layoutY="228.0" prefWidth="150.0" promptText="To" />
+      <DatePicker fx:id="departureDateDaetPicker" layoutX="25.0" layoutY="285.0" promptText="Departure Date" />
+      <Button fx:id="bookFlightBtn" layoutX="415.0" layoutY="285.0" mnemonicParsing="false" onAction="#onBookFlightBtn" text="Book a flight" />
+      <Button fx:id="cumparaBtn" layoutX="266.0" layoutY="336.0" mnemonicParsing="false" onAction="#onCumparaBtnClick" text="Cumpara!" />
+      <TextField fx:id="searchFromTxtFld" layoutX="383.0" layoutY="323.0" onAction="#onSearchFrom" onInputMethodTextChanged="#textChangedSearch" onKeyPressed="#onKeyPressedSearch" promptText="Search from" />
+   </children>
+</AnchorPane>

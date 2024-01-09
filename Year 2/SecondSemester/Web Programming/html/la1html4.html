@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang ="ro">
+<head>
+	<title> Register </title>
+	<style type="text/css">
+	</style>
+</head>
+<body bgcolor="9999CC">
+	<h1>
+		Aplica&#539i aici pentru una dintre bibliotecile noastre!
+	</h1>
+
+	<form method = "GET" action=action.php>
+		<img src="6-129.jpg"alt="text pentru imagine" width="500" height=500 style = "float:right"> <br>
+		<div style = "background-color: mediumaquamarine;">
+			
+			<p style="color:Tomato;" align = "right">
+				Ne bucur&#259m c&#259 sunte&#539i dornici de lectur&#259! 
+
+				Pentru a v&#259 <span style="color:darkolivegreen;">&#238nscrie</span> , v&#259 rug&#259m sa completa&#539i formularul urm&#259tor:
+			</p>
+		
+		</div>
+
+		Prenume: <input type="text" name="prenume" maxlength="15"> <br>
+		Nume de familie: <input type="text" name="numeFam"> <br>
+		Email: <input type="text" name="email" size = "50"> <br>
+		Data na&#351terii: <input type="text" name="dataN"> <br>
+		<center>
+		Prola: <input type="password" name="password">
+	</center>
+		<br>
+		C&#259r&#355i citite &#238n medie pe lun&#259:
+		<input type="text" name="cartiLuna" >
+		<p>
+			Pentru fiecare nou&#259 persoan&#259 adus&#259, prime&#351ti un cod de reducere: 
+			C&#226te persoane crezi c&#259 ai putea aduce:
+		</p>
+		<input type="text" name="nrpers"><br><br>
+
+		Sex: <br>
+		<input type="radio" name="sex" value = "Femeie" checked>Femeie <br>
+		<input type="radio" name="sex" value = "B&#259rbat">B&#259rbat<br>
+		<input type="radio" name="sex" value = "Altceva">Altceva<br>
+
+
+		Am peste 18 ani: 
+		<select>
+			<option value = "Da" 
+			> Da </option>
+			<option value = "Nu" selected> Nu </option>
+		</select>	
+		<br>
+		Am acordul p&#259rin&#539ilor: 
+		<input type="text" name="acord" readonly = "readonly"><br>
+		Am deja cont: <br>
+		<input type="text" name="dejacont" disabled> <br>
+
+		<textarea name="message" rows="10" cols="30">Detalii suplimentare:</textarea> <br>
+
+		<fieldset>
+			<legend>Detalii biblioteca la nivel na&#539ional: </legend>
+		<b>Centrul de &#238mprumutare:</b> (selecta&#539i una sau mai multe) <br>
+		<input type="checkbox" name="Cluj-Napoca" checked>Cluj-Napoca <br>
+		<input type="checkbox" name="Oradea">Oradea <br>
+		<input type="checkbox" name="Alba Iulia">Alba Iulia <br>
+		<br>
+
+		Tipuri de abonamente: 
+		<ul>
+			<li>Intrare unic&#259 - 15 lei </li>
+			<li>Lunar - 70 lei </li>
+			<li>Anual - 600 lei </li>
+		</ul>
+
+		Modalit&#259&#539i de &#238mprumut:
+		<ol type = "A">
+			<li>La fa&#539a locului</li>
+			<li>Precomand&#259 online</li>
+		</ol>
+
+		Cluburi de lectur&#259:
+		<ol start = "30">
+			<li>Cluj-Napoca			</li>
+			<li><ol type = "I">
+				<li>Miercuri cu Andreea</li>	
+				<li>Drama de luni</li>
+			</ol></li>
+			<li>Oradea</li>
+			<li><ol>
+				<li>Crima Express</li>
+				<li>Academy of Murder</li>
+				<li>Funny Sunday</li>
+			</ol></li>
+			<li>Alba-Iulia</li>
+			<li><ol type="a">
+				<li>SF &#351i nu numai</li>
+				<li>Istorie &#351i Cultur&#259</li>
+			</ol></li>
+		</ol>
+	</fieldset>
+
+	Cum dori&#539i s&#259 v&#259 abona&#539i la newsletter:
+	<select name = "newsletter" multiple>
+		<option value = "Prin email">Prin email</option>
+		<option value = "Prin sms">Prin sms</option>
+		<option value = "Prin po&#351t&#259 fizic&#259">Prin po&#351t&#259 fizic&#259</option>
+		<option value = "Fizic la momentul &#238mprumutului">Fizic la momentul &#238mprumutului</option>
+		
+	</select>
+	<br>
+	
+	Sunt de acord cu 
+	<a href="https://halier.ro/TERMENI_SI_CONDITII.pdf" target = "_blank">termenii &#351i condi&#539iile: </a> 
+	<select>
+			<option value = "Da"> Da </option>
+			<option value = "Nu"> Nu </option>
+		</select>	
+		<br>
+
+	Adrese biblioteci:
+	<table border="1">
+		<tr>
+			<th valign="middle">Denumire</th>
+			<th valign="middle">Ora&#351</th>
+			<th valign="middle">Strada</th>
+		</tr>
+		<tr>
+			<td>Mihai Eminescu</td>
+			<td>Cluj-Napoca</td>
+			<td>Nicolae Iorga</td>
+		</tr>
+		<tr>
+			<td>Mihai Viteazu</td>
+			<td>Alba Iulia</td>
+			<td>Topora&#351ilor</td>
+		</tr>
+		<tr>
+			<td>Tudor Arghezi</td>
+			<td>Oradea</td>
+			<td>Av&#226ntului</td>
+		</tr>
+	</table>
+	<br>
+
+	Sec&#355ii disponibile:
+	<table border="2">
+		<tr>
+			<th>Num&#259r:</th>
+			<th>Nume sec&#355ie:</th>
+			<th>Ora&#351:</th>
+		</tr>
+		<tr>
+			<td >1.</td>
+			<td>Cultur&#259 &#351i istorie </td>
+			<td>Alba Iulia</td>
+		</tr>
+		<tr>
+			<td >2.</td>
+			<td>
+				<table border = "1">
+					<tr>
+						<th>Nume Autor</th>
+						<th>Sec&#355ia</th>
+					</tr>
+					<tr>
+						<td colspan="2">Mihai Eminescu</td>
+						<td>Poezii</td>
+					</tr>
+					<tr>
+						<td colspan="2">Ioan Slavici</td>
+						<td> Proz&#259 </td>
+					</tr>
+				</table>
+			</td>
+			<td>Cluj-Napoca</td>
+		</tr>
+		<tr>
+			<td >3.</td>
+			<td colspan="2">Oradea</td>
+		</tr>
+	</table>
+	<br>
+	<input type="submit" value="Register!">
+	<input type="reset">
+
+	</form>
+</body>
+</html>
