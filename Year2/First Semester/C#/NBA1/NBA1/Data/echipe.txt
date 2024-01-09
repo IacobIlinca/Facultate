@@ -1,3 +1,0 @@
-1;HoustonRockets
-2;LAClippers
-3;UtahJazz

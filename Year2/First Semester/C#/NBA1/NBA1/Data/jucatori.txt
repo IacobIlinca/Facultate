@@ -1,4 +1,0 @@
-1;Marcel;Horea;1;HoustonRockets
-2;Ion;OctavianGoga;2;LAClippers
-3;Marian;Horea;1;HoustonRockets
-4;Aurel;OctavianGoga;2;LAClippers
